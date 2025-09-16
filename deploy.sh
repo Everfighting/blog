@@ -50,6 +50,6 @@ fi
 
 # 启动Hexo服务（统一使用LOG_FILE变量并保持追加模式）
 echo "启动Hexo服务..." >> $LOG_FILE
-nohup hexo server >> $LOG_FILE 2>&1 &
+nohup hexo server  -i 0.0.0.0 >> $LOG_FILE 2>&1 &
 
 echo "===== $(date "+%Y-%m-%d %H:%M:%S") 部署完成 =====" >> $LOG_FILE
