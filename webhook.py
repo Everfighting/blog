@@ -61,7 +61,7 @@ def handle_webhook():
     try:
         # 执行部署脚本并捕获输出
         result = subprocess.run(
-            [DEPLOY_SCRIPT_PATH],
+            ['bash', DEPLOY_SCRIPT_PATH],
             check=True,
             capture_output=True,
             text=True
