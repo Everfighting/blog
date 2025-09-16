@@ -2,6 +2,9 @@
 
 # 定义日志文件，方便排查问题
 LOG_FILE="/root/blog/deploy.log"
+# 部署开始时清空日志文件
+> $LOG_FILE
+# 写入部署开始标识
 echo "===== $(date "+%Y-%m-%d %H:%M:%S") 开始部署 =====" >> $LOG_FILE
 
 # 进入博客目录
@@ -45,8 +48,8 @@ else
   echo "没有占用4000端口的进程" >> $LOG_FILE
 fi
 
-# 启动Hexo服务
+# 启动Hexo服务（统一使用LOG_FILE变量并保持追加模式）
 echo "启动Hexo服务..." >> $LOG_FILE
-nohup hexo server > /root/blog/deploy.log 2>&1 &
+nohup hexo server >> $LOG_FILE 2>&1 &
 
 echo "===== $(date "+%Y-%m-%d %H:%M:%S") 部署完成 =====" >> $LOG_FILE
