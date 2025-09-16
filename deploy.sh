@@ -19,14 +19,14 @@ if [ $? -ne 0 ]; then
 fi
 
 # 清理旧静态文件
-echo "清理旧静态文件..." >> $LOG_FILE  # 新增：日志记录清理操作
-hexo clean >> $LOG_FILE 2>&1            # 新增：执行hexo clean命令
-if [ $? -ne 0 ]; then                   # 新增：检查清理操作是否成功
+echo "清理旧静态文件..." >> $LOG_FILE
+hexo clean >> $LOG_FILE 2>&1
+if [ $? -ne 0 ]; then
   echo "错误：hexo clean失败" >> $LOG_FILE
   exit 1
 fi
 
-# 生成静态文件（保持原hexo g的功能，此处hexo generate等价于hexo g）
+# 生成静态文件
 echo "生成Hexo静态文件..." >> $LOG_FILE
 hexo generate >> $LOG_FILE 2>&1
 if [ $? -ne 0 ]; then
@@ -34,12 +34,19 @@ if [ $? -ne 0 ]; then
   exit 1
 fi
 
-# 停止现有Hexo服务（如果存在）
-echo "停止现有Hexo服务..." >> $LOG_FILE
-pkill -f "hexo server" >> $LOG_FILE 2>&1
+# 停止占用4000端口的进程（精准杀进程）
+echo "停止占用4000端口的进程..." >> $LOG_FILE
+# 查找占用4000端口的进程PID并杀死
+PID=$(lsof -t -i:4000)
+if [ -n "$PID" ]; then
+  kill -9 $PID >> $LOG_FILE 2>&1
+  echo "已杀死占用4000端口的进程（PID: $PID）" >> $LOG_FILE
+else
+  echo "没有占用4000端口的进程" >> $LOG_FILE
+fi
 
-# 启动Hexo服务（保持原hexo s的功能，此处hexo server等价于hexo s）
+# 启动Hexo服务
 echo "启动Hexo服务..." >> $LOG_FILE
-nohup hexo server > /dev/null 2>&1 &
+nohup hexo server > /root/blog/deploy.log 2>&1 &
 
 echo "===== $(date "+%Y-%m-%d %H:%M:%S") 部署完成 =====" >> $LOG_FILE
