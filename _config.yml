@@ -3,8 +3,8 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
-subtitle: 'write my life'
+title: Bingo's Blog
+subtitle: '蔡大锅不背锅日志'
 description: 'Keep Track of Every Step'
 keywords:
 author: 'Bingo Cai'
@@ -125,3 +125,7 @@ feed:
 
 sitemap:
   path: sitemap.xml
+
+baidusitemap:
+  path: baidusitemap.xml
+
