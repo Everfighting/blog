@@ -3,9 +3,18 @@ title: 我的第三个博客
 date: {{ date }}
 updated: {{ date }}  # 文章更新时间，再次编辑时需手动更新
 author: 你的名称  # 替换为你的笔名/昵称
-categories: "技术笔记"  # 至少填写一个分类，如"技术笔记"、"生活感悟"
-tags: "AI"  # 多个标签用短横线分隔，如"- 前端开发"、"- JavaScript"
-keywords: "AI", "人工智能"  # SEO优化，建议填写3-5个核心词
+categories:
+  - 技术笔记
+  - 生活感悟
+  - 操作指南
+tags: 
+  - Hexo
+  - Next主题
+  - Markdown
+keywords: 
+  - AI
+  - 人工智能
+
 description: 本文详细介绍了人工智能的相关内容，包括原理、实现方法及应用场景。  # 网页描述，会显示在搜索结果中
 
 # 显示配置
