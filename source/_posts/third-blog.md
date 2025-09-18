@@ -3,15 +3,10 @@ title: 我的第三个博客
 date: {{ date }}
 updated: {{ date }}  # 文章更新时间，再次编辑时需手动更新
 author: 你的名称  # 替换为你的笔名/昵称
-categories:
-  - "技术笔记"  # 至少填写一个分类，如"技术笔记"、"生活感悟"
-tags:
-  - AI  # 多个标签用短横线分隔，如"- 前端开发"、"- JavaScript"
-keywords:
-  - {{ title }}
-  - AI
-  - 人工智能  # SEO优化，建议填写3-5个核心词
-description: 本文详细介绍了{{ title }}的相关内容，包括原理、实现方法及应用场景。  # 网页描述，会显示在搜索结果中
+categories: "技术笔记"  # 至少填写一个分类，如"技术笔记"、"生活感悟"
+tags: "AI"  # 多个标签用短横线分隔，如"- 前端开发"、"- JavaScript"
+keywords: "AI", "人工智能"  # SEO优化，建议填写3-5个核心词
+description: 本文详细介绍了人工智能的相关内容，包括原理、实现方法及应用场景。  # 网页描述，会显示在搜索结果中
 
 # 显示配置
 toc: true  # 是否显示目录
@@ -24,7 +19,7 @@ copyright: true  # 是否显示版权声明（需主题支持）
 
 # 媒体配置
 cover:  # 文章封面图（优先显示）
-  - /images/covers/{{ title | lower | replace(' ', '-') }}.jpg  # 本地路径示例
+  #- /images/covers/{{ title | lower | replace(' ', '-') }}.jpg  # 本地路径示例
   # - https://picsum.photos/1200/600  # 网络图片示例
 photos:  # 文章相册图（用于多图展示）
   # - /images/content/img1.jpg
