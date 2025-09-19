@@ -1,45 +1,35 @@
 ---
 title: 我的第三个博客
-date: {{ date }}
-updated: {{ date }}  # 文章更新时间，再次编辑时需手动更新
-author: 你的名称  # 替换为你的笔名/昵称
+date:
+updated:
+author: Bingo
 categories:
   - 技术笔记
   - 生活感悟
   - 操作指南
-tags: 
+tags:
   - Hexo
   - Next主题
   - Markdown
-keywords: 
+keywords:
   - AI
   - 人工智能
-
-description: 本文详细介绍了人工智能的相关内容，包括原理、实现方法及应用场景。  # 网页描述，会显示在搜索结果中
-
-# 显示配置
-toc: true  # 是否显示目录
-toc_number: true  # 目录是否带序号
-toc_depth: 3  # 目录深度（1-6）
-mathjax: false  # 是否启用MathJax公式渲染
-katex: false  # 是否启用KaTeX公式渲染（推荐优先使用）
-comments: true  # 是否开启评论功能
-copyright: true  # 是否显示版权声明（需主题支持）
-
-# 媒体配置
-cover:  # 文章封面图（优先显示）
-  #- /images/covers/{{ title | lower | replace(' ', '-') }}.jpg  # 本地路径示例
-  # - https://picsum.photos/1200/600  # 网络图片示例
-photos:  # 文章相册图（用于多图展示）
-  # - /images/content/img1.jpg
-  # - /images/content/img2.jpg
-
-# 功能配置
-top: false  # 是否置顶（数值越大优先级越高，如top: 100）
-pin: false  # 是否在首页固定显示
-password:  # 阅读密码（如需要加密文章）
-reprintPolicy: cc_by  # 转载协议（cc_by/cc_by_sa/no_reprint等）
-draft: false  # 是否为草稿（true时不参与部署）
+description: 本文详细介绍了人工智能的相关内容，包括原理、实现方法及应用场景。
+toc: true
+toc_number: true
+toc_depth: 3
+mathjax: false
+katex: false
+comments: true
+copyright: true
+top: false
+pin: false
+reprintPolicy: cc_by
+draft: false
+abbrlink: 52816
+cover:
+photos:
+password:
 ---
 
 <!-- 
