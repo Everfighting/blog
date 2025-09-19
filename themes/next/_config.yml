@@ -367,7 +367,7 @@ baidu_analytics: fa8b25a8de50c7a3401d49765b5192cd
 # Disqus
 disqus:
   enable: true
-  shortname: bingo_cai
+  shortname: everfight
   count: true
 
 # Hypercomments

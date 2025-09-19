@@ -3,13 +3,13 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Bingo's Blog
-subtitle: '不背锅日志'
-description: 'Keep Track of Every Step'
+title: 蔡大锅's
+subtitle: 不背锅日志
+description: Keep Track of Every Step
 keywords:
-author: 'Bingo Cai'
+author: Bingo Cai
 language: zh-Hans
-timezone: 'Asia/Shanghai'
+timezone: Asia/Shanghai
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
