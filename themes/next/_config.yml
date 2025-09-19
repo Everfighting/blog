@@ -92,12 +92,12 @@ index_with_subtitle: true
 # Value before `||` delimeter is the target link.
 # Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, question icon will be loaded.
 menu:
-  home: / || home
-  about: /about/ || user
-  tags: /tags/ || tags
-  categories: /categories/ || th
-  archives: /archives/ || archive
-  RSS: /atom.xml || fa fa-rss
+  home: /|| home
+  about: /about/|| user
+  tags: /tags/|| tags
+  categories: /categories/|| th
+  archives: /archives/|| archive
+  RSS: /atom.xml|| fa fa-rss
   #schedule: /schedule/ || calendar
   #sitemap: /sitemap.xml || sitemap
   #commonweal: /404/ || heartbeat
@@ -478,7 +478,7 @@ baidu_site_verification: codeva-IdaHYFTDQL
 
 # Bing Webmaster tools verification setting
 # See: https://www.bing.com/webmaster/
-#bing_site_verification:
+bing_site_verification: FC067E398F86AC9B4BF0C75855D30357
 
 # Yandex Webmaster tools verification setting
 # See: https://webmaster.yandex.ru/
