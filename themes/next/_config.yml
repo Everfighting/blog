@@ -136,7 +136,7 @@ scheme: Pisces
 social:
   GitHub: https://github.com/Everfighting || fa-brands fa-github 
   豆瓣: http://douban.com/people/your-user-name || fa-solid fa-book
-  知乎: http://www.zhihu.com/people/your-user-name || fa-brands fa-zhihu
+  知乎: http://www.zhihu.com/people/your-user-name || fa-solid fa-thumbs-up
   E-Mail: mailto:binbeing@126.com || fa-solid fa-envelope
   #StackOverflow: https://stackoverflow.com/yourname || stack-overflow
   #YouTube: https://youtube.com/yourname || youtube
