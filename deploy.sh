@@ -1,5 +1,6 @@
 #!/bin/bash
 export PATH="/root/.nvm/versions/node/v22.19.0/bin:$PATH"
+
 # 定义日志文件，方便排查问题
 LOG_FILE="/root/blog/deploy.log"
 # 部署开始时清空日志文件
