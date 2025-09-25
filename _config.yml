@@ -3,10 +3,10 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 蔡大锅's
+title: 蔡大锅's Blog
 subtitle: 不背锅日志
 description: Keep Track of Every Step
-keywords:
+keywords: 科技,AI,LLM,Agent,程序员,编程,阅读
 author: Bingo Cai
 language: zh-Hans
 timezone: Asia/Shanghai
