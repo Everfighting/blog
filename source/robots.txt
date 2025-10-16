@@ -8,5 +8,5 @@ Disallow: /vendors/
 Disallow: /css/
 Disallow: /fancybox/
 Sitemap: https://bingowith.tech/sitemap.xml
-Sitemap: https://bingowith.tech/baidu_sitemap.xml
+Sitemap: https://bingowith.tech/baidusitemap.xml
 
