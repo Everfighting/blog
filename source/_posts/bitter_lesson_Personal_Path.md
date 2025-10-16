@@ -1,7 +1,5 @@
 ---
 title: 读懂《苦涩教训》：AI 七十年真相与个人突围指南
-date:
-updated:
 author: Bingo
 categories:
   - 技术笔记
@@ -16,7 +14,9 @@ keywords:
   - The Bitter Lesson
   - Rich Sutton
   - OpenAI
-description: 结合近期大模型动态，我整理了对《The Bitter Lesson》的通俗解读，既有历史复盘也有实操建议，希望能帮你在算力浪潮中找对方向。
+description: >-
+  作为一名长期关注 AI 发展的技术人，Rich Sutton 这篇《The Bitter Lesson》被 OpenAI
+  工程师奉为“圣经”的短文，每次重读都有新感悟。结合近期大模型动态，我整理了这份通俗解读，既有历史复盘也有实操建议，希望能帮你在AI浪潮中找对方向。
 toc: true
 toc_number: true
 toc_depth: 3
@@ -28,15 +28,13 @@ top: false
 pin: false
 reprintPolicy: cc_by
 draft: false
-abbrlink: 
+abbrlink: 50634
+date:
+updated:
 cover:
 photos:
 password:
 ---
-
-# 读懂《苦涩教训》：AI 七十年真相与个人突围指南
-
-作为一名长期关注 AI 发展的技术人，Rich Sutton 这篇《The Bitter Lesson》被 OpenAI 工程师奉为“圣经”的短文，每次重读都有新感悟。结合近期大模型动态，我整理了这份通俗解读，既有历史复盘也有实操建议，希望能帮你在算力浪潮中找对方向。
 
 ## 一、“苦涩教训”到底在说什么？（核心观点通俗版）
 
