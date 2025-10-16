@@ -107,29 +107,20 @@ Sutton 总结的规律堪称真理：
 
 ## 参考来源
 
-1. 核心原文：Rich Sutton《The Bitter Lesson》原版  
-   [http://www.incompleteideas.net/IncIdeas/BitterLesson.html](http://www.incompleteideas.net/IncIdeas/BitterLesson.html)
+1. [核心原文：Rich Sutton《The Bitter Lesson》原版](http://www.incompleteideas.net/IncIdeas/BitterLesson.html)
 
-2. 1997 深蓝事件：IBM 官方报道《Deep Blue | IBM》  
-   [https://www.ibm.com/qa-ar/history/deep-blue](https://www.ibm.com/qa-ar/history/deep-blue)
+2. [1997 深蓝事件：IBM 官方报道《Deep Blue | IBM》](https://www.ibm.com/qa-ar/history/deep-blue)
 
-3. 1970 年代 DARPA 语音竞赛：CMU 计算机学院 50 周年回顾《Pawn to Queen Four: CMU Celebrates 50 Years of Speech Research》  
-   [https://www.cs.cmu.edu/news/2022/50-years-speech-recognition](https://www.cs.cmu.edu/news/2022/50-years-speech-recognition)
+3. [1970 年代 DARPA 语音竞赛：CMU 计算机学院 50 周年回顾《Pawn to Queen Four: CMU Celebrates 50 Years of Speech Research》](https://www.cs.cmu.edu/news/2022/50-years-speech-recognition)
 
-4. 1970 年代语音系统技术细节：历史百科网《自然语言语音理解系统》  
-   [https://www.freedefine.cn/wenzhan/47417.html](https://www.freedefine.cn/wenzhan/47417.html)
+4. [1970 年代语音系统技术细节：历史百科网《自然语言语音理解系统》](https://www.freedefine.cn/wenzhan/47417.html)
 
-5. 2025 Noam 算力观点：网易科技《谷歌回归 27 亿，美国 AI 行业迎来突破》  
-   [http://m.163.com/dy/article/KA7B9N7I05565FLW.html](http://m.163.com/dy/article/KA7B9N7I05565FLW.html)
+5. [2025 Noam 算力观点：网易科技《谷歌回归 27 亿，美国 AI 行业迎来突破》](http://m.163.com/dy/article/KA7B9N7I05565FLW.html)
 
-6. 2025 OpenAI 动态：新浪财经《Altman 携高管“回答一切”:Ilya 看到了超凡未来》  
-   [https://finance.sina.com.cn/roll/2024-11-02/doc-incurtuh2378797.shtml](https://finance.sina.com.cn/roll/2024-11-02/doc-incurtuh2378797.shtml)
+6. [2025 OpenAI 动态：新浪财经《Altman 携高管 “回答一切”:Ilya 看到了超凡未来》](https://finance.sina.com.cn/roll/2024-11-02/doc-incurtuh2378797.shtml)
 
-7. 历史案例汇总：51CTO 博客《一文讲透 AI 历史上的 10 个关键时刻》  
-   [https://blog.51cto.com/u_15767091/14002699](https://blog.51cto.com/u_15767091/14002699)
+7. [历史案例汇总：51CTO 博客《一文讲透 AI 历史上的 10 个关键时刻》](https://blog.51cto.com/u_15767091/14002699)
 
-8. 人类与 AI 知识对比：LinkedIn《Human knowledge vs AI knowledge : a visual summary》  
-   [http://www.linkedin.com/pulse/human-knowledge-vs-ai-visual-summary-laurent-gouzènes](http://www.linkedin.com/pulse/human-knowledge-vs-ai-visual-summary-laurent-gouzènes)
+8. [人类与 AI 知识对比：LinkedIn《Human knowledge vs AI knowledge : a visual summary》](http://www.linkedin.com/pulse/human-knowledge-vs-ai-visual-summary-laurent-gouzènes)
 
-9. 2025 模型动态：《关于 Grok3 和 DeepSeek 背后苦涩教训引发的思考》  
-   [http://www.shurl.cc/cb85d177c9f31c9b6f86387a25e2afb8](http://www.shurl.cc/cb85d177c9f31c9b6f86387a25e2afb8)
+9. [2025 模型动态：《关于 Grok3 和 DeepSeek 背后苦涩教训引发的思考》](http://www.shurl.cc/cb85d177c9f31c9b6f86387a25e2afb8)
