@@ -1,20 +1,15 @@
 ---
-title: 我的第三个博客
+title: 我的测试博客
 date:
 updated:
 author: Bingo
 categories:
-  - 技术笔记
-  - 生活感悟
   - 操作指南
 tags:
   - Hexo
-  - Next主题
-  - Markdown
 keywords:
-  - AI
-  - 人工智能
-description: 本文详细介绍了人工智能的相关内容，包括原理、实现方法及应用场景。
+  - Hexo
+description: 本文详细介绍了hexo设置和使用的方法，并进行了测试
 toc: true
 toc_number: true
 toc_depth: 3

@@ -1,6 +1,42 @@
+---
+title: 读懂《苦涩教训》：AI 七十年真相与个人突围指南
+date:
+updated:
+author: Bingo
+categories:
+  - 技术笔记
+tags:
+  - 个人成长
+  - 大模型
+  - AI
+keywords:
+  - 个人成长
+  - 大模型
+  - AI
+  - The Bitter Lesson
+  - Rich Sutton
+  - OpenAI
+description: 结合近期大模型动态，我整理了对《The Bitter Lesson》的通俗解读，既有历史复盘也有实操建议，希望能帮你在算力浪潮中找对方向。
+toc: true
+toc_number: true
+toc_depth: 3
+mathjax: false
+katex: false
+comments: true
+copyright: true
+top: false
+pin: false
+reprintPolicy: cc_by
+draft: false
+abbrlink: 
+cover:
+photos:
+password:
+---
+
 # 读懂《苦涩教训》：AI 七十年真相与个人突围指南
 
-作为一名长期关注 AI 发展的技术人，Rich Sutton 这篇《The Bitter Lesson》被 OpenAI 工程师奉为 “圣经” 的短文，每次重读都有新感悟。结合近期大模型动态，我整理了这份通俗解读，既有历史复盘也有实操建议，希望能帮你在算力浪潮中找对方向。
+作为一名长期关注 AI 发展的技术人，Rich Sutton 这篇《The Bitter Lesson》被OpenAI工程师奉为 “圣经” 的短文，每次重读都有新感悟。结合近期大模型动态，我整理了这份通俗解读，既有历史复盘也有实操建议，希望能帮你在算力浪潮中找对方向。
 
 The Bitter Lesson 中文翻译版 
 
@@ -16,7 +52,7 @@ The Bitter Lesson 中文翻译版
 
 根本原因很现实：**算力成本每年都在暴跌**（摩尔定律持续生效）。你还在纠结 “怎么教机器” 时，别人已经靠堆算力让通用方法跑通了，而且越跑越强。
 
-![AI发展路径对比图：人类知识注入vs算力+通用方法 ](/download/AI发展路径对比图.jpg)
+![AI发展路径对比图：人类知识注入vs算力+通用方法 ](/images/content/AI发展路径对比图.jpg)
 
 
 
@@ -38,7 +74,7 @@ Sutton 总结的规律堪称真理：
 
 > 人类知识注入→短期进步→遇瓶颈→被 “算力 + 通用方法” 秒杀
 
-![AI历史关键突破时间线](/download/AI历史关键突破时间线.jpg)
+![AI历史关键突破时间线](/images/content/AI历史关键突破时间线.jpg)
 
 
 
@@ -57,7 +93,7 @@ Sutton 总结的规律堪称真理：
 
 
 
-![2025 AI算力路线对比图](/download/2025AI算力路线对比图-信息图.jpg)
+![2025 AI算力路线对比图](/images/content/2025AI算力路线对比图-信息图.jpg)
 
 
 ## 四、个人怎么应对？三个 “反焦虑” 行动指南
@@ -95,7 +131,7 @@ Sutton 总结的规律堪称真理：
 *   **稀缺领域抓知识**：医疗、法律等数据少的领域，人类经验仍很重要。比如学医，基础解剖知识必须扎实，但也要用 AI 辅助看 CT 片（知识 + 算力结合）。
 
 
-![个人AI时代能力提升流程图](/download/个人AI时代能力提升流程图.jpg)
+![个人AI时代能力提升流程图](/images/content/个人AI时代能力提升流程图.jpg)
 
 
 ## 参考来源
