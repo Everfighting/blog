@@ -25,6 +25,12 @@ abbrlink: 52816
 cover:
 photos:
 password:
+lazyload: true
+indexing: true
+share: true
+codeblock:
+  line_number: true
+toc_collapse: true
 ---
 
 <!-- 

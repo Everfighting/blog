@@ -24,7 +24,7 @@ copyright: true  # 是否显示版权声明（需主题支持）
 
 # 媒体配置
 cover:  # 文章封面图（优先显示）
-  - /images/covers/{{ title | lower | replace(' ', '-') }}.jpg  # 本地路径示例
+  #- /images/covers/{{ title | lower | replace(' ', '-') }}.jpg  # 本地路径示例
   # - https://picsum.photos/1200/600  # 网络图片示例
 photos:  # 文章相册图（用于多图展示）
   # - /images/content/img1.jpg
@@ -36,6 +36,12 @@ pin: false  # 是否在首页固定显示
 password:  # 阅读密码（如需要加密文章）
 reprintPolicy: cc_by  # 转载协议（cc_by/cc_by_sa/no_reprint等）
 draft: false  # 是否为草稿（true时不参与部署）
+lazyload: true # 功能：开启图片懒加载，解决多图文章初始加载慢的问题，提升页面打开速度。
+indexing: true # 功能：控制搜索引擎是否收录该文章
+share: true  # 功能：开启社交分享功能
+codeblock:  # 功能：为代码块显示行号
+  line_number: true
+toc_collapse: true  # 功能：在移动端自动隐藏目录
 ---
 
 <!-- 
