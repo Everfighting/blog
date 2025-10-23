@@ -98,9 +98,9 @@ menu:
   categories: /categories/|| th
   archives: /archives/|| archive
   RSS: /atom.xml|| fa fa-rss
-  #schedule: /schedule/ || calendar
-  #sitemap: /sitemap.xml || sitemap
-  #commonweal: /404/ || heartbeat
+  #schedule: /schedule/|| calendar
+  #sitemap: /sitemap.xml|| sitemap
+  #commonweal: /404/|| heartbeat
 
 # Enable/Disable menu icons.
 menu_icons:
