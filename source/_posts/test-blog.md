@@ -4,11 +4,11 @@ date:
 updated:
 author: Bingo
 categories:
-  - 操作指南
+- 操作指南
 tags:
-  - Hexo
+- Hexo
 keywords:
-  - Hexo
+- Hexo
 description: 本文详细介绍了hexo设置和使用的方法，并进行了测试
 toc: true
 toc_number: true
