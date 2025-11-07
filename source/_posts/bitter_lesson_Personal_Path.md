@@ -3,16 +3,16 @@ title: 读懂《苦涩教训》：AI 七十年真相与个人突围指南
 author: Bingo
 categories: 技术笔记
 tags:
-- 个人成长
-- 大模型
-- AI
+  - 个人成长
+  - 大模型
+  - AI
 keywords:
-- 个人成长
-- 大模型
-- AI
-- The Bitter Lesson
-- Rich Sutton
-- OpenAI
+  - 个人成长
+  - 大模型
+  - AI
+  - The Bitter Lesson
+  - Rich Sutton
+  - OpenAI
 description: >-
   作为一名长期关注 AI 发展的技术人，Rich Sutton 这篇《The Bitter Lesson》被 OpenAI
   工程师奉为“圣经”的短文，每次重读都有新感悟。结合近期大模型动态，我整理了这份通俗解读，既有历史复盘也有实操建议，希望能帮你在AI浪潮中找对方向。
