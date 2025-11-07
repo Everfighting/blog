@@ -1,8 +1,7 @@
 ---
 title: 读懂《苦涩教训》：AI 七十年真相与个人突围指南
 author: Bingo
-categories:
-- 技术笔记
+categories: 技术笔记
 tags:
 - 个人成长
 - 大模型
