@@ -37,9 +37,11 @@ pin: false
 reprintPolicy: cc_by
 draft: false
 abbrlink: bitter-lesson-ai-seventy-years
-cover: /images/covers/bitter-lesson-cover.jpg
+cover: /images/content/个人AI时代能力提升流程图.jpg
 photos:
-  - /images/content/bitter-lesson-ai-evolution.jpg
+  - /images/content/AI发展路径对比图.jpg
+  - /images/content/AI历史关键突破时间线.jpg
+  - /images/content/2025AI算力路线对比图-信息图.jpg
 password:
 ---
 
@@ -57,7 +59,7 @@ password:
 
 ### 核心图示：AI 发展路径对比
 
-![AI 发展路径对比：人类知识注入 vs 算力 + 通用方法](/images/content/bitter-lesson-path-comparison.jpg)
+![AI 发展路径对比：人类知识注入 vs 算力 + 通用方法](/images/content/AI发展路径对比图.jpg)
 
 ## 二、历史反复验证：四个领域的"打脸时刻"
 
@@ -81,7 +83,7 @@ AlexNet 出现前，研究者靠人工找"边缘特征"，而 CNN（卷积神经
 
 ### 历史时间线图
 
-![AI 历史关键突破时间线](/images/content/ai-history-timeline.jpg)
+![AI 历史关键突破时间线](/images/content/AI历史关键突破时间线.jpg)
 
 Sutton 总结的规律堪称真理：
 
@@ -91,13 +93,13 @@ Sutton 总结的规律堪称真理：
 
 今年以来的大模型动态，再次印证了"苦涩教训"的正确性：
 
-### 1. 前任科学家观点分歧
+### 1. 前首席科学家观点分歧
 
 前 OpenAI 首席科学家 Ilya 说"预训练到头了"，但 Transformer 共同发明者 Noam 立刻补刀："提升实时算力才是关键"，他在 HotChips 2025 大会上直言"算力越多越好"。
 
 ### 2. 不同公司的路线对比
 
-- 马斯克的 Grok3：堆算力硬冲参数记录
+- 马斯克的 Grok 3：堆算力硬冲参数记录
 - DeepSeek-R1：优化工程省算力
 - 本质都是"靠通用方法挖算力潜力"
 
@@ -107,7 +109,7 @@ Sutton 总结的规律堪称真理：
 
 ### 算力路线对比图
 
-![2025 AI 算力路线对比](/images/content/2025-ai-compute-comparison.jpg)
+![2025 AI 算力路线对比](/images/content/2025AI算力路线对比图-信息图.jpg)
 
 现在行业里没人再纠结"怎么把人类知识灌进模型"，而是比拼"如何让通用模型更高效地利用算力"。
 
@@ -139,7 +141,7 @@ Sutton 总结的规律堪称真理：
 
 ### 能力提升流程图
 
-![个人 AI 时代能力提升流程](/images/content/personal-ai-capability-flow.jpg)
+![个人 AI 时代能力提升流程](/images/content/个人AI时代能力提升流程图.jpg)
 
 ### 3. 避坑提醒：知识不是没用，别当"天花板"
 
@@ -172,8 +174,8 @@ Sutton 总结的规律堪称真理：
 4. [1970 年代 DARPA 语音竞赛：CMU 计算机学院 50 周年回顾](https://www.cs.cmu.edu/news/2022/50-years-speech-recognition)
 5. [2012 AlexNet 论文：《ImageNet Classification with Deep Convolutional Neural Networks》](https://papers.nips.cc/paper/2012/c3a8c62e-27c6-4944-8d42-2d9297d6e1d/6438e586.html)
 6. [2025 Noam Shazeir 观点：HotChips 2025 演讲](https://www.hotchips.org/2025/hotchips-keynotes/)
-7. [2025 Grok3 技术报告：马斯克 xAI 官方文档](https://x.ai/blog/grok-3/)
-8. [2025 DeepSeek-R1 技术报告：深度求索官方文档](https://www.deepseek.com/zh/research/r1/)
+7. [2025 Grok 3 技术报告：马斯克 xAI 官方文档](https://x.ai/blog/grok-3/)
+8. [2025 DeepSeek-R1 技术报告：深度搜索官方文档](https://www.deepseek.com/zh/research/r1/)
 
 ---
 
