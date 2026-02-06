@@ -97,7 +97,7 @@ Sutton 总结的规律堪称真理：
 
 ### 2. 不同公司的路线对比
 
-- 马斯克的 Grok 3：堆算力硬冲参数记录
+- 马斯克的 Grok3：堆算力硬冲参数记录
 - DeepSeek-R1：优化工程省算力
 - 本质都是"靠通用方法挖算力潜力"
 
@@ -172,7 +172,7 @@ Sutton 总结的规律堪称真理：
 4. [1970 年代 DARPA 语音竞赛：CMU 计算机学院 50 周年回顾](https://www.cs.cmu.edu/news/2022/50-years-speech-recognition)
 5. [2012 AlexNet 论文：《ImageNet Classification with Deep Convolutional Neural Networks》](https://papers.nips.cc/paper/2012/c3a8c62e-27c6-4944-8d42-2d9297d6e1d/6438e586.html)
 6. [2025 Noam Shazeir 观点：HotChips 2025 演讲](https://www.hotchips.org/2025/hotchips-keynotes/)
-7. [2025 Grok 3 技术报告：马斯克 xAI 官方文档](https://x.ai/blog/grok-3/)
+7. [2025 Grok3 技术报告：马斯克 xAI 官方文档](https://x.ai/blog/grok-3/)
 8. [2025 DeepSeek-R1 技术报告：深度求索官方文档](https://www.deepseek.com/zh/research/r1/)
 
 ---
