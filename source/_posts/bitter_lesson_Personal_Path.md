@@ -3,16 +3,8 @@ title: 读懂《苦涩教训》：AI 七十年真相与个人突围指南
 author: Bingo
 date: 2026-01-15 10:00:00
 updated: 2026-01-15 10:00:00
-categories:
-  - 技术观察
-  - AI思考
-tags:
-  - 个人成长
-  - 大模型
-  - AI
-  - 强化学习
-  - Rich Sutton
-  - 算力
+categories: [技术观察, AI思考]
+tags: [个人成长, 大模型, AI, 强化学习, Rich Sutton, 算力]
 keywords:
   - The Bitter Lesson
   - Rich Sutton
