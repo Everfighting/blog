@@ -4,7 +4,14 @@ author: Bingo
 date: 2026-01-15 10:00:00
 updated: 2026-01-15 10:00:00
 categories: [技术观察, AI思考]
-tags: [个人成长, 大模型, AI, 强化学习, Rich Sutton, 算力]
+tags:
+  - tags: 个人成长
+  - 大模型
+  - AI
+  - 强化学习
+  - Rich Sutton
+  - 算力
+
 keywords: [The Bitter Lesson, Rich Sutton, 强化学习, 算力, 通用方法, AI发展史, 预训练]
 description: 深入解读Rich Sutton的《The Bitter Lesson》，探讨AI七十年发展史与个人成长启示
 abbrlink: bitter-lesson-ai-seventy-years
