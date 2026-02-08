@@ -5,18 +5,10 @@ date: 2026-01-15 10:00:00
 updated: 2026-01-15 10:00:00
 categories: [技术观察, AI思考]
 tags: [个人成长, 大模型, AI, 强化学习, Rich Sutton, 算力]
-keywords:
-  - The Bitter Lesson
-  - Rich Sutton
-  - 强化学习
-  - 算力
-  - 通用方法
-  - AI发展史
-  - 预训练
-description: >-
-  作为一名长期关注 AI 发展的技术人，Rich Sutton 这篇《The Bitter Lesson》被 OpenAI 
-  工程师奉为"圣经"的短文，每次重读都有新感悟。结合近期大模型动态，我整理了这份通俗解读，
-  既有历史复盘也有实操建议，希望能帮你在 AI 浪潮中找对方向。
+keywords: [The Bitter Lesson, Rich Sutton, 强化学习, 算力, 通用方法, AI发展史, 预训练]
+description: 深入解读Rich Sutton的《The Bitter Lesson》，探讨AI七十年发展史与个人成长启示
+abbrlink: bitter-lesson-ai-seventy-years
+---
 toc: true
 toc_number: true
 toc_depth: 3
