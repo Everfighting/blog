@@ -1,5 +1,5 @@
 ---
 title: tags
-date: 2025-09-19 17:16:12
-tags: "tags"
+date: 2026-02-09 23:11:47
+type: "tags"
 ---
