@@ -1,9 +1,6 @@
 ---
 title: 读懂《苦涩教训》：AI 七十年真相与个人突围指南
-author: Bingo
 date: 2026-01-15 10:00:00
-updated: 2026-01-15 10:00:00
-categories: 技术观察
 tags:
   - 个人成长
   - 大模型
@@ -12,26 +9,14 @@ tags:
   - Rich Sutton
   - 算力
 
-keywords: [The Bitter Lesson, Rich Sutton, 强化学习, 算力, 通用方法, AI发展史, 预训练]
+categories: 技术观察
 description: 深入解读Rich Sutton的《The Bitter Lesson》，探讨AI七十年发展史与个人成长启示
 abbrlink: bitter-lesson-ai-seventy-years
 toc: true
 toc_number: true
-toc_depth: 3
-mathjax: false
-katex: false
-comments: true
-copyright: true
-top: false
-pin: false
-reprintPolicy: cc_by
-draft: false
-cover: /images/bitter-lesson-ai-seventy-years/个人AI时代能力提升流程图.jpg
-photos:
-  - /images/bitter-lesson-ai-seventy-years/AI发展路径对比图.jpg
 ---
-
-## 一、"苦涩教训"到底在说什么？（核心观点通俗版）
+toc_number: true
+---
 
 强化学习之父 Rich Sutton 在 2019 年写下的《The Bitter Lesson》，撕开了 AI 发展的一个反直觉真相：
 
