@@ -44,25 +44,6 @@ codeblock:  # 功能：为代码块显示行号
 toc_collapse: true  # 功能：在移动端自动隐藏目录
 ---
 
-<!-- 
-  📝 写作指南：
-  1. 基础设置：
-     - 发布前务必修改categories和tags，删除"未分类"和"无标签"
-     - 每次更新文章后，手动同步updated字段时间
-
-  2. 媒体资源：
-     - 建议在source/images下创建covers（封面）和content（内容图）文件夹
-     - 图片命名格式：文章标题小写+横线分隔，如"hello-world-1.jpg"
-
-  3. 格式规范：
-     - 标题层级：# 一级标题（仅1个）→ ## 二级标题 → ### 三级标题
-     - 代码块需指定语言，如```javascript
-     - 表格、公式等复杂格式建议先在Markdown编辑器中测试
-
-  4. 发布流程：
-     - 本地预览：hexo s
-     - 部署命令：hexo clean && hexo g -d
--->
 
 ## 引言
 
