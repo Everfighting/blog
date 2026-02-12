@@ -51,7 +51,7 @@
               {% if theme.menu.archives %}
                 <a href="{{ url_for(theme.menu.archives[0].path) }}">
               {% else %}
-                <a href="{{ url_for(config.archive_dir) | trim }}">
+                <a href="{{ url_for('archive') }}">
               {% endif %}
                   <span class="site-state-item-count">{{ site.posts.length }}</span>
                   <span class="site-state-item-name">{{ __('state.posts') }}</span>
