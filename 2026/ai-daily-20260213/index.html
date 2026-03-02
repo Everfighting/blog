@@ -1,0 +1,1760 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+  <meta name="google-site-verification" content="j9K0QHVhy5Is2MyrlHKAdrH9TTZmmQ8bQD16-miJTT0" />
+
+
+
+  <meta name="msvalidate.01" content="FC067E398F86AC9B4BF0C75855D30357" />
+
+
+
+
+
+
+  <meta name="baidu-site-verification" content="codeva-IdaHYFTDQL" />
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="https://fonts.lug.ustc.edu.cn/css?family=Noto Serif SC:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="AI日报,AI知识点,论文推荐," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="蔡大锅's Blog" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="每日AI知识点推送与论文推荐汇总">
+<meta property="og:type" content="article">
+<meta property="og:title" content="AI日报 2026-02-13">
+<meta property="og:url" content="http://bingowith.tech/2026/ai-daily-20260213/index.html">
+<meta property="og:site_name" content="蔡大锅&#39;s Blog">
+<meta property="og:description" content="每日AI知识点推送与论文推荐汇总">
+<meta property="og:locale">
+<meta property="article:published_time" content="2026-02-13T15:59:59.000Z">
+<meta property="article:modified_time" content="2026-02-13T08:45:25.734Z">
+<meta property="article:author" content="Bingo Cai">
+<meta property="article:tag" content="AI日报">
+<meta property="article:tag" content="AI知识点">
+<meta property="article:tag" content="论文推荐">
+<meta name="twitter:card" content="summary">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://bingowith.tech/2026/ai-daily-20260213/"/>
+
+
+
+
+
+  <title>AI日报 2026-02-13 | 蔡大锅's Blog</title>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?fa8b25a8de50c7a3401d49765b5192cd";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+<meta name="generator" content="Hexo 8.0.0"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">蔡大锅's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">不背锅日志</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://bingowith.tech/2026/ai-daily-20260213/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="蔡大锅's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">AI日报 2026-02-13</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2026-02-13T23:59:59+08:00">
+                2026-02-13
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/AI%E6%97%A5%E6%8A%A5/" itemprop="url" rel="index">
+                    <span itemprop="name">AI日报</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2026/ai-daily-20260213/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="/2026/ai-daily-20260213/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  1:12
+                </span>
+              
+            </div>
+          
+
+          
+              <div class="post-description">
+                  每日AI知识点推送与论文推荐汇总
+              </div>
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="📚-今日知识点"><a href="#📚-今日知识点" class="headerlink" title="📚 今日知识点"></a>📚 今日知识点</h2><h3 id="早上8-00推送"><a href="#早上8-00推送" class="headerlink" title="早上8:00推送"></a>早上8:00推送</h3><ol>
+<li><p>【架构】LangChain vs LangGraph：Chain是线性流程，Graph是循环流程。复杂Agent用LangGraph，简单任务用LangChain足够。</p>
+</li>
+<li><p>【项目经验】成本优化：小模型+Prompt工程 &gt; 大模型+暴力Prompt。7B模型调优后，很多任务能达到GPT-4的80%效果，成本只有1&#x2F;10。</p>
+</li>
+<li><p>【方法论】Debug新技巧：把错误信息和相关代码扔给AI，让它在本地环境模拟执行（如果有能力），或分析可能原因。比自己Google快5倍。</p>
+</li>
+</ol>
+<h3 id="中午11-00推送"><a href="#中午11-00推送" class="headerlink" title="中午11:00推送"></a>中午11:00推送</h3><ol start="4">
+<li><p>【方法论】Debug新技巧：把错误信息和相关代码扔给AI，让它在本地环境模拟执行（如果有能力），或分析可能原因。比自己Google快5倍。</p>
+</li>
+<li><p>【感悟】与AI协作的三个层次：1.把AI当搜索引擎 2.把AI当工具（写作、编程） 3.把AI当思维伙伴（共创、辩论）。大部分人还停留在第一层。</p>
+</li>
+<li><p>【方法论】AI辅助读书：读完一章，让AI用费曼技巧给你讲一遍，发现理解偏差。被动阅读变为主动验证。</p>
+</li>
+</ol>
+<h3 id="下午15-00推送"><a href="#下午15-00推送" class="headerlink" title="下午15:00推送"></a>下午15:00推送</h3><ol start="7">
+<li><p>【Vibe Coding】用自然语言解释需求比写伪代码更有效：AI理解上下文比理解语法更擅长。说清楚’为什么做’比’怎么做’重要。</p>
+</li>
+<li><p>【Vibe Coding】相信AI但验证结果：让AI写复杂逻辑，但你必须理解代码结构。不理解的东西，永远不要直接部署到生产环境。</p>
+</li>
+<li><p>【方法论】AI辅助读书：读完一章，让AI用费曼技巧给你讲一遍，发现理解偏差。被动阅读变为主动验证。</p>
+</li>
+<li><p>【架构】RAG三要素：文档切分（chunk size 512-1024）、向量数据库（FAISS&#x2F;Pinecone）、召回+重排（BM25+语义检索）。</p>
+</li>
+<li><p>【架构】Prompt Engineering的层次：1.指令明确 2.提供示例 3.思维链 4.自我反思。大部分问题在前两步就能解决。</p>
+</li>
+<li><p>【LLM】上下文窗口是记忆容量：GPT-4是128K，Claude是200K。长对话中可以用滑动窗口或RAG技术避免遗忘关键信息。</p>
+</li>
+<li><p>【感悟】AI时代的竞争力变化：不再是’谁能记住更多’，而是’谁能提出更好问题’和’谁能判断AI答案的质量’。</p>
+</li>
+<li><p>【架构】LangChain vs LangGraph：Chain是线性流程，Graph是循环流程。复杂Agent用LangGraph，简单任务用LangChain足够。</p>
+</li>
+<li><p>【感悟】AI不是万能药：它能加速已知路径的探索，但无法替代方向判断。选择什么问题去解决，比如何解决更重要。</p>
+</li>
+</ol>
+<hr>
+<h2 id="📖-论文推荐"><a href="#📖-论文推荐" class="headerlink" title="📖 论文推荐"></a>📖 论文推荐</h2><ol>
+<li><p><strong>Constitutional AI (2022)</strong></p>
+<ul>
+<li>作者: Anthropic</li>
+<li>简介: 引用2000+！宪法AI，通过自我批评避免有害输出。Claude模型的核心安全机制，RLHF的替代方案。</li>
+</ul>
+</li>
+<li><p><strong>GPT-2: Language Models are Unsupervised Multitask Learners (2019)</strong></p>
+<ul>
+<li>作者: Radford et al. (OpenAI)</li>
+<li>简介: 引用2万+！1.5B参数模型，展示大规模无监督训练的潜力。是GPT-3、ChatGPT的先驱。</li>
+</ul>
+</li>
+<li><p><strong>Instruction Tuning (2022)</strong></p>
+<ul>
+<li>作者: Wei et al. (Google)</li>
+<li>简介: 引用5000+！证明指令微调让单一模型完成多任务。ChatGPT等聊天机器人的技术基础。</li>
+</ul>
+</li>
+<li><p><strong>Chain of Density (2024)</strong></p>
+<ul>
+<li>作者: Various Researchers</li>
+<li>简介: 迭代增加摘要密度，简洁且信息丰富。长文档摘要必备。</li>
+</ul>
+</li>
+<li><p><strong>Mixture of Agents (2024)</strong></p>
+<ul>
+<li>作者: Together AI</li>
+<li>简介: 多Agent协作框架，每个专注一领域。通过aggregation得到更好结果。</li>
+</ul>
+</li>
+<li><p><strong>Emergent Abilities (2022)</strong></p>
+<ul>
+<li>作者: Wei et al. (Google)</li>
+<li>简介: 揭示某些能力只在模型规模达到阈值后出现。解释为什么大模型比小模型强很多。</li>
+</ul>
+</li>
+<li><p><strong>Prompt Caching (2024)</strong></p>
+<ul>
+<li>作者: Anthropic, OpenAI</li>
+<li>简介: 缓存prefix重复使用不收费。RAG、长对话可节省50%+成本。生产环境必备优化。</li>
+</ul>
+</li>
+<li><p><strong>Attention Is All You Need (2017)</strong></p>
+<ul>
+<li>作者: Vaswani et al. (Google Brain)</li>
+<li>简介: 引用10万+！Transformer论文，彻底改变NLP领域。自注意力机制是所有大模型（GPT、BERT、Claude）的架构基础。必读经典。</li>
+</ul>
+</li>
+<li><p><strong>DeepSeek-V3: Technical Report (2025)</strong></p>
+<ul>
+<li>作者: DeepSeek Team</li>
+<li>简介: 开源MoE架构，671B参数激活仅37B。性能媲美GPT-4，训练成本560万美元。开源的里程碑。</li>
+</ul>
+</li>
+<li><p><strong>Tree of Thoughts (2023)</strong></p>
+<ul>
+<li>作者: Yao et al.</li>
+<li>简介: 引用1500+！思维树方法，探索多个推理路径并回溯。数学、编程等复杂任务效果显著。</li>
+</ul>
+</li>
+<li><p><strong>Toolformer (2023)</strong></p>
+<ul>
+<li>作者: Schick et al.</li>
+<li>简介: 引用1000+！让模型学习调用外部工具。现代AI工具调用的基础，Agent能力扩展的关键。</li>
+</ul>
+</li>
+<li><p><strong>GraphRAG (2024)</strong></p>
+<ul>
+<li>作者: Microsoft Research</li>
+<li>简介: 结合知识图谱+社区检测，解决RAG全局性盲点。企业级知识库必备技术。</li>
+</ul>
+</li>
+<li><p><strong>Long Context Beyond 1M Tokens (2024)</strong></p>
+<ul>
+<li>作者: Google, Anthropic</li>
+<li>简介: Gemini 1.5、Claude 3突破1M上下文。长文档、代码库、视频内容处理成为可能。</li>
+</ul>
+</li>
+<li><p><strong>Qwen2.5 (2024)</strong></p>
+<ul>
+<li>作者: Alibaba</li>
+<li>简介: 72B开源，性能超越闭源模型。数学、编程、长文本突出。中国开源AI的重要里程碑。</li>
+</ul>
+</li>
+<li><p><strong>Claude 3.5 Sonnet (2024)</strong></p>
+<ul>
+<li>作者: Anthropic</li>
+<li>简介: 编程、推理SOTA，Artifacts功能革新代码预览。AI辅助编程的新标杆。</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="📰-今日最新AI新闻（时效性更新）"><a href="#📰-今日最新AI新闻（时效性更新）" class="headerlink" title="📰 今日最新AI新闻（时效性更新）"></a>📰 今日最新AI新闻（时效性更新）</h2><h3 id="💰-融资-投资-并购"><a href="#💰-融资-投资-并购" class="headerlink" title="💰 融资&#x2F;投资&#x2F;并购"></a>💰 融资&#x2F;投资&#x2F;并购</h3><ol>
+<li><p><strong>金浦智能:AI浪潮下硬科技投资破局,并购整合铸就产业龙头</strong></p>
+<ul>
+<li>发布时间：2026-02-12 11:39:40</li>
+<li>关键词：金浦智能、AI投资、硬科技</li>
+<li>内容摘要：金浦智能顺势而为锚定支撑AI产业发展的硬件技术,在半导体设备与零部件、新型光电、先进存储等关键领域精准布局,同时拓展商业航天、可控核聚变等前沿赛道。在IPO渠道优化与并购市场活跃的双重利好下,金浦智能凭借精准的项目筛选、多元的投后赋能与灵活的退出策略,收获了主板IPO、并购整合、投后赋能等多项亮眼成果。</li>
+</ul>
+</li>
+<li><p><strong>国务院国资委发文,算力市场迎重大利好!DeepSeek、智谱大模型上新</strong></p>
+<ul>
+<li>发布时间：2026-02-12 08:25:43</li>
+<li>关键词：国务院国资委、算力投资、DeepSeek、智谱GLM-5</li>
+<li>内容摘要：国务院国资委日前提出,中央企业要强化投资牵引,积极扩大算力有效投资,推进”算力+电力”协同发展,提升全链条数据治理能力,不断夯实人工智能产业基础底座。</li>
+</ul>
+</li>
+</ol>
+<h3 id="🚀-产品-服务发布"><a href="#🚀-产品-服务发布" class="headerlink" title="🚀 产品&#x2F;服务发布"></a>🚀 产品&#x2F;服务发布</h3><ol start="3">
+<li><p><strong>科技巨头扎堆发布大模型,DeepSeek新模型成热点!详解国产大模型的机遇</strong></p>
+<ul>
+<li>发布时间：2026-02-13 08:01:00</li>
+<li>关键词：DeepSeek V4、智谱GLM-5、阿里Qwen 3.5、字节Seedance 2.0</li>
+<li>内容摘要：2月15日-2月23日,长达9天的春节假期即将到来,不少行业巨头均瞄准”春节档”推出旗舰产品,这或将带来市场热点。智谱2月11日发布新一代旗舰模型GLM-5,在编程方面实现重要进步。此外,DeepSeek V4大模型、阿里巴巴Qwen 3.5等有望在2月中旬推出,这将继续推动国产大模型发展。</li>
+</ul>
+</li>
+<li><p><strong>智谱发布新模型GLM-5;DeepSeek灰度测试百万上下文</strong></p>
+<ul>
+<li>发布时间：2026-02-12 10:09:28</li>
+<li>关键词：智谱GLM-5、DeepSeek V4、百万Token上下文</li>
+<li>内容摘要：2026年2月11日深夜,智谱发布新一代旗舰模型GLM-5。在Coding与Agent能力上,GLM-5取得开源SOTA表现,在真实编程场景的使用体感逼近Claude Opus 4.5,擅长复杂系统工程与长程Agent任务。DeepSeek也在春节档更新了其V4版本,支持百万Token上下文长度,进一步拓展了模型的应用边界。</li>
+</ul>
+</li>
+<li><p><strong>智谱GLM-5、DeepSeek V4、MiniMax 2.5、字节Seedance 2.0：春节档AI大模型扎堆发布</strong></p>
+<ul>
+<li>发布时间：2026-02-12 07:00:03</li>
+<li>关键词：智谱GLM-5、DeepSeek V4、MiniMax 2.5、字节Seedance 2.0</li>
+<li>内容摘要：2月11日,多位用户反馈DeepSeek已在网页及App端进行版本更新,上下文窗口由原有的128K直接提升至1M(百万token)级别。GLM-5采用DeepSeek稀疏注意力(DSA)技术,参数规模达到7450亿,是上一代GLM-4.7的两倍。其具备78层隐藏层和256个专家网络,支持最高202K Token的上下文窗口,显著提升了模型的长文本理解和多任务处理能力。</li>
+</ul>
+</li>
+<li><p><strong>智谱发布GLM-5、DeepSeek推百万Token模型、MiniMax上线M2.5</strong></p>
+<ul>
+<li>发布时间：2026-02-12 08:43:02</li>
+<li>关键词：智谱GLM-5、DeepSeek V4、MiniMax M2.5</li>
+<li>内容摘要：2月11日晚,智谱上线并开源新一代旗舰模型GLM-5。该模型具备强编码能力、超长上下文窗口及对智能体工作流的深度优化,OpenRouter将其描述为”前沿基础模型”,在编程、智能体工作流、推理与角色扮演方面表现突出,尤其强调”极高的工具调用准确率”。</li>
+</ul>
+</li>
+<li><p><strong>国产大模型春节档扎堆:DeepSeek上新,智谱GLM-5与MiniMAX 2.5曝新进展,AI应用股大涨</strong></p>
+<ul>
+<li>发布时间：2026-02-12 07:48:00</li>
+<li>关键词：智谱GLM-5、DeepSeek V4、MiniMAX 2.5、字节Seedance 2.0</li>
+<li>内容摘要：2月10日至11日,智谱确认其新模型GLM-5已上线chat.z.ai平台,MiniMAX 2.5模型也进入内测阶段,DeepSeek同步更新版本,字节跳动发布的Seedance 2.0视频生成模型也引发广泛关注,形成春节档大模型扎堆发布的罕见景象。</li>
+</ul>
+</li>
+<li><p><strong>春节档AI”混战” 大模型行业竞速</strong></p>
+<ul>
+<li>发布时间：2026-02-12 20:56:00</li>
+<li>关键词：大模型、智谱GLM-5、DeepSeek、字节、阿里</li>
+<li>内容摘要：2025年春节,DeepSeek以”突袭”方式异军突起,假期活跃用户数超越同期所有大厂AI应用。如今,2026年春节临近,中国大模型行业正以更密集、更紧凑的姿态应战。自1月下旬以来,阿里巴巴、月之暗面、字节跳动先后推出新一代模型。</li>
+</ul>
+</li>
+<li><p><strong>浪潮信息:中国大模型的”算力总装线”——五巨头新模型背后的同一名字</strong></p>
+<ul>
+<li>发布时间：2026-02-12 14:42:02</li>
+<li>关键词：浪潮信息、DeepSeek、字节、智谱、算力服务器</li>
+<li>内容摘要：浪潮信息与DeepSeek的合作,是全产业链条、全技术深度的绑定。在训练侧,浪潮信息为DeepSeek亦庄智算中心提供核心服务器。元脑SD200超节点服务器的部署,使DeepSeek R1大模型的Token生成速度达到8.9毫秒,创下国内公开可查的最快纪录。</li>
+</ul>
+</li>
+<li><p><strong>字节AI大爆发+国产模型扎堆上新!芯片设计ETF飙涨3.6%</strong></p>
+<ul>
+<li>发布时间：2026-02-12 18:17:30</li>
+<li>关键词：字节跳动、Seedance 2.0、豆包大模型2.0</li>
+<li>内容摘要：2026年2月12日,字节跳动正式发布Seedance 2.0多模态视频生成模型,豆包大模型2.0定档2月14日推出全栈升级,国内多家厂商同步发布新一代大模型,行业进入集中落地期。</li>
+</ul>
+</li>
+<li><p><strong>国产大模型今年首次大幅提价 GLM-5海外涨幅更高</strong></p>
+<ul>
+<li>发布时间：2026-02-12 22:26:48</li>
+<li>关键词：智谱GLM-5、大模型提价</li>
+<li>内容摘要：2月12日凌晨及当日,智谱连发两项重磅动作:新一代旗舰大模型GLM-5率先登陆海外市场,同时正式发布GLM Coding Plan价格调整函,对相关套餐价格实施结构性上调。此举为国产大模型2026年以来首次大幅提价。</li>
+</ul>
+</li>
+<li><p><strong>字节跳动豆包大模型2.0初定2月14日正式发布,信创ETF易方达涨1.13%</strong></p>
+<ul>
+<li>发布时间：2026-02-12 11:12:46</li>
+<li>关键词：字节跳动、豆包大模型2.0、信创ETF</li>
+<li>内容摘要：字节跳动火山引擎初步确定于2026年2月14日官宣发布三大模型的最新升级,包括豆包大模型2.0、音视频创作模型Seedance 2.0、图像创作模型Seedream 5.0 Lite。</li>
+</ul>
+</li>
+<li><p><strong>MiniMax M2.5模型将于近期正式上线</strong></p>
+<ul>
+<li>发布时间：2026-02-12 14:19:03</li>
+<li>关键词：MiniMax M2.5、大模型上线</li>
+<li>内容摘要：2026年2月12日,人工智能公司MiniMax宣布其全新大模型M2.5即将正式上线。</li>
+</ul>
+</li>
+<li><p><strong>10B小模型吊打国际巨头!MiniMax编程大模型上线,概念股全梳理</strong></p>
+<ul>
+<li>发布时间：2026-02-12 18:06:37</li>
+<li>关键词：MiniMax M2.5、10B模型、Claude Opus 4.6</li>
+<li>内容摘要：2026年2月12日,MiniMax正式发布新一代旗舰编程模型M2.5,该模型以10B激活参数量实现对标Claude Opus 4.6的性能,支持全栈编程开发与多端协同。</li>
+</ul>
+</li>
+</ol>
+<h3 id="💼-商业-落地应用"><a href="#💼-商业-落地应用" class="headerlink" title="💼 商业&#x2F;落地应用"></a>💼 商业&#x2F;落地应用</h3><ol start="15">
+<li><p><strong>荣耀前CEO赵明加盟千里科技,印奇的AI商业闭环收获”关键拼图”</strong></p>
+<ul>
+<li>发布时间：2026-02-12 19:14:00</li>
+<li>关键词：千里科技、赵明、AI商业化</li>
+<li>内容摘要：在2025年初卸任荣耀CEO休整一年后,赵明的这一职业选择不仅成为业界关注的焦点,更标志着千里科技在”AI+车”战略布局中,正式吹响了AI商业化落地的冲锋号。</li>
+</ul>
+</li>
+<li><p><strong>国内外AI应用现状深度解析:从技术突破到产业落地</strong></p>
+<ul>
+<li>发布时间：2026-02-11 18:43:32</li>
+<li>关键词：AI应用、技术突破、产业落地、Next-State Prediction</li>
+<li>内容摘要：智源研究院2026十大AI技术趋势报告指出,AI技术范式正经历根本性变革。过去十年,AI以语言模型为核心,聚焦于文本、图像等符号数据的生成与理解。而2026年的核心转向是”Next-State Prediction(NSP)”,即AI系统不再局限于预测下一个符号,而是学习物理世界的动态规律。</li>
+</ul>
+</li>
+<li><p><strong>大佬发声!毕盛资产王国辉:中国AI应用,反而比美国更占优</strong></p>
+<ul>
+<li>发布时间：2026-02-11 16:39:15</li>
+<li>关键词：中国AI应用、商业化落地、比较优势</li>
+<li>内容摘要：2026年2月11日,毕盛资产创始人王国辉在公开对话中明确提出核心判断:中国AI应用环节具备显著比较优势,商业化落地速度与场景渗透空间有望超越美国。王国辉指出,中美AI发展路径已形成清晰分野,美国聚焦底层模型与基础创新,中国凭借海量场景、工程化能力、产业数字化基础与快速迭代机制。</li>
+</ul>
+</li>
+<li><p><strong>垂类场景开始变现,”AI for X”商业化破壁</strong></p>
+<ul>
+<li>发布时间：2026-02-12 18:07:05</li>
+<li>关键词：有道、AI商业化、垂类场景</li>
+<li>内容摘要：近期,有道宣布公司定位从”领先的教育科技公司”转型为”学习与广告AI应用服务提供商”,未来将持续深耕学习与广告两个垂直领域的”AI原生”。</li>
+</ul>
+</li>
+<li><p><strong>国务院重磅定调AI+!全链条+全场景落地,A股主线彻底明朗</strong></p>
+<ul>
+<li>发布时间：2026-02-13 09:21:29</li>
+<li>关键词：国务院、AI+、全链条突破、全场景落地</li>
+<li>内容摘要：2026年2月11日,国务院开展以深化拓展”人工智能+”、全方位赋能千行百业为主题的第十八次专题学习,据新华社官方通稿披露,国务院总理李强主持并发表重要讲话。会议明确要求推动AI全链条突破与全场景落地。</li>
+</ul>
+</li>
+<li><p><strong>最高层定调AI!科技创新+产业落地+全场景赋能,A股主线彻底明确</strong></p>
+<ul>
+<li>发布时间：2026-02-13 09:24:35</li>
+<li>关键词：国务院、人工智能、科技创新</li>
+<li>内容摘要：2026年2月11日,国务院以深化拓展”人工智能+”、全方位赋能千行百业为主题开展专题学习,国务院总理李强主持并发表讲话,强调全面推进人工智能科技创新、产业发展和赋能应用。</li>
+</ul>
+</li>
+<li><p><strong>AI智能体加速渗透,成2026年产业核心主线</strong></p>
+<ul>
+<li>发布时间：2026-02-12 10:52:14</li>
+<li>关键词：AI智能体、Agent、产业主线</li>
+<li>内容摘要：据华泰证券消息,近期AI领域进展显示,智能体能力持续演进并加速渗透,正成为驱动AI产业发展的核心主线。其视觉能力的成熟,为DeepSeek下一代模型扩展多模态能力奠定了基础。</li>
+</ul>
+</li>
+<li><p><strong>德银CIO重磅发声:AI不是泡沫,中国资产吸引力正在上升</strong></p>
+<ul>
+<li>发布时间：2026-02-12 17:38:31</li>
+<li>关键词：德意志银行、AI投资、中国资产</li>
+<li>内容摘要：2026年2月12日,第一财经、财联社同步发布对德意志银行全球首席投资官克里斯蒂安·诺尔廷的独家专访。诺尔廷明确提出,当前全球AI投资属于结构性产业变革,并非市场担忧的资产泡沫。</li>
+</ul>
+</li>
+<li><p><strong>2026春节七大主线:看懂这几大赛道,抓住开年机会</strong></p>
+<ul>
+<li>发布时间：2026-02-13 01:25:14</li>
+<li>关键词：AI应用、太空光伏、人形机器人</li>
+<li>内容摘要：2025年是大模型爆发的一年,2026年则是AI应用落地的关键年。AI不再是实验室里的概念,而是开始渗透到各行各业,创造实实在在的价值。</li>
+</ul>
+</li>
+<li><p><strong>从春晚舞台到千家万户:2026年AI消费浪潮下的科技年货新趋势</strong></p>
+<ul>
+<li>发布时间：2026-02-13 15:50:00</li>
+<li>关键词：AI消费品、陪伴机器人、AI玩具</li>
+<li>内容摘要：临近马年春晚,多家机器人品牌官宣将”组团”登台。其中,松延动力、魔法原子两大品牌正式亮相,让”科技智造”融入舞美设计与内容呈现。</li>
+</ul>
+</li>
+<li><p><strong>德马2026年新战略发布,擘画”具身AI+智慧物流”全球化新征程!</strong></p>
+<ul>
+<li>发布时间：2026-02-13 09:02:00</li>
+<li>关键词：德马科技、具身AI、智慧物流</li>
+<li>内容摘要：新年伊始,德马科技集团年会圆满落幕,集团董事长卓序先生发表重磅讲话,在简要回顾2025年公司聚力攻坚的亮眼成绩后,正式发布德马科技2026年核心发展战略。</li>
+</ul>
+</li>
+<li><p><strong>央企AI共同体将如何开放应用场景,促进技术商业化落地?</strong></p>
+<ul>
+<li>发布时间：2026-02-12 14:03:00</li>
+<li>关键词：央企AI共同体、应用场景、商业化落地</li>
+<li>内容摘要：2025年11月,国务院办公厅印发《关于加快场景培育和开放推动新场景大规模应用的实施意见》,明确要求国有企业特别是中央企业主动开放主业领域场景。2026年2月,国资委主导成立”央企AI+具身智能产业共同体”。</li>
+</ul>
+</li>
+</ol>
+<h3 id="🔬-技术进展"><a href="#🔬-技术进展" class="headerlink" title="🔬 技术进展"></a>🔬 技术进展</h3><ol start="27">
+<li><strong>即构实时互动AI Agent 2026年重磅升级</strong><ul>
+<li>发布时间：2026-02-11 19:03:43</li>
+<li>关键词：即构科技、AI Agent 2.10、情绪识别、多情感TTS</li>
+<li>内容摘要：近日,即构科技实时互动AI Agent 2.10版本正式上线,强化智能体的”自然拟人”效果——支持用户情绪识别和多情感TTS,让AI不仅能”听懂”你说的话,更能”读懂”你的情绪。</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="📚-今日最新论文（时效性更新）"><a href="#📚-今日最新论文（时效性更新）" class="headerlink" title="📚 今日最新论文（时效性更新）"></a>📚 今日最新论文（时效性更新）</h2><h3 id="1-解码AI-Agent-2025技术驱动生态跃迁"><a href="#1-解码AI-Agent-2025技术驱动生态跃迁" class="headerlink" title="1. 解码AI Agent:2025技术驱动生态跃迁"></a>1. 解码AI Agent:2025技术驱动生态跃迁</h3><ul>
+<li><strong>作者：</strong> 未提供具体作者信息</li>
+<li><strong>发表时间：</strong> 2025年</li>
+<li><strong>来源：</strong> 百度学术</li>
+<li><strong>Abstract翻译：</strong> 这篇资料指出2025年是大模型规模化应用”DeepSeek之年”，AI Agent或成重塑人机协作核心引擎，推动人工智能从被动响应迈向主动决策。极光月狐等发布的报告显示，2024年全球AI Agent市场规模52.9亿美元，预计2030年达471亿美元。随着中国AI市场份额提升，国内相关企业和机构有望成赛道主要参与者。</li>
+<li><strong>重要性：</strong> 该论文分析了2025年AI Agent的发展趋势和市场规模，强调了AI Agent在重塑人机协作中的核心作用。</li>
+<li><strong>核心贡献和创新点：</strong><ol>
+<li>明确了2025年作为大模型规模化应用”DeepSeek之年”的重要性，指出AI Agent正成为重塑人机协作的核心引擎</li>
+<li>提供了AI Agent市场规模预测：2024年全球市场规模52.9亿美元，预计2030年达471亿美元</li>
+<li>分析了中国AI市场份额提升对国内企业和机构的影响，指出国内相关企业和机构有望成为赛道主要参与者</li>
+<li>强调了AI Agent推动人工智能从被动响应迈向主动决策的转变</li>
+</ol>
+</li>
+<li><strong>相关链接：</strong> <a target="_blank" rel="noopener" href="https://xueshu.baidu.com/ndscholar/browse/detail?paperid=1d5s0r00ee3v08d0456h0au0u8617055">https://xueshu.baidu.com/ndscholar/browse/detail?paperid=1d5s0r00ee3v08d0456h0au0u8617055</a></li>
+</ul>
+<h3 id="2-Advanced-Game-Theoretic-Frameworks-for-Multi-Agent-AI-Challenges-A-2025-Outlook"><a href="#2-Advanced-Game-Theoretic-Frameworks-for-Multi-Agent-AI-Challenges-A-2025-Outlook" class="headerlink" title="2. Advanced Game-Theoretic Frameworks for Multi-Agent AI Challenges: A 2025 Outlook"></a>2. Advanced Game-Theoretic Frameworks for Multi-Agent AI Challenges: A 2025 Outlook</h3><ul>
+<li><strong>作者：</strong> 未提供具体作者信息</li>
+<li><strong>发表时间：</strong> 2025年</li>
+<li><strong>来源：</strong> 百度学术</li>
+<li><strong>Abstract翻译：</strong> 本文重新审视了高级博弈论范式如何为2025年左右人工智能（AI）的新一代挑战奠定基础。研究超越传统模型，纳入动态联盟形成、基于语言的效用、破坏风险和部分可观测性等因素，提供数学形式化、模拟和编码方案，阐述多智能体AI系统在复杂环境中的适应与协商方式。</li>
+<li><strong>重要性：</strong> 该论文探讨了多智能体AI系统面临的2025年挑战，提供了基于博弈论的理论框架。</li>
+<li><strong>核心贡献和创新点：</strong><ol>
+<li>重新审视了高级博弈论范式，为2025年左右AI的新一代挑战奠定理论基础</li>
+<li>研究超越传统模型，纳入动态联盟形成、基于语言的效用、破坏风险和部分可观测性等因素</li>
+<li>提供了数学形式化、模拟和编码方案</li>
+<li>阐述了多智能体AI系统在复杂环境中的适应与协商方式</li>
+</ol>
+</li>
+<li><strong>相关链接：</strong> <a target="_blank" rel="noopener" href="https://xueshu.baidu.com/ndscholar/browse/detail?paperid=100n0260ns2j0c007r7700402b177815">https://xueshu.baidu.com/ndscholar/browse/detail?paperid=100n0260ns2j0c007r7700402b177815</a></li>
+</ul>
+<h3 id="3-Will-2025-be-year-of-agent-A-primer-for-competition-practitioners-on-the-next-wave-of-AI-innovation"><a href="#3-Will-2025-be-year-of-agent-A-primer-for-competition-practitioners-on-the-next-wave-of-AI-innovation" class="headerlink" title="3. Will 2025 be year of agent? A primer for competition practitioners on the next wave of AI innovation"></a>3. Will 2025 be year of agent? A primer for competition practitioners on the next wave of AI innovation</h3><ul>
+<li><strong>作者：</strong> 未提供具体作者信息</li>
+<li><strong>发表时间：</strong> 2025年</li>
+<li><strong>来源：</strong> 百度学术</li>
+<li><strong>Abstract翻译：</strong> 本文聚焦AI创新领域，指出AI创新愈发关注AI智能体（agents）的发展利用，其从遵循用户指令生成输出的AI自然演进而来，能更主动完成任务。科技名流认为其将使AI真正具有变革性。</li>
+<li><strong>重要性：</strong> 该论文探讨了2025年是否成为”Agent年”，分析了AI智能体的变革性影响。</li>
+<li><strong>核心贡献和创新点：</strong><ol>
+<li>明确提出”2025年是否成为Agent年”的问题</li>
+<li>指出AI智能体从遵循用户指令生成输出演变为能更主动完成任务</li>
+<li>认为AI智能体将使AI真正具有变革性</li>
+<li>预览了可能出现的类似其他数字市场及新的争议问题</li>
+</ol>
+</li>
+<li><strong>相关链接：</strong> <a target="_blank" rel="noopener" href="https://xueshu.baidu.com/ndscholar/browse/detail?paperid=162w00p0920u0ru0bu5e0xp09b292142">https://xueshu.baidu.com/ndscholar/browse/detail?paperid=162w00p0920u0ru0bu5e0xp09b292142</a></li>
+</ul>
+<h3 id="4-The-Rise-of-Agent-Based-Deep-Research-Exploring-OpenAI’s-Deep-Research-Gemini-Deep-Research-Perplexity-Deep-Research-AI2-ScholarQA-SciSpace-and-More-in-2025"><a href="#4-The-Rise-of-Agent-Based-Deep-Research-Exploring-OpenAI’s-Deep-Research-Gemini-Deep-Research-Perplexity-Deep-Research-AI2-ScholarQA-SciSpace-and-More-in-2025" class="headerlink" title="4. The Rise of Agent-Based Deep Research: Exploring OpenAI’s Deep Research, Gemini Deep Research, Perplexity Deep Research, AI2 ScholarQA, SciSpace and More in 2025"></a>4. The Rise of Agent-Based Deep Research: Exploring OpenAI’s Deep Research, Gemini Deep Research, Perplexity Deep Research, AI2 ScholarQA, SciSpace and More in 2025</h3><ul>
+<li><strong>作者：</strong> 未提供具体作者信息</li>
+<li><strong>发表时间：</strong> 2025年</li>
+<li><strong>来源：</strong> 百度学术</li>
+<li><strong>Abstract翻译：</strong> 该文献概述了2025年兴起的基于智能体的深度研究工具，这些工具正重塑处理复杂查询的方式，超越传统搜索引擎和快速AI摘要。</li>
+<li><strong>重要性：</strong> 该论文综述了2025年基于智能体的深度研究工具，介绍了OpenAI Deep Research等系统。</li>
+<li><strong>核心贡献和创新点：</strong><ol>
+<li>概述了2025年兴起的基于智能体的深度研究工具</li>
+<li>详细介绍了OpenAI的Deep Research、谷歌的Gemini Deep Research等系统</li>
+<li>指出这些智能体系统正重塑处理复杂查询的方式</li>
+<li>虽然响应慢，但能提供全面报告与文献综述</li>
+</ol>
+</li>
+<li><strong>相关链接：</strong> <a target="_blank" rel="noopener" href="https://xueshu.baidu.com/ndscholar/browse/detail?paperid=166300a0ng5x0aj0085904b0wx711210">https://xueshu.baidu.com/ndscholar/browse/detail?paperid=166300a0ng5x0aj0085904b0wx711210</a></li>
+</ul>
+<h3 id="5-Can-LLM-feedback-enhance-review-quality-A-randomized-study-of-20K-reviews-at-ICLR-2025"><a href="#5-Can-LLM-feedback-enhance-review-quality-A-randomized-study-of-20K-reviews-at-ICLR-2025" class="headerlink" title="5. Can LLM feedback enhance review quality? A randomized study of 20K reviews at ICLR 2025"></a>5. Can LLM feedback enhance review quality? A randomized study of 20K reviews at ICLR 2025</h3><ul>
+<li><strong>作者：</strong> 未提供具体作者信息</li>
+<li><strong>发表时间：</strong> 2025年</li>
+<li><strong>来源：</strong> 百度学术</li>
+<li><strong>Abstract翻译：</strong> 该文献聚焦AI会议同行评审因投稿量激增出现评审质量下降、作者不满等问题。在ICLR 2025开展大型随机对照研究，开发Review Feedback Agent系统。</li>
+<li><strong>重要性：</strong> 该论文探讨了使用LLM反馈提升AI会议同行评审质量的方法，在ICLR 2025进行了大规模随机对照研究。</li>
+<li><strong>核心贡献和创新点：</strong><ol>
+<li>聚焦AI会议同行评审因投稿量激增出现评审质量下降、作者不满等问题</li>
+<li>在ICLR 2025开展大型随机对照研究</li>
+<li>开发Review Feedback Agent系统，用多个大语言模型为超20000篇评审提供反馈</li>
+<li>结果显示27%收到反馈的评审更新评审，AI反馈提升了评审质量</li>
+</ol>
+</li>
+<li><strong>相关链接：</strong> <a target="_blank" rel="noopener" href="https://xueshu.baidu.com/ndscholar/browse/detail?paperid=1j400jf02n0u0xg0fq540pq0ga563258">https://xueshu.baidu.com/ndscholar/browse/detail?paperid=1j400jf02n0u0xg0fq540pq0ga563258</a></li>
+</ul>
+<h3 id="6-NTU-Speechlab-LLM-Based-Multilingual-ASR-System-for-Interspeech-2025-MLC-SLM-Challenge"><a href="#6-NTU-Speechlab-LLM-Based-Multilingual-ASR-System-for-Interspeech-2025-MLC-SLM-Challenge" class="headerlink" title="6. NTU Speechlab LLM-Based Multilingual ASR System for Interspeech 2025 MLC-SLM Challenge"></a>6. NTU Speechlab LLM-Based Multilingual ASR System for Interspeech 2025 MLC-SLM Challenge</h3><ul>
+<li><strong>作者：</strong> 未提供具体作者信息</li>
+<li><strong>发表时间：</strong> 2025年</li>
+<li><strong>来源：</strong> 百度学术</li>
+<li><strong>Abstract翻译：</strong> 这篇文章详细介绍了NTU Speechlab为Interspeech 2025 MLC-SLM挑战赛（任务一）开发的多语言自动语音识别系统，该系统获第五名。</li>
+<li><strong>重要性：</strong> 该论文介绍了在Interspeech 2025 MLC-SLM挑战赛中获得第五名的系统，展示了LLM在多语言自动语音识别中的应用。</li>
+<li><strong>核心贡献和创新点：</strong><ol>
+<li>详细介绍了NTU Speechlab为Interspeech 2025 MLC-SLM挑战赛开发的多语言自动语音识别系统</li>
+<li>全面分析了系统，强调模型架构、数据选择和训练策略的关键进展</li>
+<li>语言特定提示和模型集成技术显著提升系统性能</li>
+<li>最终模型在评估集上平均混合错误率较基线降低9.6%（相对降低48%）</li>
+</ol>
+</li>
+<li><strong>相关链接：</strong> <a target="_blank" rel="noopener" href="https://xueshu.baidu.com/ndscholar/browse/detail?paperid=1w5p0a00db090ah0906g0aw0qf229185">https://xueshu.baidu.com/ndscholar/browse/detail?paperid=1w5p0a00db090ah0906g0aw0qf229185</a></li>
+</ul>
+<hr>
+<h2 id="🔗-博客文章"><a href="#🔗-博客文章" class="headerlink" title="🔗 博客文章"></a>🔗 博客文章</h2><p><a href="https://bingowith.tech/posts/ai-daily-20260213/">https://bingowith.tech/posts/ai-daily-20260213/</a></p>
+<hr>
+<p><em>本日报由AI助手自动生成，帮您快速了解AI领域最新动态。</em></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    Bingo Cai
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://bingowith.tech/2026/ai-daily-20260213/" title="AI日报 2026-02-13">http://bingowith.tech/2026/ai-daily-20260213/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/AI%E6%97%A5%E6%8A%A5/" rel="tag"># AI日报</a>
+          
+            <a href="/tags/AI%E7%9F%A5%E8%AF%86%E7%82%B9/" rel="tag"># AI知识点</a>
+          
+            <a href="/tags/%E8%AE%BA%E6%96%87%E6%8E%A8%E8%8D%90/" rel="tag"># 论文推荐</a>
+          
+        </div>
+      
+
+      
+      
+        <div class="post-widgets">
+        
+
+        
+
+        
+          
+          <div id="needsharebutton-postbottom">
+            <span class="btn">
+              <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </span>
+          </div>
+        
+        </div>
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2026/perplexity-guide-2026/" rel="next" title="一文读懂自然语言困惑度：AI语言模型的「懵逼指数」">
+                <i class="fa fa-chevron-left"></i> 一文读懂自然语言困惑度：AI语言模型的「懵逼指数」
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2026/ai-daily-20260214/" rel="prev" title="AI日报 2026-02-14">
+                AI日报 2026-02-14 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a target="_blank" rel="noopener" href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/uploads/avatar.png"
+                alt="" />
+            
+              <p class="site-author-name" itemprop="name"></p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">41</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">17</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">70</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/Everfighting" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-fa-brands fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.douban.com/people/binbeing" target="_blank" title="豆瓣">
+                      
+                        <i class="fa fa-fw fa-fa-solid fa-book"></i>豆瓣</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="http://www.zhihu.com/people/your-user-name" target="_blank" title="知乎">
+                      
+                        <i class="fa fa-fw fa-fa-solid fa-thumbs-up"></i>知乎</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:binbeing@126.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-fa-solid fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://x.com/bingo41589512" target="_blank" title="Twitter">
+                      
+                        <i class="fa fa-fw fa-twitter"></i>Twitter</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%93%9A-%E4%BB%8A%E6%97%A5%E7%9F%A5%E8%AF%86%E7%82%B9"><span class="nav-number">1.</span> <span class="nav-text">📚 今日知识点</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%97%A9%E4%B8%8A8-00%E6%8E%A8%E9%80%81"><span class="nav-number">1.1.</span> <span class="nav-text">早上8:00推送</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%AD%E5%8D%8811-00%E6%8E%A8%E9%80%81"><span class="nav-number">1.2.</span> <span class="nav-text">中午11:00推送</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%8B%E5%8D%8815-00%E6%8E%A8%E9%80%81"><span class="nav-number">1.3.</span> <span class="nav-text">下午15:00推送</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%93%96-%E8%AE%BA%E6%96%87%E6%8E%A8%E8%8D%90"><span class="nav-number">2.</span> <span class="nav-text">📖 论文推荐</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%93%B0-%E4%BB%8A%E6%97%A5%E6%9C%80%E6%96%B0AI%E6%96%B0%E9%97%BB%EF%BC%88%E6%97%B6%E6%95%88%E6%80%A7%E6%9B%B4%E6%96%B0%EF%BC%89"><span class="nav-number">3.</span> <span class="nav-text">📰 今日最新AI新闻（时效性更新）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%F0%9F%92%B0-%E8%9E%8D%E8%B5%84-%E6%8A%95%E8%B5%84-%E5%B9%B6%E8%B4%AD"><span class="nav-number">3.1.</span> <span class="nav-text">💰 融资&#x2F;投资&#x2F;并购</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%F0%9F%9A%80-%E4%BA%A7%E5%93%81-%E6%9C%8D%E5%8A%A1%E5%8F%91%E5%B8%83"><span class="nav-number">3.2.</span> <span class="nav-text">🚀 产品&#x2F;服务发布</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%F0%9F%92%BC-%E5%95%86%E4%B8%9A-%E8%90%BD%E5%9C%B0%E5%BA%94%E7%94%A8"><span class="nav-number">3.3.</span> <span class="nav-text">💼 商业&#x2F;落地应用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%F0%9F%94%AC-%E6%8A%80%E6%9C%AF%E8%BF%9B%E5%B1%95"><span class="nav-number">3.4.</span> <span class="nav-text">🔬 技术进展</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%93%9A-%E4%BB%8A%E6%97%A5%E6%9C%80%E6%96%B0%E8%AE%BA%E6%96%87%EF%BC%88%E6%97%B6%E6%95%88%E6%80%A7%E6%9B%B4%E6%96%B0%EF%BC%89"><span class="nav-number">4.</span> <span class="nav-text">📚 今日最新论文（时效性更新）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E8%A7%A3%E7%A0%81AI-Agent-2025%E6%8A%80%E6%9C%AF%E9%A9%B1%E5%8A%A8%E7%94%9F%E6%80%81%E8%B7%83%E8%BF%81"><span class="nav-number">4.1.</span> <span class="nav-text">1. 解码AI Agent:2025技术驱动生态跃迁</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-Advanced-Game-Theoretic-Frameworks-for-Multi-Agent-AI-Challenges-A-2025-Outlook"><span class="nav-number">4.2.</span> <span class="nav-text">2. Advanced Game-Theoretic Frameworks for Multi-Agent AI Challenges: A 2025 Outlook</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-Will-2025-be-year-of-agent-A-primer-for-competition-practitioners-on-the-next-wave-of-AI-innovation"><span class="nav-number">4.3.</span> <span class="nav-text">3. Will 2025 be year of agent? A primer for competition practitioners on the next wave of AI innovation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-The-Rise-of-Agent-Based-Deep-Research-Exploring-OpenAI%E2%80%99s-Deep-Research-Gemini-Deep-Research-Perplexity-Deep-Research-AI2-ScholarQA-SciSpace-and-More-in-2025"><span class="nav-number">4.4.</span> <span class="nav-text">4. The Rise of Agent-Based Deep Research: Exploring OpenAI’s Deep Research, Gemini Deep Research, Perplexity Deep Research, AI2 ScholarQA, SciSpace and More in 2025</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-Can-LLM-feedback-enhance-review-quality-A-randomized-study-of-20K-reviews-at-ICLR-2025"><span class="nav-number">4.5.</span> <span class="nav-text">5. Can LLM feedback enhance review quality? A randomized study of 20K reviews at ICLR 2025</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-NTU-Speechlab-LLM-Based-Multilingual-ASR-System-for-Interspeech-2025-MLC-SLM-Challenge"><span class="nav-number">4.6.</span> <span class="nav-text">6. NTU Speechlab LLM-Based Multilingual ASR System for Interspeech 2025 MLC-SLM Challenge</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%94%97-%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0"><span class="nav-number">5.</span> <span class="nav-text">🔗 博客文章</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2025 &mdash; <span itemprop="copyrightYear">2026</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Bingo Cai</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+
+
+
+
+  <div class="footer-custom"><a href="https://beian.miit.gov.cn/" target="_blank">沪ICP备2025139614号</a></div>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script id="ribbon" type="text/javascript" size="300" alpha="0.6"  zIndex="-1" src="/lib/canvas-ribbon/canvas-ribbon.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+    
+      <script id="dsq-count-scr" src="https://everfight.disqus.com/count.js" async></script>
+    
+
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'http://bingowith.tech/2026/ai-daily-20260213/';
+          this.page.identifier = '/2026/ai-daily-20260213/';
+          this.page.title = 'AI日报 2026-02-13';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://everfight.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
+    
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+  
+  <link rel="stylesheet" href="/lib/needsharebutton/needsharebutton.css">
+
+  
+  
+  <script src="/lib/needsharebutton/needsharebutton.js"></script>
+
+  <script>
+    
+      pbOptions = {};
+      
+          pbOptions.iconStyle = "box";
+      
+          pbOptions.boxForm = "horizontal";
+      
+          pbOptions.position = "bottomCenter";
+      
+          pbOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
+      
+      new needShareButton('#needsharebutton-postbottom', pbOptions);
+    
+    
+  </script>
+
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+  <script type="text/javascript" src="/js/src/js.cookie.js?v=5.1.4"></script>
+  <script type="text/javascript" src="/js/src/scroll-cookie.js?v=5.1.4"></script>
+
+
+  
+
+</body>
+</html>

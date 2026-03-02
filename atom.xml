@@ -6,7 +6,7 @@
   <link href="http://bingowith.tech/atom.xml" rel="self"/>
   
   <link href="http://bingowith.tech/"/>
-  <updated>2026-02-09T10:46:39.516Z</updated>
+  <updated>2026-03-02T07:30:20.635Z</updated>
   <id>http://bingowith.tech/</id>
   
   <author>
@@ -17,37 +17,14 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>2026-02-08-AI日报</title>
-    <link href="http://bingowith.tech/ai-daily-2026/02/08/"/>
-    <id>http://bingowith.tech/ai-daily-2026/02/08/</id>
-    <published>2026-02-09T10:46:39.516Z</published>
-    <updated>2026-02-09T10:46:39.516Z</updated>
+    <title>AI日报 2026-03-02</title>
+    <link href="http://bingowith.tech/2026/ai-daily-20260302/"/>
+    <id>http://bingowith.tech/2026/ai-daily-20260302/</id>
+    <published>2026-03-02T15:59:59.000Z</published>
+    <updated>2026-03-02T07:30:20.635Z</updated>
     
     
-    <summary type="html">每日AI知识点推送与论文推荐汇总</summary>
-    
-    
-    
-    <category term="AI日报" scheme="http://bingowith.tech/categories/AI%E6%97%A5%E6%8A%A5/"/>
-    
-    
-    <category term="AI日报" scheme="http://bingowith.tech/tags/AI%E6%97%A5%E6%8A%A5/"/>
-    
-    <category term="AI知识点" scheme="http://bingowith.tech/tags/AI%E7%9F%A5%E8%AF%86%E7%82%B9/"/>
-    
-    <category term="论文推荐" scheme="http://bingowith.tech/tags/%E8%AE%BA%E6%96%87%E6%8E%A8%E8%8D%90/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>2026-02-09-AI日报</title>
-    <link href="http://bingowith.tech/ai-daily-2026/02/09/"/>
-    <id>http://bingowith.tech/ai-daily-2026/02/09/</id>
-    <published>2026-02-09T07:30:36.000Z</published>
-    <updated>2026-02-09T10:46:39.516Z</updated>
-    
-    
-    <summary type="html">每日AI知识点推送与论文推荐汇总</summary>
+    <summary type="html">每日AI新闻、知识点推送与论文推荐汇总</summary>
     
     
     
@@ -60,171 +37,488 @@
     
     <category term="论文推荐" scheme="http://bingowith.tech/tags/%E8%AE%BA%E6%96%87%E6%8E%A8%E8%8D%90/"/>
     
-  </entry>
-  
-  <entry>
-    <title>别再乱对比中美AI了：这波泡沫，远比房地产的金融游戏值得支持</title>
-    <link href="http://bingowith.tech/2026/ai-bubble-vs-real-estate-bubble/"/>
-    <id>http://bingowith.tech/2026/ai-bubble-vs-real-estate-bubble/</id>
-    <published>2026-02-09T06:30:00.000Z</published>
-    <updated>2026-02-09T06:30:00.000Z</updated>
-    
-    
-    <summary type="html">深入分析中美AI对比背后的真实逻辑，对比AI泡沫与房地产泡沫的本质差异，阐述为什么AI泡沫远比房地产的金融游戏值得支持</summary>
-    
-    
-    
-    <category term="科技评论" scheme="http://bingowith.tech/categories/%E7%A7%91%E6%8A%80%E8%AF%84%E8%AE%BA/"/>
-    
-    
-    <category term="AI" scheme="http://bingowith.tech/tags/AI/"/>
-    
-    <category term="中美科技" scheme="http://bingowith.tech/tags/%E4%B8%AD%E7%BE%8E%E7%A7%91%E6%8A%80/"/>
-    
-    <category term="行业观察" scheme="http://bingowith.tech/tags/%E8%A1%8C%E4%B8%9A%E8%A7%82%E5%AF%9F/"/>
-    
-    <category term="泡沫" scheme="http://bingowith.tech/tags/%E6%B3%A1%E6%B2%AB/"/>
-    
-    <category term="房地产" scheme="http://bingowith.tech/tags/%E6%88%BF%E5%9C%B0%E4%BA%A7/"/>
-    
-    <category term="社会思考" scheme="http://bingowith.tech/tags/%E7%A4%BE%E4%BC%9A%E6%80%9D%E8%80%83/"/>
+    <category term="AI新闻" scheme="http://bingowith.tech/tags/AI%E6%96%B0%E9%97%BB/"/>
     
   </entry>
   
   <entry>
-    <title>认知觉醒：用一张认知地图，让AI从实习生升级为合伙人</title>
-    <link href="http://bingowith.tech/2026/cognitive-awakening-ai-partner/"/>
-    <id>http://bingowith.tech/2026/cognitive-awakening-ai-partner/</id>
-    <published>2026-02-07T10:50:00.000Z</published>
-    <updated>2026-02-09T10:46:39.516Z</updated>
+    <title>大模型领域核心概念详解</title>
+    <link href="http://bingowith.tech/2026/llm-core-concepts-guide/"/>
+    <id>http://bingowith.tech/2026/llm-core-concepts-guide/</id>
+    <published>2026-03-02T09:35:00.000Z</published>
+    <updated>2026-03-02T09:38:20.353Z</updated>
     
     
-    <summary type="html">基于乔哈里视窗理论，构建AI对话四象限，让人机协作从工具进化为思维合伙人</summary>
-    
-    
-    
-    <category term="成长" scheme="http://bingowith.tech/categories/%E6%88%90%E9%95%BF/"/>
-    
-    
-    <category term="AI" scheme="http://bingowith.tech/tags/AI/"/>
-    
-    <category term="认知" scheme="http://bingowith.tech/tags/%E8%AE%A4%E7%9F%A5/"/>
-    
-    <category term="工作效率" scheme="http://bingowith.tech/tags/%E5%B7%A5%E4%BD%9C%E6%95%88%E7%8E%87/"/>
-    
-    <category term="方法论" scheme="http://bingowith.tech/tags/%E6%96%B9%E6%B3%95%E8%AE%BA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>中美AI大战的真实图景：超越简单叙事</title>
-    <link href="http://bingowith.tech/2026/china-us-ai-battle-reality/"/>
-    <id>http://bingowith.tech/2026/china-us-ai-battle-reality/</id>
-    <published>2026-02-07T10:34:00.000Z</published>
-    <updated>2026-02-09T10:46:39.516Z</updated>
-    
-    
-    <summary type="html">深入分析中美AI发展的真实图景，超越简单化叙事，探讨技术差距、应用落地与个人行动指南</summary>
+    <summary type="html">系统梳理大语言模型领域的核心概念，涵盖基础架构、模型训练、核心能力、AI智能体、评估伦理到应用部署六大模块</summary>
     
     
     
-    <category term="科技评论" scheme="http://bingowith.tech/categories/%E7%A7%91%E6%8A%80%E8%AF%84%E8%AE%BA/"/>
+    <category term="技术学习" scheme="http://bingowith.tech/categories/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/"/>
     
     
     <category term="AI" scheme="http://bingowith.tech/tags/AI/"/>
     
-    <category term="中美科技" scheme="http://bingowith.tech/tags/%E4%B8%AD%E7%BE%8E%E7%A7%91%E6%8A%80/"/>
-    
-    <category term="行业观察" scheme="http://bingowith.tech/tags/%E8%A1%8C%E4%B8%9A%E8%A7%82%E5%AF%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>输入法的进化之路：从敲击键盘到理解意图</title>
-    <link href="http://bingowith.tech/2026/input-method-evolution-journey/"/>
-    <id>http://bingowith.tech/2026/input-method-evolution-journey/</id>
-    <published>2026-02-06T02:08:00.000Z</published>
-    <updated>2026-01-20T07:30:00.000Z</updated>
-    
-    
-    <summary type="html">回顾中文输入法四十年进化史，从拼音到AI，探讨人机交互的未来形态</summary>
-    
-    
-    
-    <category term="技术观察" scheme="http://bingowith.tech/categories/%E6%8A%80%E6%9C%AF%E8%A7%82%E5%AF%9F/"/>
-    
-    
-    <category term="AI" scheme="http://bingowith.tech/tags/AI/"/>
-    
-    <category term="输入法" scheme="http://bingowith.tech/tags/%E8%BE%93%E5%85%A5%E6%B3%95/"/>
-    
-    <category term="技术史" scheme="http://bingowith.tech/tags/%E6%8A%80%E6%9C%AF%E5%8F%B2/"/>
-    
-    <category term="人机交互" scheme="http://bingowith.tech/tags/%E4%BA%BA%E6%9C%BA%E4%BA%A4%E4%BA%92/"/>
-    
-    <category term="NLP" scheme="http://bingowith.tech/tags/NLP/"/>
-    
-    <category term="语音识别" scheme="http://bingowith.tech/tags/%E8%AF%AD%E9%9F%B3%E8%AF%86%E5%88%AB/"/>
-    
-    <category term="多模态交互" scheme="http://bingowith.tech/tags/%E5%A4%9A%E6%A8%A1%E6%80%81%E4%BA%A4%E4%BA%92/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>读懂《苦涩教训》：AI 七十年真相与个人突围指南</title>
-    <link href="http://bingowith.tech/2026/bitter-lesson-ai-seventy-years/"/>
-    <id>http://bingowith.tech/2026/bitter-lesson-ai-seventy-years/</id>
-    <published>2026-01-15T02:00:00.000Z</published>
-    <updated>2026-01-15T02:00:00.000Z</updated>
-    
-    
-    <summary type="html">深入解读Rich Sutton的《The Bitter Lesson》，探讨AI七十年发展史与个人成长启示</summary>
-    
-    
-    
-    <category term="技术观察" scheme="http://bingowith.tech/categories/%E6%8A%80%E6%9C%AF%E8%A7%82%E5%AF%9F/"/>
-    
-    
-    <category term="AI" scheme="http://bingowith.tech/tags/AI/"/>
-    
-    <category term="个人成长" scheme="http://bingowith.tech/tags/%E4%B8%AA%E4%BA%BA%E6%88%90%E9%95%BF/"/>
+    <category term="LLM" scheme="http://bingowith.tech/tags/LLM/"/>
     
     <category term="大模型" scheme="http://bingowith.tech/tags/%E5%A4%A7%E6%A8%A1%E5%9E%8B/"/>
     
-    <category term="强化学习" scheme="http://bingowith.tech/tags/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/"/>
-    
-    <category term="Rich Sutton" scheme="http://bingowith.tech/tags/Rich-Sutton/"/>
-    
-    <category term="算力" scheme="http://bingowith.tech/tags/%E7%AE%97%E5%8A%9B/"/>
+    <category term="技术解读" scheme="http://bingowith.tech/tags/%E6%8A%80%E6%9C%AF%E8%A7%A3%E8%AF%BB/"/>
     
   </entry>
   
   <entry>
-    <title>电工初级(五级)理论考试知识点超全总结｜从基础到实操，小白也能看懂！</title>
-    <link href="http://bingowith.tech/2025/electrician-primary-exam-notes/"/>
-    <id>http://bingowith.tech/2025/electrician-primary-exam-notes/</id>
-    <published>2025-10-23T06:52:12.000Z</published>
-    <updated>2026-01-20T10:00:00.000Z</updated>
+    <title>大模型领域核心概念详解</title>
+    <link href="http://bingowith.tech/2026/llm-core-concepts-guide/"/>
+    <id>http://bingowith.tech/2026/llm-core-concepts-guide/</id>
+    <published>2026-03-02T08:05:00.000Z</published>
+    <updated>2026-03-02T09:34:23.892Z</updated>
     
     
-    <summary type="html">利用 AI 工具结合考试材料，整理了电工初级(五级)理论考试背诵知识点，从电阻电路到安全操作，从低压电器到电机控制，每一个知识点都拆解得明明白白，还有实操要点和记忆提示，帮你快速记忆和备考。</summary>
+    <summary type="html">系统梳理大语言模型领域的核心概念，从基础架构到应用部署的六大模块</summary>
     
     
     
-    <category term="职业考试" scheme="http://bingowith.tech/categories/%E8%81%8C%E4%B8%9A%E8%80%83%E8%AF%95/"/>
+    <category term="技术原理" scheme="http://bingowith.tech/categories/%E6%8A%80%E6%9C%AF%E5%8E%9F%E7%90%86/"/>
+    
+    
+    <category term="AI Agent" scheme="http://bingowith.tech/tags/AI-Agent/"/>
+    
+    <category term="LLM" scheme="http://bingowith.tech/tags/LLM/"/>
+    
+    <category term="大模型" scheme="http://bingowith.tech/tags/%E5%A4%A7%E6%A8%A1%E5%9E%8B/"/>
+    
+    <category term="Transformer" scheme="http://bingowith.tech/tags/Transformer/"/>
+    
+    <category term="技术原理" scheme="http://bingowith.tech/tags/%E6%8A%80%E6%9C%AF%E5%8E%9F%E7%90%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>AI Coding 普及后的新范式：构建你的编程飞轮</title>
+    <link href="http://bingowith.tech/2026/ai-coding-new-paradigm/"/>
+    <id>http://bingowith.tech/2026/ai-coding-new-paradigm/</id>
+    <published>2026-03-02T07:35:00.000Z</published>
+    <updated>2026-03-02T07:17:57.962Z</updated>
+    
+    
+    <summary type="html">AI Coding时代，编程成本降低，但对代码判断力更重要</summary>
+    
+    
+    
+    <category term="读书笔记" scheme="http://bingowith.tech/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="AI Agent" scheme="http://bingowith.tech/tags/AI-Agent/"/>
+    
+    <category term="AI开发" scheme="http://bingowith.tech/tags/AI%E5%BC%80%E5%8F%91/"/>
+    
+    <category term="编程范式" scheme="http://bingowith.tech/tags/%E7%BC%96%E7%A8%8B%E8%8C%83%E5%BC%8F/"/>
+    
+    <category term="代码质量" scheme="http://bingowith.tech/tags/%E4%BB%A3%E7%A0%81%E8%B4%A8%E9%87%8F/"/>
+    
+    <category term="Simon Willison" scheme="http://bingowith.tech/tags/Simon-Willison/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Vibe Coding 氛围编程：从入门到实战</title>
+    <link href="http://bingowith.tech/2026/vibe-coding-guide/"/>
+    <id>http://bingowith.tech/2026/vibe-coding-guide/</id>
+    <published>2026-03-02T07:10:00.000Z</published>
+    <updated>2026-03-02T08:11:54.896Z</updated>
+    
+    
+    <summary type="html">AI 时代的全新开发范式：从逐行敲代码到掌控全局的决策者</summary>
+    
+    
+    
+    <category term="技术教程" scheme="http://bingowith.tech/categories/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="AI开发" scheme="http://bingowith.tech/tags/AI%E5%BC%80%E5%8F%91/"/>
+    
+    <category term="编程方法" scheme="http://bingowith.tech/tags/%E7%BC%96%E7%A8%8B%E6%96%B9%E6%B3%95/"/>
+    
+    <category term="效率提升" scheme="http://bingowith.tech/tags/%E6%95%88%E7%8E%87%E6%8F%90%E5%8D%87/"/>
+    
+    <category term="Vibe Coding" scheme="http://bingowith.tech/tags/Vibe-Coding/"/>
+    
+    <category term="Google Cloud" scheme="http://bingowith.tech/tags/Google-Cloud/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>AI日报 2026-03-01</title>
+    <link href="http://bingowith.tech/2026/ai-daily-20260301/"/>
+    <id>http://bingowith.tech/2026/ai-daily-20260301/</id>
+    <published>2026-03-01T15:59:59.000Z</published>
+    <updated>2026-03-01T07:30:12.291Z</updated>
+    
+    
+    <summary type="html">每日AI新闻、知识点推送与论文推荐汇总</summary>
+    
+    
+    
+    <category term="AI日报" scheme="http://bingowith.tech/categories/AI%E6%97%A5%E6%8A%A5/"/>
+    
+    
+    <category term="AI日报" scheme="http://bingowith.tech/tags/AI%E6%97%A5%E6%8A%A5/"/>
+    
+    <category term="AI知识点" scheme="http://bingowith.tech/tags/AI%E7%9F%A5%E8%AF%86%E7%82%B9/"/>
+    
+    <category term="论文推荐" scheme="http://bingowith.tech/tags/%E8%AE%BA%E6%96%87%E6%8E%A8%E8%8D%90/"/>
+    
+    <category term="AI新闻" scheme="http://bingowith.tech/tags/AI%E6%96%B0%E9%97%BB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>AI日报 2026-02-28</title>
+    <link href="http://bingowith.tech/2026/ai-daily-20260228/"/>
+    <id>http://bingowith.tech/2026/ai-daily-20260228/</id>
+    <published>2026-02-28T15:59:59.000Z</published>
+    <updated>2026-02-28T07:30:16.274Z</updated>
+    
+    
+    <summary type="html">每日AI新闻、知识点推送与论文推荐汇总</summary>
+    
+    
+    
+    <category term="AI日报" scheme="http://bingowith.tech/categories/AI%E6%97%A5%E6%8A%A5/"/>
+    
+    
+    <category term="AI日报" scheme="http://bingowith.tech/tags/AI%E6%97%A5%E6%8A%A5/"/>
+    
+    <category term="AI知识点" scheme="http://bingowith.tech/tags/AI%E7%9F%A5%E8%AF%86%E7%82%B9/"/>
+    
+    <category term="论文推荐" scheme="http://bingowith.tech/tags/%E8%AE%BA%E6%96%87%E6%8E%A8%E8%8D%90/"/>
+    
+    <category term="AI新闻" scheme="http://bingowith.tech/tags/AI%E6%96%B0%E9%97%BB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>🚀 从零到一：大语言模型本地部署全流程深度科普</title>
+    <link href="http://bingowith.tech/2026/llm-local-deployment-guide/"/>
+    <id>http://bingowith.tech/2026/llm-local-deployment-guide/</id>
+    <published>2026-02-28T09:10:00.000Z</published>
+    <updated>2026-02-28T09:41:54.018Z</updated>
+    
+    
+    <summary type="html">彻底讲透LLM本地部署的底层概念，涵盖模型下载、框架原理、代码逻辑、Prompt设计与业务实战</summary>
+    
+    
+    
+    <category term="AI教程" scheme="http://bingowith.tech/categories/AI%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="LLM" scheme="http://bingowith.tech/tags/LLM/"/>
+    
+    <category term="本地部署" scheme="http://bingowith.tech/tags/%E6%9C%AC%E5%9C%B0%E9%83%A8%E7%BD%B2/"/>
+    
+    <category term="提示词工程" scheme="http://bingowith.tech/tags/%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%B7%A5%E7%A8%8B/"/>
+    
+    <category term="AI实战" scheme="http://bingowith.tech/tags/AI%E5%AE%9E%E6%88%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>一文读懂Hugging Face大模型文件：从下载到理解，新手也能轻松上手</title>
+    <link href="http://bingowith.tech/2026/huggingface-model-files-guide/"/>
+    <id>http://bingowith.tech/2026/huggingface-model-files-guide/</id>
+    <published>2026-02-28T08:00:00.000Z</published>
+    <updated>2026-02-28T08:19:37.137Z</updated>
+    
+    
+    <summary type="html">全面解析Hugging Face大模型文件夹中的各类文件，帮助新手轻松理解模型结构、权重、分词器等核心文件的作用与使用方法。</summary>
+    
+    
+    
+    <category term="技术教程" scheme="http://bingowith.tech/categories/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/"/>
     
     
     <category term="AI" scheme="http://bingowith.tech/tags/AI/"/>
     
-    <category term="电工" scheme="http://bingowith.tech/tags/%E7%94%B5%E5%B7%A5/"/>
+    <category term="大模型" scheme="http://bingowith.tech/tags/%E5%A4%A7%E6%A8%A1%E5%9E%8B/"/>
     
-    <category term="备考记录" scheme="http://bingowith.tech/tags/%E5%A4%87%E8%80%83%E8%AE%B0%E5%BD%95/"/>
+    <category term="Hugging Face" scheme="http://bingowith.tech/tags/Hugging-Face/"/>
     
-    <category term="零基础" scheme="http://bingowith.tech/tags/%E9%9B%B6%E5%9F%BA%E7%A1%80/"/>
+    <category term="教程" scheme="http://bingowith.tech/tags/%E6%95%99%E7%A8%8B/"/>
     
-    <category term="电工实操" scheme="http://bingowith.tech/tags/%E7%94%B5%E5%B7%A5%E5%AE%9E%E6%93%8D/"/>
+  </entry>
+  
+  <entry>
+    <title>AI日报 2026-02-27</title>
+    <link href="http://bingowith.tech/2026/ai-daily-20260227/"/>
+    <id>http://bingowith.tech/2026/ai-daily-20260227/</id>
+    <published>2026-02-27T15:59:59.000Z</published>
+    <updated>2026-02-27T07:30:15.568Z</updated>
     
-    <category term="题库整理" scheme="http://bingowith.tech/tags/%E9%A2%98%E5%BA%93%E6%95%B4%E7%90%86/"/>
+    
+    <summary type="html">每日AI新闻、知识点推送与论文推荐汇总</summary>
+    
+    
+    
+    <category term="AI日报" scheme="http://bingowith.tech/categories/AI%E6%97%A5%E6%8A%A5/"/>
+    
+    
+    <category term="AI日报" scheme="http://bingowith.tech/tags/AI%E6%97%A5%E6%8A%A5/"/>
+    
+    <category term="AI知识点" scheme="http://bingowith.tech/tags/AI%E7%9F%A5%E8%AF%86%E7%82%B9/"/>
+    
+    <category term="论文推荐" scheme="http://bingowith.tech/tags/%E8%AE%BA%E6%96%87%E6%8E%A8%E8%8D%90/"/>
+    
+    <category term="AI新闻" scheme="http://bingowith.tech/tags/AI%E6%96%B0%E9%97%BB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>AI日报 2026-02-26</title>
+    <link href="http://bingowith.tech/2026/ai-daily-20260226/"/>
+    <id>http://bingowith.tech/2026/ai-daily-20260226/</id>
+    <published>2026-02-26T15:59:59.000Z</published>
+    <updated>2026-02-26T07:30:27.402Z</updated>
+    
+    
+    <summary type="html">每日AI新闻、知识点推送与论文推荐汇总</summary>
+    
+    
+    
+    <category term="AI日报" scheme="http://bingowith.tech/categories/AI%E6%97%A5%E6%8A%A5/"/>
+    
+    
+    <category term="AI日报" scheme="http://bingowith.tech/tags/AI%E6%97%A5%E6%8A%A5/"/>
+    
+    <category term="AI知识点" scheme="http://bingowith.tech/tags/AI%E7%9F%A5%E8%AF%86%E7%82%B9/"/>
+    
+    <category term="论文推荐" scheme="http://bingowith.tech/tags/%E8%AE%BA%E6%96%87%E6%8E%A8%E8%8D%90/"/>
+    
+    <category term="AI新闻" scheme="http://bingowith.tech/tags/AI%E6%96%B0%E9%97%BB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>AI日报 2026-02-25</title>
+    <link href="http://bingowith.tech/2026/ai-daily-20260225/"/>
+    <id>http://bingowith.tech/2026/ai-daily-20260225/</id>
+    <published>2026-02-25T15:59:59.000Z</published>
+    <updated>2026-02-25T07:30:51.044Z</updated>
+    
+    
+    <summary type="html">每日AI新闻、知识点推送与论文推荐汇总</summary>
+    
+    
+    
+    <category term="AI日报" scheme="http://bingowith.tech/categories/AI%E6%97%A5%E6%8A%A5/"/>
+    
+    
+    <category term="AI日报" scheme="http://bingowith.tech/tags/AI%E6%97%A5%E6%8A%A5/"/>
+    
+    <category term="AI知识点" scheme="http://bingowith.tech/tags/AI%E7%9F%A5%E8%AF%86%E7%82%B9/"/>
+    
+    <category term="论文推荐" scheme="http://bingowith.tech/tags/%E8%AE%BA%E6%96%87%E6%8E%A8%E8%8D%90/"/>
+    
+    <category term="AI新闻" scheme="http://bingowith.tech/tags/AI%E6%96%B0%E9%97%BB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>AI日报 2026-02-24</title>
+    <link href="http://bingowith.tech/2026/ai-daily-20260224/"/>
+    <id>http://bingowith.tech/2026/ai-daily-20260224/</id>
+    <published>2026-02-24T15:59:59.000Z</published>
+    <updated>2026-02-24T07:30:18.059Z</updated>
+    
+    
+    <summary type="html">每日AI新闻、知识点推送与论文推荐汇总</summary>
+    
+    
+    
+    <category term="AI日报" scheme="http://bingowith.tech/categories/AI%E6%97%A5%E6%8A%A5/"/>
+    
+    
+    <category term="AI日报" scheme="http://bingowith.tech/tags/AI%E6%97%A5%E6%8A%A5/"/>
+    
+    <category term="AI知识点" scheme="http://bingowith.tech/tags/AI%E7%9F%A5%E8%AF%86%E7%82%B9/"/>
+    
+    <category term="论文推荐" scheme="http://bingowith.tech/tags/%E8%AE%BA%E6%96%87%E6%8E%A8%E8%8D%90/"/>
+    
+    <category term="AI新闻" scheme="http://bingowith.tech/tags/AI%E6%96%B0%E9%97%BB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>AI日报 2026-02-23</title>
+    <link href="http://bingowith.tech/2026/ai-daily-20260223/"/>
+    <id>http://bingowith.tech/2026/ai-daily-20260223/</id>
+    <published>2026-02-23T15:59:59.000Z</published>
+    <updated>2026-02-23T07:30:46.462Z</updated>
+    
+    
+    <summary type="html">每日AI新闻、知识点推送与论文推荐汇总</summary>
+    
+    
+    
+    <category term="AI日报" scheme="http://bingowith.tech/categories/AI%E6%97%A5%E6%8A%A5/"/>
+    
+    
+    <category term="AI日报" scheme="http://bingowith.tech/tags/AI%E6%97%A5%E6%8A%A5/"/>
+    
+    <category term="AI知识点" scheme="http://bingowith.tech/tags/AI%E7%9F%A5%E8%AF%86%E7%82%B9/"/>
+    
+    <category term="论文推荐" scheme="http://bingowith.tech/tags/%E8%AE%BA%E6%96%87%E6%8E%A8%E8%8D%90/"/>
+    
+    <category term="AI新闻" scheme="http://bingowith.tech/tags/AI%E6%96%B0%E9%97%BB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>AI日报 2026-02-22</title>
+    <link href="http://bingowith.tech/2026/ai-daily-20260222/"/>
+    <id>http://bingowith.tech/2026/ai-daily-20260222/</id>
+    <published>2026-02-22T15:59:59.000Z</published>
+    <updated>2026-02-22T07:30:35.434Z</updated>
+    
+    
+    <summary type="html">每日AI新闻、知识点推送与论文推荐汇总</summary>
+    
+    
+    
+    <category term="AI日报" scheme="http://bingowith.tech/categories/AI%E6%97%A5%E6%8A%A5/"/>
+    
+    
+    <category term="AI日报" scheme="http://bingowith.tech/tags/AI%E6%97%A5%E6%8A%A5/"/>
+    
+    <category term="AI知识点" scheme="http://bingowith.tech/tags/AI%E7%9F%A5%E8%AF%86%E7%82%B9/"/>
+    
+    <category term="论文推荐" scheme="http://bingowith.tech/tags/%E8%AE%BA%E6%96%87%E6%8E%A8%E8%8D%90/"/>
+    
+    <category term="AI新闻" scheme="http://bingowith.tech/tags/AI%E6%96%B0%E9%97%BB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>AI日报 2026-02-21</title>
+    <link href="http://bingowith.tech/2026/ai-daily-20260221/"/>
+    <id>http://bingowith.tech/2026/ai-daily-20260221/</id>
+    <published>2026-02-21T15:59:59.000Z</published>
+    <updated>2026-02-21T07:30:10.126Z</updated>
+    
+    
+    <summary type="html">每日AI新闻、知识点推送与论文推荐汇总</summary>
+    
+    
+    
+    <category term="AI日报" scheme="http://bingowith.tech/categories/AI%E6%97%A5%E6%8A%A5/"/>
+    
+    
+    <category term="AI日报" scheme="http://bingowith.tech/tags/AI%E6%97%A5%E6%8A%A5/"/>
+    
+    <category term="AI知识点" scheme="http://bingowith.tech/tags/AI%E7%9F%A5%E8%AF%86%E7%82%B9/"/>
+    
+    <category term="论文推荐" scheme="http://bingowith.tech/tags/%E8%AE%BA%E6%96%87%E6%8E%A8%E8%8D%90/"/>
+    
+    <category term="AI新闻" scheme="http://bingowith.tech/tags/AI%E6%96%B0%E9%97%BB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>AI日报 2026-02-20</title>
+    <link href="http://bingowith.tech/2026/ai-daily-20260220/"/>
+    <id>http://bingowith.tech/2026/ai-daily-20260220/</id>
+    <published>2026-02-20T15:59:59.000Z</published>
+    <updated>2026-02-20T07:30:14.319Z</updated>
+    
+    
+    <summary type="html">每日AI新闻、知识点推送与论文推荐汇总</summary>
+    
+    
+    
+    <category term="AI日报" scheme="http://bingowith.tech/categories/AI%E6%97%A5%E6%8A%A5/"/>
+    
+    
+    <category term="AI日报" scheme="http://bingowith.tech/tags/AI%E6%97%A5%E6%8A%A5/"/>
+    
+    <category term="AI知识点" scheme="http://bingowith.tech/tags/AI%E7%9F%A5%E8%AF%86%E7%82%B9/"/>
+    
+    <category term="论文推荐" scheme="http://bingowith.tech/tags/%E8%AE%BA%E6%96%87%E6%8E%A8%E8%8D%90/"/>
+    
+    <category term="AI新闻" scheme="http://bingowith.tech/tags/AI%E6%96%B0%E9%97%BB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>AI日报 2026-02-19</title>
+    <link href="http://bingowith.tech/2026/ai-daily-20260219/"/>
+    <id>http://bingowith.tech/2026/ai-daily-20260219/</id>
+    <published>2026-02-19T15:59:59.000Z</published>
+    <updated>2026-02-19T07:30:22.876Z</updated>
+    
+    
+    <summary type="html">每日AI新闻、知识点推送与论文推荐汇总</summary>
+    
+    
+    
+    <category term="AI日报" scheme="http://bingowith.tech/categories/AI%E6%97%A5%E6%8A%A5/"/>
+    
+    
+    <category term="AI日报" scheme="http://bingowith.tech/tags/AI%E6%97%A5%E6%8A%A5/"/>
+    
+    <category term="AI知识点" scheme="http://bingowith.tech/tags/AI%E7%9F%A5%E8%AF%86%E7%82%B9/"/>
+    
+    <category term="论文推荐" scheme="http://bingowith.tech/tags/%E8%AE%BA%E6%96%87%E6%8E%A8%E8%8D%90/"/>
+    
+    <category term="AI新闻" scheme="http://bingowith.tech/tags/AI%E6%96%B0%E9%97%BB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>AI日报 2026-02-18</title>
+    <link href="http://bingowith.tech/2026/ai-daily-20260218/"/>
+    <id>http://bingowith.tech/2026/ai-daily-20260218/</id>
+    <published>2026-02-18T15:59:59.000Z</published>
+    <updated>2026-02-18T07:30:23.654Z</updated>
+    
+    
+    <summary type="html">每日AI新闻、知识点推送与论文推荐汇总</summary>
+    
+    
+    
+    <category term="AI日报" scheme="http://bingowith.tech/categories/AI%E6%97%A5%E6%8A%A5/"/>
+    
+    
+    <category term="AI日报" scheme="http://bingowith.tech/tags/AI%E6%97%A5%E6%8A%A5/"/>
+    
+    <category term="AI知识点" scheme="http://bingowith.tech/tags/AI%E7%9F%A5%E8%AF%86%E7%82%B9/"/>
+    
+    <category term="论文推荐" scheme="http://bingowith.tech/tags/%E8%AE%BA%E6%96%87%E6%8E%A8%E8%8D%90/"/>
+    
+    <category term="AI新闻" scheme="http://bingowith.tech/tags/AI%E6%96%B0%E9%97%BB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>AI日报 2026-02-17</title>
+    <link href="http://bingowith.tech/2026/ai-daily-20260217/"/>
+    <id>http://bingowith.tech/2026/ai-daily-20260217/</id>
+    <published>2026-02-17T15:59:59.000Z</published>
+    <updated>2026-02-17T07:30:15.470Z</updated>
+    
+    
+    <summary type="html">每日AI新闻、知识点推送与论文推荐汇总</summary>
+    
+    
+    
+    <category term="AI日报" scheme="http://bingowith.tech/categories/AI%E6%97%A5%E6%8A%A5/"/>
+    
+    
+    <category term="AI日报" scheme="http://bingowith.tech/tags/AI%E6%97%A5%E6%8A%A5/"/>
+    
+    <category term="AI知识点" scheme="http://bingowith.tech/tags/AI%E7%9F%A5%E8%AF%86%E7%82%B9/"/>
+    
+    <category term="论文推荐" scheme="http://bingowith.tech/tags/%E8%AE%BA%E6%96%87%E6%8E%A8%E8%8D%90/"/>
+    
+    <category term="AI新闻" scheme="http://bingowith.tech/tags/AI%E6%96%B0%E9%97%BB/"/>
     
   </entry>
   
