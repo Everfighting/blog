@@ -20,7 +20,7 @@ toc: true
 
 本文档以PDF格式提供，包含完整的内容和图表：
 
-[📥 下载PDF文档](/pdf/li-bojie-ai-native-team.pdf)
+[📥 下载PDF文档](http://bingowith.tech/pdf/li-bojie-ai-native-team.pdf)
 
 **文件信息：**
 - 文件名：李博杰--构建 AI 原生团队，使能 AI 员工.pdf
@@ -75,7 +75,7 @@ toc: true
 
 ## 🔗 相关资源
 
-- PDF下载：[李博杰--构建 AI 原生团队，使能 AI 员工.pdf](/pdf/li-bojie-ai-native-team.pdf)
+- PDF下载：[李博杰--构建 AI 原生团队，使能 AI 员工.pdf](http://bingowith.tech/pdf/li-bojie-ai-native-team.pdf)
 - 更多管理思考文章敬请期待
 
 ---

@@ -17,7 +17,7 @@ toc: true
 
 ## 📖 文档下载
 
-[📥 下载PDF文档](/pdf/366dc1e0-5e0e-435e-b184-68bbd3fbb507.pdf)
+[📥 下载PDF文档](http://bingowith.tech/pdf/366dc1e0-5e0e-435e-b184-68bbd3fbb507.pdf)
 
 **文件信息：**
 - 文件名：366dc1e0-5e0e-435e-b184-68bbd3fbb507.pdf
