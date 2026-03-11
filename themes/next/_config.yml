@@ -826,3 +826,4 @@ version: 5.1.4
 mermaid:
   enable: true
   cdn: https://cdn.bootcdn.net/ajax/libs/mermaid/7.1.2/mermaid.min.js
+  theme: forest
