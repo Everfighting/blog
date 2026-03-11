@@ -1,0 +1,1450 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+  <meta name="google-site-verification" content="j9K0QHVhy5Is2MyrlHKAdrH9TTZmmQ8bQD16-miJTT0" />
+
+
+
+  <meta name="msvalidate.01" content="FC067E398F86AC9B4BF0C75855D30357" />
+
+
+
+
+
+
+  <meta name="baidu-site-verification" content="codeva-IdaHYFTDQL" />
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="https://fonts.lug.ustc.edu.cn/css?family=Noto Serif SC:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="AI,LLM,大模型,技术解读," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="蔡大锅's Blog" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="系统梳理大语言模型领域的核心概念，涵盖基础架构、模型训练、核心能力、AI智能体、评估伦理到应用部署六大模块">
+<meta property="og:type" content="article">
+<meta property="og:title" content="大模型领域核心概念详解">
+<meta property="og:url" content="http://bingowith.tech/2026/llm-core-concepts-guide/index.html">
+<meta property="og:site_name" content="蔡大锅&#39;s Blog">
+<meta property="og:description" content="系统梳理大语言模型领域的核心概念，涵盖基础架构、模型训练、核心能力、AI智能体、评估伦理到应用部署六大模块">
+<meta property="og:locale">
+<meta property="article:published_time" content="2026-03-02T09:35:00.000Z">
+<meta property="article:modified_time" content="2026-03-02T09:38:20.353Z">
+<meta property="article:author" content="Bingo Cai">
+<meta property="article:tag" content="AI">
+<meta property="article:tag" content="LLM">
+<meta property="article:tag" content="大模型">
+<meta property="article:tag" content="技术解读">
+<meta name="twitter:card" content="summary">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://bingowith.tech/2026/llm-core-concepts-guide/"/>
+
+
+
+
+
+  <title>大模型领域核心概念详解 | 蔡大锅's Blog</title>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?fa8b25a8de50c7a3401d49765b5192cd";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+<meta name="generator" content="Hexo 8.0.0"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">蔡大锅's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">不背锅日志</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://bingowith.tech/2026/llm-core-concepts-guide/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="蔡大锅's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">大模型领域核心概念详解</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2026-03-02T17:35:00+08:00">
+                2026-03-02
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index">
+                    <span itemprop="name">技术学习</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2026/llm-core-concepts-guide/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="/2026/llm-core-concepts-guide/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  51 mins.
+                </span>
+              
+            </div>
+          
+
+          
+              <div class="post-description">
+                  系统梳理大语言模型领域的核心概念，涵盖基础架构、模型训练、核心能力、AI智能体、评估伦理到应用部署六大模块
+              </div>
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>本文整理了大语言模型（Large Language Models, LLMs）领域的核心概念，从基础架构、模型训练、核心能力、AI智能体、评估伦理到应用部署进行系统梳理，这些概念是理解LLM工作原理、优势局限及未来发展的基础，且按重要性和关联性组织为六大模块。</p>
+<span id="more"></span>
+
+<h2 id="I-基础构建模块与核心架构"><a href="#I-基础构建模块与核心架构" class="headerlink" title="I. 基础构建模块与核心架构"></a>I. 基础构建模块与核心架构</h2><p>这是理解现代大模型构建和运作的基石，包含构成模型底层的关键技术与结构。</p>
+<h3 id="1-Transformer架构"><a href="#1-Transformer架构" class="headerlink" title="1. Transformer架构"></a>1. Transformer架构</h3><p><strong>首次提出：</strong> Ashish Vaswani等学者（Google Brain&#x2F;Research &amp; 多伦多大学）在2017年《Attention Is All You Need》论文中提出。</p>
+<p><strong>核心思想：</strong> 基于自注意力机制的深度学习架构，摒弃传统RNN、CNN结构，完全依靠注意力机制捕捉输入数据的全局依赖关系，核心组件为多头自注意力层和前馈神经网络层。</p>
+<p><strong>意义影响：</strong> 成为GPT、BERT、PaLM等先进LLM的基石；支持输入序列高度并行化处理，加速模型训练；能有效捕捉长距离依赖，优于RNN；具备优秀可扩展性，性能随参数量、数据量和计算量提升而持续优化。</p>
+<h3 id="2-注意力机制"><a href="#2-注意力机制" class="headerlink" title="2. 注意力机制"></a>2. 注意力机制</h3><p><strong>首次提出：</strong> 2014年Dzmitry Bahdanau等在神经机器翻译论文中引入，后在Transformer中发展为自注意力形式。</p>
+<p><strong>核心思想：</strong> 让模型处理序列数据时，为输入不同部分动态分配注意力权重，聚焦任务相关部分；其中自注意力计算序列内部元素相关性，多头注意力则并行运行多个注意力”头”，学习不同上下文表示后聚合，捕捉多子空间信息。</p>
+<p><strong>意义影响：</strong> 大幅增强模型对词语上下文含义的理解，是Transformer模型高效处理复杂序列的核心驱动。</p>
+<h3 id="3-词元-标记"><a href="#3-词元-标记" class="headerlink" title="3. 词元&#x2F;标记"></a>3. 词元&#x2F;标记</h3><p><strong>相关算法：</strong> 字节对编码（BPE，2015）、WordPiece（Google，BERT使用）、SentencePiece（2018）等。</p>
+<p><strong>核心思想：</strong> 将原始文本分割为单词、子词或单个字符等标准化小单元，模型基于词元进行处理。</p>
+<p><strong>意义影响：</strong> 子词标记化可处理未登录词和罕见词，控制词汇表大小；是文本输入神经网络的标准化形式，其设计影响模型计算效率和上下文长度处理能力。</p>
+<h3 id="4-词嵌入"><a href="#4-词嵌入" class="headerlink" title="4. 词嵌入"></a>4. 词嵌入</h3><p><strong>普及工作：</strong> 2013年Google Word2Vec、2014年斯坦福GloVe。</p>
+<p><strong>核心思想：</strong> 将离散词元映射到稠密、低维、连续的向量空间，向量捕捉词元的语义和句法信息，语义相近词元在向量空间中距离更近。</p>
+<p><strong>意义影响：</strong> 让计算机以数值方式理解词语意义和关系；相比独热编码大幅降低输入维度；为神经网络提供富含语义的可处理输入。</p>
+<h3 id="5-位置编码"><a href="#5-位置编码" class="headerlink" title="5. 位置编码"></a>5. 位置编码</h3><p><strong>首次提出：</strong> 2017年原版Transformer论文中引入。</p>
+<p><strong>核心思想：</strong> 因Transformer自注意力机制无序列感知能力，通过位置编码向量为模型注入词元的相对&#x2F;绝对位置信息，编码向量与词嵌入向量相加或拼接。</p>
+<p><strong>意义影响：</strong> 让Transformer理解词语顺序，是其能有效处理序列数据的关键组件。</p>
+<h3 id="6-激活函数"><a href="#6-激活函数" class="headerlink" title="6. 激活函数"></a>6. 激活函数</h3><p><strong>关键类型：</strong> 2010年Vinod Nair和Geoffrey Hinton提出的ReLU、2016年Dan Hendrycks和Kevin Gimpel提出的GeLU。</p>
+<p><strong>核心思想：</strong> 在神经网络神经元输出上应用的非线性函数，决定神经元的激活状态和对下一层的贡献程度。</p>
+<p><strong>意义影响：</strong> 为神经网络引入非线性，使其能学习复杂非线性关系（否则多层网络等效于单层线性模型）；激活函数选择影响模型训练动态和性能，ReLU及其变体因简单性和缓解梯度消失的能力被广泛使用。</p>
+<h3 id="7-混合专家模型"><a href="#7-混合专家模型" class="headerlink" title="7. 混合专家模型"></a>7. 混合专家模型</h3><p><strong>首次提出：</strong> 1991年Robert A. Jacobs等提出概念，LLM领域中Google GShard（2020）、Switch Transformers（2021）、Mistral AI Mixtral系列（2023）实现稀疏门控MoE层的发展。</p>
+<p><strong>核心思想：</strong> 包含多个”专家”子网络和一个门控网络，门控网络为每个输入动态选择1-2个专家子网络处理，实现大参数量与低实际计算量的结合。</p>
+<p><strong>意义影响：</strong> 在控制计算效率的同时大幅提升模型参数量和容量；不同专家可专业化学习处理不同类型输入或模式。</p>
+<h2 id="II-模型训练、学习与优化"><a href="#II-模型训练、学习与优化" class="headerlink" title="II. 模型训练、学习与优化"></a>II. 模型训练、学习与优化</h2><p>该模块描述模型从数据中学习并持续改进的方法与策略，是LLM从基础架构到可用模型的关键环节。</p>
+<h3 id="1-数据清洗与预处理"><a href="#1-数据清洗与预处理" class="headerlink" title="1. 数据清洗与预处理"></a>1. 数据清洗与预处理</h3><p><strong>核心思想：</strong> 模型训练前对原始文本数据的一系列处理，包括去除噪声、处理重复、过滤低质量&#x2F;有害内容、文本规范化等，是机器学习领域逐步形成的最佳实践。</p>
+<p><strong>意义影响：</strong> 高质量训练数据是高性能、低偏见、稳健模型的基础，符合”输入垃圾，输出垃圾”原则；干净的数据能提升训练效率，增强模型稳定性。</p>
+<h3 id="2-预训练"><a href="#2-预训练" class="headerlink" title="2. 预训练"></a>2. 预训练</h3><p><strong>发展标志：</strong> 2018年Google BERT和OpenAI GPT的出现，开启NLP领域大规模预训练语言模型时代。</p>
+<p><strong>核心思想：</strong> 在大规模无标签文本数据上，通过掩码语言模型（MLM）、下一词元预测等自监督学习任务训练模型，使其学习通用的语言知识和模式。</p>
+<p><strong>意义影响：</strong> 让模型积累丰富的语法、语义和世界知识；成为各类下游任务迁移学习的强大基础，大幅降低下游任务的训练成本。</p>
+<h3 id="3-扩展定律"><a href="#3-扩展定律" class="headerlink" title="3. 扩展定律"></a>3. 扩展定律</h3><p><strong>首次总结：</strong> 2020年OpenAI Jared Kaplan等在《Scaling Laws for Neural Language Models》中，与DeepMind研究人员通过大量实验得出。</p>
+<p><strong>核心思想：</strong> LLM的性能（以损失函数值衡量）与模型参数量、训练数据集大小、训练计算量之间存在可预测的幂律关系。</p>
+<p><strong>意义影响：</strong> 为构建更大、更强的LLM提供理论依据和实践指导；帮助研发者在有限预算下平衡三大因素，实现最优性能。</p>
+<h3 id="4-微调"><a href="#4-微调" class="headerlink" title="4. 微调"></a>4. 微调</h3><p><strong>核心思想：</strong> 在预训练好的大模型基础上，使用特定任务的小规模有标签数据集，继续训练并调整模型部分或全部参数，使其适配具体任务。</p>
+<p><strong>意义影响：</strong> 将通用语言模型的能力特化到具体应用场景；相比从头训练，效率更高、所需数据更少。</p>
+<h3 id="5-参数高效微调"><a href="#5-参数高效微调" class="headerlink" title="5. 参数高效微调"></a>5. 参数高效微调</h3><p><strong>代表性工作：</strong> 2019年Adapter、2021年微软LoRA、2021年Prefix Tuning。</p>
+<p><strong>核心思想：</strong> 仅更新模型少量参数（如引入新参数、调整低秩矩阵），冻结大部分预训练参数，降低微调的计算和存储成本。</p>
+<p><strong>意义影响：</strong> 让有限资源下微调超大规模模型成为可能；便于为多个任务维护少量专属参数，无需保存多个完整模型副本，提升部署灵活性。</p>
+<h3 id="6-指令微调-指令遵循"><a href="#6-指令微调-指令遵循" class="headerlink" title="6. 指令微调 &#x2F; 指令遵循"></a>6. 指令微调 &#x2F; 指令遵循</h3><p><strong>代表性工作：</strong> 2021年Google FLAN、2022年OpenAI InstructGPT。</p>
+<p><strong>核心思想：</strong> 在大量（任务描述，输入，输出）格式的指令数据集上微调预训练模型，让模型学会理解并遵循自然语言指令执行任务。</p>
+<p><strong>意义影响：</strong> 显著增强模型对未见过任务的零样本和少样本泛化能力；让模型更能响应用户的多样化、指令式需求，提升用户友好性。</p>
+<h3 id="7-强化学习来自人类反馈"><a href="#7-强化学习来自人类反馈" class="headerlink" title="7. 强化学习来自人类反馈"></a>7. 强化学习来自人类反馈</h3><p><strong>推广应用：</strong> 2022年OpenAI在InstructGPT和ChatGPT开发中广泛应用。</p>
+<p><strong>核心思想：</strong> 三阶段训练方法，先收集人类对模型输出的偏好排序数据，再基于数据训练奖励模型预测人类偏好，最后以奖励模型为强化学习的奖励函数，微调LLM生成符合人类偏好的输出。</p>
+<p><strong>意义影响：</strong> 是LLM与人类意图、价值观对齐的核心技术；让模型输出更有用、无害、诚实，是ChatGPT等产品成功的关键。</p>
+<h3 id="8-知识蒸馏"><a href="#8-知识蒸馏" class="headerlink" title="8. 知识蒸馏"></a>8. 知识蒸馏</h3><p><strong>首次提出：</strong> 2015年Geoffrey Hinton等Google学者在《Distilling the Knowledge in a Neural Network》中系统性提出。</p>
+<p><strong>核心思想：</strong> 一种模型压缩技术，将大型复杂的”教师模型”的知识（软标签、中间层表示）迁移到更小、更轻量的”学生模型”。</p>
+<p><strong>意义影响：</strong> 生成计算成本更低、推理速度更快的小型模型，且能保持与教师模型相当的性能；便于在手机、边缘设备等资源受限的环境中部署模型。</p>
+<h2 id="III-语言模型核心能力与交互"><a href="#III-语言模型核心能力与交互" class="headerlink" title="III. 语言模型核心能力与交互"></a>III. 语言模型核心能力与交互</h2><p>该模块介绍训练完成的LLM具备的关键能力，以及人类与模型的交互方式，是模型能力落地的核心体现。</p>
+<h3 id="1-上下文窗口"><a href="#1-上下文窗口" class="headerlink" title="1. 上下文窗口"></a>1. 上下文窗口</h3><p><strong>核心思想：</strong> LLM一次处理中能接收和考虑的最大词元数量，输入提示和模型生成内容均需在该限制内，是Transformer序列长度限制的具体体现。</p>
+<p><strong>意义影响：</strong> 直接决定模型处理长文本、长对话和理解复杂上下文的能力，是当前LLM的重要能力瓶颈；扩展上下文窗口是LLM的重要研究方向，但面临计算成本增加和注意力稀释的挑战。</p>
+<h3 id="2-推理-思维能力"><a href="#2-推理-思维能力" class="headerlink" title="2. 推理&#x2F;思维能力"></a>2. 推理&#x2F;思维能力</h3><p><strong>关键推动：</strong> 2022年Google Jason Wei等提出的思维链（Chain-of-Thought, CoT）技术。</p>
+<p><strong>核心思想：</strong> 模型执行逻辑推断、多步骤问题解决、因果关系理解、隐含结论推导及知识迁移应用的能力；其中CoT是提示工程技巧，通过提供逐步思考示例，引导模型生成中间推理步骤，提升复杂推理任务表现。</p>
+<p><strong>意义影响：</strong> 是衡量LLM”智能”程度和实用性的重要指标；更强的推理能力让模型回答更可靠、更有深度。</p>
+<h3 id="3-涌现能力"><a href="#3-涌现能力" class="headerlink" title="3. 涌现能力"></a>3. 涌现能力</h3><p><strong>首次系统讨论：</strong> 2022年Google Research Jason Wei等在《Emergent Abilities of Large Language Models》中提出。</p>
+<p><strong>核心思想：</strong> 模型规模（参数量）达到特定阈值后，突然出现并显著提升的复杂能力，这些能力未经过显式设计或针对性训练，在小型模型中不存在或表现微弱。</p>
+<p><strong>意义影响：</strong> 进一步印证模型规模在LLM发展中的关键作用；使大型模型的行为更难完全预测，部分能力的出现具有偶然性。</p>
+<h3 id="4-多模态"><a href="#4-多模态" class="headerlink" title="4. 多模态"></a>4. 多模态</h3><p><strong>前沿模型：</strong> 2023年OpenAI GPT-4（具备视觉输入能力）、Google Gemini（原生多模态设计）。</p>
+<p><strong>核心思想：</strong> LLM理解、处理和生成文本、图像、音频、视频等多种类型信息的能力，例如根据图片生成描述、根据文本指令生成图片。</p>
+<p><strong>意义影响：</strong> 让AI更接近人类通过多感官与世界交互的方式；极大拓展了LLM的应用范围，打破单一文本模态的限制。</p>
+<h3 id="5-提示工程"><a href="#5-提示工程" class="headerlink" title="5. 提示工程"></a>5. 提示工程</h3><p><strong>兴起背景：</strong> 随GPT-2、GPT-3等强大生成模型出现，由用户和研究者在实践中探索总结。</p>
+<p><strong>核心思想：</strong> 设计和优化输入给LLM的文本提示，无需修改模型参数，引导模型生成特定、高质量、符合预期的输出。</p>
+<p><strong>意义影响：</strong> 构建了人机与LLM高效沟通、控制模型行为的新范式；优秀的提示能解锁模型在预训练阶段习得的潜在能力，充分发挥模型价值。</p>
+<h3 id="6-工具使用-函数调用"><a href="#6-工具使用-函数调用" class="headerlink" title="6. 工具使用 &#x2F; 函数调用"></a>6. 工具使用 &#x2F; 函数调用</h3><p><strong>首次引入：</strong> 2023年OpenAI在GPT模型API中引入函数调用功能，Meta AI Toolformer同期探索LLM自主学习使用工具。</p>
+<p><strong>核心思想：</strong> 赋予LLM判断何时需要调用外部工具（计算器、搜索引擎API、代码解释器等）的能力，并生成符合特定格式的工具调用请求，模型本身不执行工具操作，仅输出指令。</p>
+<p><strong>意义影响：</strong> 让LLM间接利用外部实时信息和专用计算能力，突破自身知识和能力局限；是构建复杂AI智能体的重要前置能力。</p>
+<h2 id="IV-AI智能体：迈向自主系统"><a href="#IV-AI智能体：迈向自主系统" class="headerlink" title="IV. AI智能体：迈向自主系统"></a>IV. AI智能体：迈向自主系统</h2><p>这是LLM发展的前沿方向，核心是将LLM作为”大脑”，构建能自主规划、行动的智能系统，实现从被动文本生成到主动问题解决的转变。</p>
+<h3 id="1-人工智能智能体"><a href="#1-人工智能智能体" class="headerlink" title="1. 人工智能智能体"></a>1. 人工智能智能体</h3><p><strong>概念基础：</strong> 智能体概念源于AI经典著作《Artificial Intelligence: A Modern Approach》（Russell &amp; Norvig），基于LLM的智能体随模型能力增强成为2023年研究热点，代表工作有Auto-GPT、BabyAGI。</p>
+<p><strong>核心思想：</strong> 以LLM为核心控制器的系统，能自主感知环境（文本输入、工具输出等）、制定计划、执行动作（调用工具&#x2F;API），并从结果中学习调整，以达成特定目标。</p>
+<p><strong>意义影响：</strong> 实现LLM从被动文本生成器到主动问题解决者、任务执行者的范式转变；极大扩展AI的应用场景，如自动化业务流程、复杂任务辅助等。</p>
+<h3 id="2-智能体的核心组件"><a href="#2-智能体的核心组件" class="headerlink" title="2. 智能体的核心组件"></a>2. 智能体的核心组件</h3><h4 id="规划"><a href="#规划" class="headerlink" title="规划"></a>规划</h4><p>将复杂目标分解为可执行子任务&#x2F;步骤的能力，依托LLM的推理（如CoT）技术，支持任务分解、反思和计划修正，让智能体能处理多步骤复杂任务。</p>
+<h4 id="记忆"><a href="#记忆" class="headerlink" title="记忆"></a>记忆</h4><p>存储和检索信息指导行为的能力，分为短期记忆（LLM的上下文窗口，即当前交互上下文）和长期记忆（通过外部向量数据库存储，保留过往经验、知识和用户偏好），赋予智能体持续学习、个性化服务和长期行为一致性的能力。</p>
+<h4 id="工具使用"><a href="#工具使用" class="headerlink" title="工具使用"></a>工具使用</h4><p>与LLM函数调用相关，但更强调智能体的主动决策，即根据规划和当前状态，自主选择、配置并调用外部工具，是智能体突破LLM自身局限、实现复杂任务的关键。</p>
+<h4 id="行动"><a href="#行动" class="headerlink" title="行动"></a>行动</h4><p>智能体根据规划和状态在环境中执行的操作，可分为数字化操作（发送邮件、调用API、修改文件）和物理世界交互（机器人场景），是智能体影响环境、向目标推进的实际步骤。</p>
+<h4 id="观察-感知"><a href="#观察-感知" class="headerlink" title="观察&#x2F;感知"></a>观察&#x2F;感知</h4><p>从环境中收集信息（工具输出、用户反馈、环境状态变化等），更新内部状态并指导后续规划和行动的能力，让智能体能响应动态环境并从中学习。</p>
+<h3 id="3-智能体架构-框架"><a href="#3-智能体架构-框架" class="headerlink" title="3. 智能体架构&#x2F;框架"></a>3. 智能体架构&#x2F;框架</h3><p><strong>代表框架：</strong> 2022年Google Research &amp; 普林斯顿Shunyu Yao等提出的ReAct。</p>
+<p><strong>核心思想：</strong> 指导智能体组织思考和行动的特定模式&#x2F;工作流程，例如ReAct框架让智能体交替进行”思考”（生成推理步骤决定下一步行动）和”行动”（执行工具调用等操作）。</p>
+<p><strong>意义影响：</strong> 为构建更强大、可靠、可控的AI智能体提供结构化方法，降低智能体开发的复杂度。</p>
+<h3 id="4-多智能体系统"><a href="#4-多智能体系统" class="headerlink" title="4. 多智能体系统"></a>4. 多智能体系统</h3><p><strong>代表工作：</strong> 2023年Li等提出的CAMEL。</p>
+<p><strong>核心思想：</strong> 由多个自主LLM智能体组成的系统，智能体在共享环境中通过协作、竞争或共存的方式交互，扮演不同角色、沟通协调，解决单个智能体难以处理的复杂问题。</p>
+<p><strong>意义影响：</strong> 能模拟复杂的社会动态和组织行为；探索通过智能体间的协作实现更高层次的集体智能和问题解决能力。</p>
+<h2 id="V-评估、挑战与伦理考量"><a href="#V-评估、挑战与伦理考量" class="headerlink" title="V. 评估、挑战与伦理考量"></a>V. 评估、挑战与伦理考量</h2><p>该模块涵盖LLM和AI智能体的性能衡量方法、发展面临的固有问题，以及研发和应用中的社会责任，是模型健康、可持续发展的重要保障。</p>
+<h3 id="1-基准测试"><a href="#1-基准测试" class="headerlink" title="1. 基准测试"></a>1. 基准测试</h3><p><strong>代表性基准：</strong> LLM领域有GLUE、SuperGLUE、MMLU、HumanEval、BIG-bench；AI智能体领域有2023年的AgentBench、WebArena。</p>
+<p><strong>核心思想：</strong> 通过一系列标准化的任务、数据集和评估指标，系统评估和比较不同AI模型（LLM、Agent）在各方面能力的表现，是计算机科学和机器学习的通用概念。</p>
+<p><strong>意义影响：</strong> 为AI技术进展提供客观衡量标准；支持不同模型的公平对比；帮助研究者发现模型优劣，指导后续研究方向。</p>
+<h3 id="2-推理"><a href="#2-推理" class="headerlink" title="2. 推理"></a>2. 推理</h3><p><strong>核心思想：</strong> 机器学习通用术语，指使用训练完成的模型对新的、未见过的数据进行预测、生成或执行任务的过程，重点关注推理的效率（速度&#x2F;延迟、吞吐量）和成本（计算资源消耗）。</p>
+<p><strong>意义影响：</strong> 推理性能直接决定模型在实际应用中的可用性和经济性，是模型部署的关键指标；优化推理效率是当前LLM和智能体研究的重要目标。</p>
+<h3 id="3-幻觉"><a href="#3-幻觉" class="headerlink" title="3. 幻觉"></a>3. 幻觉</h3><p><strong>核心思想：</strong> LLM或智能体生成看似合理、流畅，但实际虚假、不准确或与事实不符的信息的现象，是生成模型的普遍问题。</p>
+<p><strong>意义影响：</strong> 严重降低模型和智能体的可靠性与可信度，是LLM应用的主要局限性；检测、减轻和消除幻觉是当前AI研究的核心挑战之一。</p>
+<h3 id="4-偏见"><a href="#4-偏见" class="headerlink" title="4. 偏见"></a>4. 偏见</h3><p><strong>核心思想：</strong> LLM或智能体在输出中反映或放大训练数据中的社会偏见，如性别、种族、宗教相关的刻板印象或歧视性言论，AI偏见问题早有存在，LLM因训练数据的广泛性加剧了该问题。</p>
+<p><strong>意义影响：</strong> 存在伦理风险，可能导致不公平对待、加剧社会不平等；确保模型公平性和无偏见性，是构建负责任AI的核心要求。</p>
+<h3 id="5-可解释性-可解释人工智能"><a href="#5-可解释性-可解释人工智能" class="headerlink" title="5. 可解释性 &#x2F; 可解释人工智能"></a>5. 可解释性 &#x2F; 可解释人工智能</h3><p><strong>发展推动：</strong> 2010年代后期DARPA的XAI项目推动了该领域研究。</p>
+<p><strong>核心思想：</strong> 理解和解释AI模型（尤其是LLM这类黑箱模型）决策和生成特定输出的方法与能力，目标是让模型内部工作机制对人类透明、可理解。</p>
+<p><strong>意义影响：</strong> 对于调试模型错误、确保公平性和合规性至关重要，是建立人类对AI信任的基础；AI智能体的决策链更长更复杂，其可解释性面临更大挑战。</p>
+<h3 id="6-对齐"><a href="#6-对齐" class="headerlink" title="6. 对齐"></a>6. 对齐</h3><p><strong>实践推动：</strong> Paul Christiano等人在RLHF方面的工作，推动了LLM对齐的实际应用。</p>
+<p><strong>核心思想：</strong> 确保AI系统的目标和行为与人类的意图、价值观和偏好相一致的过程，LLM对齐遵循”有用、诚实、无害”的HHH原则。</p>
+<p><strong>意义影响：</strong> 是构建安全、可靠、值得信赖的AI系统的核心挑战和安全基石；RLHF是实现LLM对齐的重要技术手段。</p>
+<h3 id="7-智能体安全与对齐"><a href="#7-智能体安全与对齐" class="headerlink" title="7. 智能体安全与对齐"></a>7. 智能体安全与对齐</h3><p><strong>核心思想：</strong> 新兴研究领域，旨在确保自主智能体的行为不仅符合初始目标，且在复杂动态环境中不会产生意外、有害或不可控的后果，其复杂度远高于静态LLM的对齐，因智能体行为具有持续性、交互性，可能涉及长期影响和不可预见的工具交互。</p>
+<p><strong>意义影响：</strong> 是智能体技术广泛推广应用的关键前提；面临目标规范、鲁棒性、可预测性、避免意外副作用等一系列复杂难题。</p>
+<h2 id="VI-应用策略与部署模式"><a href="#VI-应用策略与部署模式" class="headerlink" title="VI. 应用策略与部署模式"></a>VI. 应用策略与部署模式</h2><p>该模块介绍将LLM和AI智能体的能力落地到实际场景的策略和模式，是技术转化为实际价值的关键环节。</p>
+<h3 id="1-检索增强生成"><a href="#1-检索增强生成" class="headerlink" title="1. 检索增强生成"></a>1. 检索增强生成</h3><p><strong>首次提出：</strong> 2020年Patrick Lewis等Meta AI学者在《Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks》中提出。</p>
+<p><strong>核心思想：</strong> 将预训练LLM与外部知识库检索结合的技术，用户提问时，系统先从向量数据库等知识库中检索相关信息片段，再将片段与原始提问一起作为上下文输入LLM，由模型生成最终答案。</p>
+<p><strong>意义影响：</strong> 让LLM利用最新、领域特定或私有知识，大幅提高答案的事实准确性，缓解幻觉问题；无需重新训练整个大模型，即可实现模型知识的更新，降低知识维护成本。</p>
+<h3 id="2-模型即服务"><a href="#2-模型即服务" class="headerlink" title="2. 模型即服务"></a>2. 模型即服务</h3><p><strong>典型代表：</strong> OpenAI API、Google Vertex AI、Amazon Bedrock，是云计算和服务化趋势在AI领域的延伸。</p>
+<p><strong>核心思想：</strong> 通过云平台提供预训练大模型的API访问服务，用户无需承担模型训练和部署的复杂性与成本，直接调用API即可使用模型能力。</p>
+<p><strong>意义影响：</strong> 大幅降低企业和开发者使用先进AI技术的门槛，让中小主体也能享受AI能力；催生了围绕LLM API的生态系统，推动了大量AI创新应用的出现。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>本文梳理的核心概念为大模型和AI智能体领域奠定了基础，而该领域发展迅速，新的概念和技术仍在不断涌现。</p>
+<p><strong>文章来源：</strong> 知乎 <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/1906481146545546693">大模型领域核心概念详解</a></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    Bingo Cai
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://bingowith.tech/2026/llm-core-concepts-guide/" title="大模型领域核心概念详解">http://bingowith.tech/2026/llm-core-concepts-guide/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/AI/" rel="tag"># AI</a>
+          
+            <a href="/tags/LLM/" rel="tag"># LLM</a>
+          
+            <a href="/tags/%E5%A4%A7%E6%A8%A1%E5%9E%8B/" rel="tag"># 大模型</a>
+          
+            <a href="/tags/%E6%8A%80%E6%9C%AF%E8%A7%A3%E8%AF%BB/" rel="tag"># 技术解读</a>
+          
+        </div>
+      
+
+      
+      
+        <div class="post-widgets">
+        
+
+        
+
+        
+          
+          <div id="needsharebutton-postbottom">
+            <span class="btn">
+              <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </span>
+          </div>
+        
+        </div>
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2026/ai-coding-new-paradigm/" rel="next" title="AI Coding 普及后的新范式：构建你的编程飞轮">
+                <i class="fa fa-chevron-left"></i> AI Coding 普及后的新范式：构建你的编程飞轮
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2026/ai-daily-20260302/" rel="prev" title="AI日报 2026-03-02">
+                AI日报 2026-03-02 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a target="_blank" rel="noopener" href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/uploads/avatar.png"
+                alt="" />
+            
+              <p class="site-author-name" itemprop="name"></p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">62</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">25</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">113</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/Everfighting" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-fa-brands fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.douban.com/people/binbeing" target="_blank" title="豆瓣">
+                      
+                        <i class="fa fa-fw fa-fa-solid fa-book"></i>豆瓣</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="http://www.zhihu.com/people/your-user-name" target="_blank" title="知乎">
+                      
+                        <i class="fa fa-fw fa-fa-solid fa-thumbs-up"></i>知乎</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:binbeing@126.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-fa-solid fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://x.com/bingo41589512" target="_blank" title="Twitter">
+                      
+                        <i class="fa fa-fw fa-twitter"></i>Twitter</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#I-%E5%9F%BA%E7%A1%80%E6%9E%84%E5%BB%BA%E6%A8%A1%E5%9D%97%E4%B8%8E%E6%A0%B8%E5%BF%83%E6%9E%B6%E6%9E%84"><span class="nav-number">1.</span> <span class="nav-text">I. 基础构建模块与核心架构</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-Transformer%E6%9E%B6%E6%9E%84"><span class="nav-number">1.1.</span> <span class="nav-text">1. Transformer架构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E6%B3%A8%E6%84%8F%E5%8A%9B%E6%9C%BA%E5%88%B6"><span class="nav-number">1.2.</span> <span class="nav-text">2. 注意力机制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E8%AF%8D%E5%85%83-%E6%A0%87%E8%AE%B0"><span class="nav-number">1.3.</span> <span class="nav-text">3. 词元&#x2F;标记</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-%E8%AF%8D%E5%B5%8C%E5%85%A5"><span class="nav-number">1.4.</span> <span class="nav-text">4. 词嵌入</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-%E4%BD%8D%E7%BD%AE%E7%BC%96%E7%A0%81"><span class="nav-number">1.5.</span> <span class="nav-text">5. 位置编码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-%E6%BF%80%E6%B4%BB%E5%87%BD%E6%95%B0"><span class="nav-number">1.6.</span> <span class="nav-text">6. 激活函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-%E6%B7%B7%E5%90%88%E4%B8%93%E5%AE%B6%E6%A8%A1%E5%9E%8B"><span class="nav-number">1.7.</span> <span class="nav-text">7. 混合专家模型</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#II-%E6%A8%A1%E5%9E%8B%E8%AE%AD%E7%BB%83%E3%80%81%E5%AD%A6%E4%B9%A0%E4%B8%8E%E4%BC%98%E5%8C%96"><span class="nav-number">2.</span> <span class="nav-text">II. 模型训练、学习与优化</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E6%95%B0%E6%8D%AE%E6%B8%85%E6%B4%97%E4%B8%8E%E9%A2%84%E5%A4%84%E7%90%86"><span class="nav-number">2.1.</span> <span class="nav-text">1. 数据清洗与预处理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E9%A2%84%E8%AE%AD%E7%BB%83"><span class="nav-number">2.2.</span> <span class="nav-text">2. 预训练</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E6%89%A9%E5%B1%95%E5%AE%9A%E5%BE%8B"><span class="nav-number">2.3.</span> <span class="nav-text">3. 扩展定律</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-%E5%BE%AE%E8%B0%83"><span class="nav-number">2.4.</span> <span class="nav-text">4. 微调</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-%E5%8F%82%E6%95%B0%E9%AB%98%E6%95%88%E5%BE%AE%E8%B0%83"><span class="nav-number">2.5.</span> <span class="nav-text">5. 参数高效微调</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-%E6%8C%87%E4%BB%A4%E5%BE%AE%E8%B0%83-%E6%8C%87%E4%BB%A4%E9%81%B5%E5%BE%AA"><span class="nav-number">2.6.</span> <span class="nav-text">6. 指令微调 &#x2F; 指令遵循</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0%E6%9D%A5%E8%87%AA%E4%BA%BA%E7%B1%BB%E5%8F%8D%E9%A6%88"><span class="nav-number">2.7.</span> <span class="nav-text">7. 强化学习来自人类反馈</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-%E7%9F%A5%E8%AF%86%E8%92%B8%E9%A6%8F"><span class="nav-number">2.8.</span> <span class="nav-text">8. 知识蒸馏</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#III-%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E6%A0%B8%E5%BF%83%E8%83%BD%E5%8A%9B%E4%B8%8E%E4%BA%A4%E4%BA%92"><span class="nav-number">3.</span> <span class="nav-text">III. 语言模型核心能力与交互</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E4%B8%8A%E4%B8%8B%E6%96%87%E7%AA%97%E5%8F%A3"><span class="nav-number">3.1.</span> <span class="nav-text">1. 上下文窗口</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E6%8E%A8%E7%90%86-%E6%80%9D%E7%BB%B4%E8%83%BD%E5%8A%9B"><span class="nav-number">3.2.</span> <span class="nav-text">2. 推理&#x2F;思维能力</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E6%B6%8C%E7%8E%B0%E8%83%BD%E5%8A%9B"><span class="nav-number">3.3.</span> <span class="nav-text">3. 涌现能力</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-%E5%A4%9A%E6%A8%A1%E6%80%81"><span class="nav-number">3.4.</span> <span class="nav-text">4. 多模态</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-%E6%8F%90%E7%A4%BA%E5%B7%A5%E7%A8%8B"><span class="nav-number">3.5.</span> <span class="nav-text">5. 提示工程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8-%E5%87%BD%E6%95%B0%E8%B0%83%E7%94%A8"><span class="nav-number">3.6.</span> <span class="nav-text">6. 工具使用 &#x2F; 函数调用</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#IV-AI%E6%99%BA%E8%83%BD%E4%BD%93%EF%BC%9A%E8%BF%88%E5%90%91%E8%87%AA%E4%B8%BB%E7%B3%BB%E7%BB%9F"><span class="nav-number">4.</span> <span class="nav-text">IV. AI智能体：迈向自主系统</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E6%99%BA%E8%83%BD%E4%BD%93"><span class="nav-number">4.1.</span> <span class="nav-text">1. 人工智能智能体</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E6%99%BA%E8%83%BD%E4%BD%93%E7%9A%84%E6%A0%B8%E5%BF%83%E7%BB%84%E4%BB%B6"><span class="nav-number">4.2.</span> <span class="nav-text">2. 智能体的核心组件</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%A7%84%E5%88%92"><span class="nav-number">4.2.1.</span> <span class="nav-text">规划</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AE%B0%E5%BF%86"><span class="nav-number">4.2.2.</span> <span class="nav-text">记忆</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8"><span class="nav-number">4.2.3.</span> <span class="nav-text">工具使用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%A1%8C%E5%8A%A8"><span class="nav-number">4.2.4.</span> <span class="nav-text">行动</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%A7%82%E5%AF%9F-%E6%84%9F%E7%9F%A5"><span class="nav-number">4.2.5.</span> <span class="nav-text">观察&#x2F;感知</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E6%99%BA%E8%83%BD%E4%BD%93%E6%9E%B6%E6%9E%84-%E6%A1%86%E6%9E%B6"><span class="nav-number">4.3.</span> <span class="nav-text">3. 智能体架构&#x2F;框架</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-%E5%A4%9A%E6%99%BA%E8%83%BD%E4%BD%93%E7%B3%BB%E7%BB%9F"><span class="nav-number">4.4.</span> <span class="nav-text">4. 多智能体系统</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#V-%E8%AF%84%E4%BC%B0%E3%80%81%E6%8C%91%E6%88%98%E4%B8%8E%E4%BC%A6%E7%90%86%E8%80%83%E9%87%8F"><span class="nav-number">5.</span> <span class="nav-text">V. 评估、挑战与伦理考量</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E5%9F%BA%E5%87%86%E6%B5%8B%E8%AF%95"><span class="nav-number">5.1.</span> <span class="nav-text">1. 基准测试</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E6%8E%A8%E7%90%86"><span class="nav-number">5.2.</span> <span class="nav-text">2. 推理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E5%B9%BB%E8%A7%89"><span class="nav-number">5.3.</span> <span class="nav-text">3. 幻觉</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-%E5%81%8F%E8%A7%81"><span class="nav-number">5.4.</span> <span class="nav-text">4. 偏见</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-%E5%8F%AF%E8%A7%A3%E9%87%8A%E6%80%A7-%E5%8F%AF%E8%A7%A3%E9%87%8A%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD"><span class="nav-number">5.5.</span> <span class="nav-text">5. 可解释性 &#x2F; 可解释人工智能</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-%E5%AF%B9%E9%BD%90"><span class="nav-number">5.6.</span> <span class="nav-text">6. 对齐</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-%E6%99%BA%E8%83%BD%E4%BD%93%E5%AE%89%E5%85%A8%E4%B8%8E%E5%AF%B9%E9%BD%90"><span class="nav-number">5.7.</span> <span class="nav-text">7. 智能体安全与对齐</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#VI-%E5%BA%94%E7%94%A8%E7%AD%96%E7%95%A5%E4%B8%8E%E9%83%A8%E7%BD%B2%E6%A8%A1%E5%BC%8F"><span class="nav-number">6.</span> <span class="nav-text">VI. 应用策略与部署模式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E6%A3%80%E7%B4%A2%E5%A2%9E%E5%BC%BA%E7%94%9F%E6%88%90"><span class="nav-number">6.1.</span> <span class="nav-text">1. 检索增强生成</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E6%A8%A1%E5%9E%8B%E5%8D%B3%E6%9C%8D%E5%8A%A1"><span class="nav-number">6.2.</span> <span class="nav-text">2. 模型即服务</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-number">7.</span> <span class="nav-text">总结</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2025 &mdash; <span itemprop="copyrightYear">2026</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Bingo Cai</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+
+
+
+
+  <div class="footer-custom"><a href="https://beian.miit.gov.cn/" target="_blank">沪ICP备2025139614号</a></div>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script id="ribbon" type="text/javascript" size="300" alpha="0.6"  zIndex="-1" src="/lib/canvas-ribbon/canvas-ribbon.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+    
+      <script id="dsq-count-scr" src="https://everfight.disqus.com/count.js" async></script>
+    
+
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'http://bingowith.tech/2026/llm-core-concepts-guide/';
+          this.page.identifier = '/2026/llm-core-concepts-guide/';
+          this.page.title = '大模型领域核心概念详解';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://everfight.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
+    
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+  
+  <link rel="stylesheet" href="/lib/needsharebutton/needsharebutton.css">
+
+  
+  
+  <script src="/lib/needsharebutton/needsharebutton.js"></script>
+
+  <script>
+    
+      pbOptions = {};
+      
+          pbOptions.iconStyle = "box";
+      
+          pbOptions.boxForm = "horizontal";
+      
+          pbOptions.position = "bottomCenter";
+      
+          pbOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
+      
+      new needShareButton('#needsharebutton-postbottom', pbOptions);
+    
+    
+  </script>
+
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+  <script type="text/javascript" src="/js/src/js.cookie.js?v=5.1.4"></script>
+  <script type="text/javascript" src="/js/src/scroll-cookie.js?v=5.1.4"></script>
+
+
+  
+
+</body>
+</html>

@@ -1,0 +1,1458 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+  <meta name="google-site-verification" content="j9K0QHVhy5Is2MyrlHKAdrH9TTZmmQ8bQD16-miJTT0" />
+
+
+
+  <meta name="msvalidate.01" content="FC067E398F86AC9B4BF0C75855D30357" />
+
+
+
+
+
+
+  <meta name="baidu-site-verification" content="codeva-IdaHYFTDQL" />
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="https://fonts.lug.ustc.edu.cn/css?family=Noto Serif SC:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="AI团队,组织管理,AI员工,软件工程," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="蔡大锅's Blog" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="AI员工时代：组织与开发的全新范式">
+<meta property="og:type" content="article">
+<meta property="og:title" content="李博杰--构建 AI 原生团队，使能 AI 员工">
+<meta property="og:url" content="http://bingowith.tech/2026/ai-native-team-employee/index.html">
+<meta property="og:site_name" content="蔡大锅&#39;s Blog">
+<meta property="og:description" content="AI员工时代：组织与开发的全新范式">
+<meta property="og:locale">
+<meta property="article:published_time" content="2026-03-06T06:00:00.000Z">
+<meta property="article:modified_time" content="2026-03-06T05:20:04.594Z">
+<meta property="article:author" content="Bingo Cai">
+<meta property="article:tag" content="AI员工">
+<meta property="article:tag" content="AI团队">
+<meta property="article:tag" content="组织管理">
+<meta property="article:tag" content="软件工程">
+<meta name="twitter:card" content="summary">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://bingowith.tech/2026/ai-native-team-employee/"/>
+
+
+
+
+
+  <title>李博杰--构建 AI 原生团队，使能 AI 员工 | 蔡大锅's Blog</title>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?fa8b25a8de50c7a3401d49765b5192cd";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+<meta name="generator" content="Hexo 8.0.0"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">蔡大锅's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">不背锅日志</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://bingowith.tech/2026/ai-native-team-employee/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="蔡大锅's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">李博杰--构建 AI 原生团队，使能 AI 员工</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2026-03-06T14:00:00+08:00">
+                2026-03-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E7%AE%A1%E7%90%86%E6%80%9D%E8%80%83/" itemprop="url" rel="index">
+                    <span itemprop="name">管理思考</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2026/ai-native-team-employee/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="/2026/ai-native-team-employee/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  18 mins.
+                </span>
+              
+            </div>
+          
+
+          
+              <div class="post-description">
+                  AI员工时代：组织与开发的全新范式
+              </div>
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="🎯-李博杰–构建-AI-原生团队，使能-AI-员工"><a href="#🎯-李博杰–构建-AI-原生团队，使能-AI-员工" class="headerlink" title="🎯 李博杰–构建 AI 原生团队，使能 AI 员工"></a>🎯 李博杰–构建 AI 原生团队，使能 AI 员工</h1><blockquote>
+<p>AI已不只是工具，正逐步成为团队中的正式成员，开启AI时代的组织新范式。</p>
+</blockquote>
+<h2 id="📖-PDF文档下载"><a href="#📖-PDF文档下载" class="headerlink" title="📖 PDF文档下载"></a>📖 PDF文档下载</h2><p><a href="http://bingowith.tech/pdf/366dc1e0-5e0e-435e-b184-68bbd3fbb507.pdf">📥 下载PDF文档</a></p>
+<p><strong>文件信息：</strong></p>
+<ul>
+<li>文件名：李博杰–构建 AI 原生团队，使能 AI 员工.pdf</li>
+<li>大小：1.5MB</li>
+<li>格式：PDF</li>
+<li>上传时间：2026-03-06</li>
+</ul>
+<h2 id="🌟-核心观点"><a href="#🌟-核心观点" class="headerlink" title="🌟 核心观点"></a>🌟 核心观点</h2><h3 id="AI员工时代：组织与开发的全新范式"><a href="#AI员工时代：组织与开发的全新范式" class="headerlink" title="AI员工时代：组织与开发的全新范式"></a>AI员工时代：组织与开发的全新范式</h3><p>AI已不只是工具，正逐步成为团队中的正式成员，开启AI时代的组织新范式。</p>
+<p><strong>Brooks提出的”概念完整性”终于得以实现：</strong></p>
+<ul>
+<li>一名架构师搭配AI，就能完成过去大团队的工作量</li>
+</ul>
+<h3 id="人类开发者的分化"><a href="#人类开发者的分化" class="headerlink" title="人类开发者的分化"></a>人类开发者的分化</h3><p>对人与模型而言，<strong>上下文（Context）</strong> 都是核心关键。人类开发者也将分化为两类：</p>
+<h4 id="1-电影导演型"><a href="#1-电影导演型" class="headerlink" title="1. 电影导演型"></a>1. 电影导演型</h4><ul>
+<li><strong>职责：</strong> 负责 0→1 的创新创造</li>
+<li><strong>核心能力：</strong> 创造力、想象力、原创性</li>
+<li><strong>工作模式：</strong> 从0到1的创新突破</li>
+</ul>
+<h4 id="2-城市规划师型"><a href="#2-城市规划师型" class="headerlink" title="2. 城市规划师型"></a>2. 城市规划师型</h4><ul>
+<li><strong>职责：</strong> 负责 1→100 的规模化扩展</li>
+<li><strong>核心能力：</strong> 架构设计、系统思维、扩展性</li>
+<li><strong>工作模式：</strong> 将创意转化为可规模化落地</li>
+</ul>
+<h2 id="🏗️-构建-AI-原生团队的四大支柱"><a href="#🏗️-构建-AI-原生团队的四大支柱" class="headerlink" title="🏗️ 构建 AI 原生团队的四大支柱"></a>🏗️ 构建 AI 原生团队的四大支柱</h2><h3 id="1-借鉴开源社区的透明沟通文化"><a href="#1-借鉴开源社区的透明沟通文化" class="headerlink" title="1. 借鉴开源社区的透明沟通文化"></a>1. 借鉴开源社区的透明沟通文化</h3><ul>
+<li><strong>透明度：</strong> 开放的工作流程和决策过程</li>
+<li><strong>社区化：</strong> 借鉴开源社区的最佳实践</li>
+<li><strong>知识共享：</strong> 建立内部知识库和文档体系</li>
+</ul>
+<h3 id="2-推动内部工具接口-AI-友好化（MCP）"><a href="#2-推动内部工具接口-AI-友好化（MCP）" class="headerlink" title="2. 推动内部工具接口 AI 友好化（MCP）"></a>2. 推动内部工具接口 AI 友好化（MCP）</h3><ul>
+<li><strong>MCP（Model Context Protocol）：</strong> 统一的模型上下文协议</li>
+<li><strong>工具标准化：</strong> 使内部工具更容易被AI理解和使用</li>
+<li><strong>接口优化：</strong> 降低AI与工具集成的门槛</li>
+</ul>
+<h3 id="3-搭建独立隔离的沙盒测试环境"><a href="#3-搭建独立隔离的沙盒测试环境" class="headerlink" title="3. 搭建独立隔离的沙盒测试环境"></a>3. 搭建独立隔离的沙盒测试环境</h3><ul>
+<li><strong>安全隔离：</strong> AI测试与生产环境隔离</li>
+<li><strong>快速迭代：</strong> 支持高频次的实验和测试</li>
+<li><strong>风险控制：</strong> 降低实验对生产的影响</li>
+</ul>
+<h3 id="4-为每位成员配备专属-AI-助理"><a href="#4-为每位成员配备专属-AI-助理" class="headerlink" title="4. 为每位成员配备专属 AI 助理"></a>4. 为每位成员配备专属 AI 助理</h3><ul>
+<li><strong>个性化配置：</strong> 根据角色定制AI助手</li>
+<li><strong>权限管理：</strong> 合理配置AI访问权限</li>
+<li><strong>持续优化：</strong> 根据使用反馈不断优化</li>
+</ul>
+<h2 id="🚀-打造数字员工的六大核心能力与工程实践"><a href="#🚀-打造数字员工的六大核心能力与工程实践" class="headerlink" title="🚀 打造数字员工的六大核心能力与工程实践"></a>🚀 打造数字员工的六大核心能力与工程实践</h2><h3 id="核心能力矩阵"><a href="#核心能力矩阵" class="headerlink" title="核心能力矩阵"></a>核心能力矩阵</h3><table>
+<thead>
+<tr>
+<th>能力维度</th>
+<th>说明</th>
+<th>关键指标</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>多模态交互</td>
+<td>文本、语音、图像等多模态理解</td>
+<td>交互准确率</td>
+</tr>
+<tr>
+<td>需求理解</td>
+<td>深度理解业务需求</td>
+<td>需求转化率</td>
+</tr>
+<tr>
+<td>主动沟通</td>
+<td>主动汇报和协调</td>
+<td>响应及时性</td>
+</tr>
+<tr>
+<td>检查点回溯</td>
+<td>工作状态追踪和恢复</td>
+<td>状态同步率</td>
+</tr>
+<tr>
+<td>长期记忆</td>
+<td>持续学习积累</td>
+<td>知识复用率</td>
+</tr>
+<tr>
+<td>知识库搜索</td>
+<td>快速检索相关信息</td>
+<td>搜索准确率</td>
+</tr>
+</tbody></table>
+<h3 id="工程落地实践"><a href="#工程落地实践" class="headerlink" title="工程落地实践"></a>工程落地实践</h3><p><strong>Vibe Coding 工程化：</strong></p>
+<ul>
+<li>500 行 PR</li>
+<li>多 Agent 评审</li>
+</ul>
+<p><strong>基于评分规则的评估：</strong></p>
+<ul>
+<li>数据飞轮机制</li>
+<li>持续优化评估标准</li>
+</ul>
+<h2 id="📈-变革历程"><a href="#📈-变革历程" class="headerlink" title="📈 变革历程"></a>📈 变革历程</h2><p>任何变革都会历经以下过程：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">不可能 → 不可实际 → 有趣但没必要 → 不可避免</span><br></pre></td></tr></table></figure>
+
+<p><strong>如今，AI 员工时代已正式迈入”不可避免”的新阶段。</strong></p>
+<h2 id="💡-关键启示"><a href="#💡-关键启示" class="headerlink" title="💡 关键启示"></a>💡 关键启示</h2><ol>
+<li><strong>拥抱变革：</strong> 不要抗拒AI员工，而是主动适应和利用</li>
+<li><strong>角色重新定义：</strong> 人类和AI需要找到新的协作模式</li>
+<li><strong>能力提升：</strong> 人类需要培养”导演”和”规划师”的能力</li>
+<li><strong>工具优化：</strong> 构建AI友好的工具链和基础设施</li>
+<li><strong>文化重塑：</strong> 建立透明、开放、实验的组织文化</li>
+</ol>
+<h2 id="🔗-相关资源"><a href="#🔗-相关资源" class="headerlink" title="🔗 相关资源"></a>🔗 相关资源</h2><ul>
+<li><strong>PDF下载：</strong> <a href="http://bingowith.tech/pdf/366dc1e0-5e0e-435e-b184-68bbd3fbb507.pdf">李博杰–构建 AI 原生团队，使能 AI 员工.pdf</a></li>
+<li><strong>相关阅读：</strong> 构建AI原生团队系列</li>
+</ul>
+<hr>
+<p><strong>标签：</strong> <code>#AI团队</code> <code>#AI员工</code> <code>#组织管理</code> <code>#软件工程</code></p>
+<blockquote>
+<p>点击上方链接下载完整PDF文档，深入了解AI员工时代的组织变革。</p>
+</blockquote>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    Bingo Cai
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://bingowith.tech/2026/ai-native-team-employee/" title="李博杰--构建 AI 原生团队，使能 AI 员工">http://bingowith.tech/2026/ai-native-team-employee/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/AI%E5%9B%A2%E9%98%9F/" rel="tag"># AI团队</a>
+          
+            <a href="/tags/%E7%BB%84%E7%BB%87%E7%AE%A1%E7%90%86/" rel="tag"># 组织管理</a>
+          
+            <a href="/tags/AI%E5%91%98%E5%B7%A5/" rel="tag"># AI员工</a>
+          
+            <a href="/tags/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B/" rel="tag"># 软件工程</a>
+          
+        </div>
+      
+
+      
+      
+        <div class="post-widgets">
+        
+
+        
+
+        
+          
+          <div id="needsharebutton-postbottom">
+            <span class="btn">
+              <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </span>
+          </div>
+        
+        </div>
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2026/ai-daily-20260305/" rel="next" title="AI日报 2026-03-05">
+                <i class="fa fa-chevron-left"></i> AI日报 2026-03-05
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2026/superpowers-complete-workflow/" rel="prev" title="Superpowers 完整工作流程：从需求到开发">
+                Superpowers 完整工作流程：从需求到开发 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a target="_blank" rel="noopener" href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/uploads/avatar.png"
+                alt="" />
+            
+              <p class="site-author-name" itemprop="name"></p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">62</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">25</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">113</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/Everfighting" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-fa-brands fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.douban.com/people/binbeing" target="_blank" title="豆瓣">
+                      
+                        <i class="fa fa-fw fa-fa-solid fa-book"></i>豆瓣</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="http://www.zhihu.com/people/your-user-name" target="_blank" title="知乎">
+                      
+                        <i class="fa fa-fw fa-fa-solid fa-thumbs-up"></i>知乎</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:binbeing@126.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-fa-solid fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://x.com/bingo41589512" target="_blank" title="Twitter">
+                      
+                        <i class="fa fa-fw fa-twitter"></i>Twitter</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%F0%9F%8E%AF-%E6%9D%8E%E5%8D%9A%E6%9D%B0%E2%80%93%E6%9E%84%E5%BB%BA-AI-%E5%8E%9F%E7%94%9F%E5%9B%A2%E9%98%9F%EF%BC%8C%E4%BD%BF%E8%83%BD-AI-%E5%91%98%E5%B7%A5"><span class="nav-number">1.</span> <span class="nav-text">🎯 李博杰–构建 AI 原生团队，使能 AI 员工</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%93%96-PDF%E6%96%87%E6%A1%A3%E4%B8%8B%E8%BD%BD"><span class="nav-number">1.1.</span> <span class="nav-text">📖 PDF文档下载</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%8C%9F-%E6%A0%B8%E5%BF%83%E8%A7%82%E7%82%B9"><span class="nav-number">1.2.</span> <span class="nav-text">🌟 核心观点</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#AI%E5%91%98%E5%B7%A5%E6%97%B6%E4%BB%A3%EF%BC%9A%E7%BB%84%E7%BB%87%E4%B8%8E%E5%BC%80%E5%8F%91%E7%9A%84%E5%85%A8%E6%96%B0%E8%8C%83%E5%BC%8F"><span class="nav-number">1.2.1.</span> <span class="nav-text">AI员工时代：组织与开发的全新范式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%BA%E7%B1%BB%E5%BC%80%E5%8F%91%E8%80%85%E7%9A%84%E5%88%86%E5%8C%96"><span class="nav-number">1.2.2.</span> <span class="nav-text">人类开发者的分化</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E7%94%B5%E5%BD%B1%E5%AF%BC%E6%BC%94%E5%9E%8B"><span class="nav-number">1.2.2.1.</span> <span class="nav-text">1. 电影导演型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E5%9F%8E%E5%B8%82%E8%A7%84%E5%88%92%E5%B8%88%E5%9E%8B"><span class="nav-number">1.2.2.2.</span> <span class="nav-text">2. 城市规划师型</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%8F%97%EF%B8%8F-%E6%9E%84%E5%BB%BA-AI-%E5%8E%9F%E7%94%9F%E5%9B%A2%E9%98%9F%E7%9A%84%E5%9B%9B%E5%A4%A7%E6%94%AF%E6%9F%B1"><span class="nav-number">1.3.</span> <span class="nav-text">🏗️ 构建 AI 原生团队的四大支柱</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E5%80%9F%E9%89%B4%E5%BC%80%E6%BA%90%E7%A4%BE%E5%8C%BA%E7%9A%84%E9%80%8F%E6%98%8E%E6%B2%9F%E9%80%9A%E6%96%87%E5%8C%96"><span class="nav-number">1.3.1.</span> <span class="nav-text">1. 借鉴开源社区的透明沟通文化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E6%8E%A8%E5%8A%A8%E5%86%85%E9%83%A8%E5%B7%A5%E5%85%B7%E6%8E%A5%E5%8F%A3-AI-%E5%8F%8B%E5%A5%BD%E5%8C%96%EF%BC%88MCP%EF%BC%89"><span class="nav-number">1.3.2.</span> <span class="nav-text">2. 推动内部工具接口 AI 友好化（MCP）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E6%90%AD%E5%BB%BA%E7%8B%AC%E7%AB%8B%E9%9A%94%E7%A6%BB%E7%9A%84%E6%B2%99%E7%9B%92%E6%B5%8B%E8%AF%95%E7%8E%AF%E5%A2%83"><span class="nav-number">1.3.3.</span> <span class="nav-text">3. 搭建独立隔离的沙盒测试环境</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-%E4%B8%BA%E6%AF%8F%E4%BD%8D%E6%88%90%E5%91%98%E9%85%8D%E5%A4%87%E4%B8%93%E5%B1%9E-AI-%E5%8A%A9%E7%90%86"><span class="nav-number">1.3.4.</span> <span class="nav-text">4. 为每位成员配备专属 AI 助理</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%9A%80-%E6%89%93%E9%80%A0%E6%95%B0%E5%AD%97%E5%91%98%E5%B7%A5%E7%9A%84%E5%85%AD%E5%A4%A7%E6%A0%B8%E5%BF%83%E8%83%BD%E5%8A%9B%E4%B8%8E%E5%B7%A5%E7%A8%8B%E5%AE%9E%E8%B7%B5"><span class="nav-number">1.4.</span> <span class="nav-text">🚀 打造数字员工的六大核心能力与工程实践</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%B8%E5%BF%83%E8%83%BD%E5%8A%9B%E7%9F%A9%E9%98%B5"><span class="nav-number">1.4.1.</span> <span class="nav-text">核心能力矩阵</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B7%A5%E7%A8%8B%E8%90%BD%E5%9C%B0%E5%AE%9E%E8%B7%B5"><span class="nav-number">1.4.2.</span> <span class="nav-text">工程落地实践</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%93%88-%E5%8F%98%E9%9D%A9%E5%8E%86%E7%A8%8B"><span class="nav-number">1.5.</span> <span class="nav-text">📈 变革历程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%92%A1-%E5%85%B3%E9%94%AE%E5%90%AF%E7%A4%BA"><span class="nav-number">1.6.</span> <span class="nav-text">💡 关键启示</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%94%97-%E7%9B%B8%E5%85%B3%E8%B5%84%E6%BA%90"><span class="nav-number">1.7.</span> <span class="nav-text">🔗 相关资源</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2025 &mdash; <span itemprop="copyrightYear">2026</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Bingo Cai</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+
+
+
+
+  <div class="footer-custom"><a href="https://beian.miit.gov.cn/" target="_blank">沪ICP备2025139614号</a></div>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script id="ribbon" type="text/javascript" size="300" alpha="0.6"  zIndex="-1" src="/lib/canvas-ribbon/canvas-ribbon.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+    
+      <script id="dsq-count-scr" src="https://everfight.disqus.com/count.js" async></script>
+    
+
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'http://bingowith.tech/2026/ai-native-team-employee/';
+          this.page.identifier = '/2026/ai-native-team-employee/';
+          this.page.title = '李博杰--构建 AI 原生团队，使能 AI 员工';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://everfight.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
+    
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+  
+  <link rel="stylesheet" href="/lib/needsharebutton/needsharebutton.css">
+
+  
+  
+  <script src="/lib/needsharebutton/needsharebutton.js"></script>
+
+  <script>
+    
+      pbOptions = {};
+      
+          pbOptions.iconStyle = "box";
+      
+          pbOptions.boxForm = "horizontal";
+      
+          pbOptions.position = "bottomCenter";
+      
+          pbOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
+      
+      new needShareButton('#needsharebutton-postbottom', pbOptions);
+    
+    
+  </script>
+
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+  <script type="text/javascript" src="/js/src/js.cookie.js?v=5.1.4"></script>
+  <script type="text/javascript" src="/js/src/scroll-cookie.js?v=5.1.4"></script>
+
+
+  
+
+</body>
+</html>

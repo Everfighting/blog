@@ -1,0 +1,1489 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+  <meta name="google-site-verification" content="j9K0QHVhy5Is2MyrlHKAdrH9TTZmmQ8bQD16-miJTT0" />
+
+
+
+  <meta name="msvalidate.01" content="FC067E398F86AC9B4BF0C75855D30357" />
+
+
+
+
+
+
+  <meta name="baidu-site-verification" content="codeva-IdaHYFTDQL" />
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="https://fonts.lug.ustc.edu.cn/css?family=Noto Serif SC:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="LLM,提示词工程,结构化输出,AI工程化,JSON输出," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="蔡大锅's Blog" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="全面解析大语言模型结构化输出的完整体系，从背景意义到五大核心实现方法">
+<meta property="og:type" content="article">
+<meta property="og:title" content="🎯 大语言模型结构化输出：从需求背景到全场景实现方法">
+<meta property="og:url" content="http://bingowith.tech/2026/llm-structured-output-guide/index.html">
+<meta property="og:site_name" content="蔡大锅&#39;s Blog">
+<meta property="og:description" content="全面解析大语言模型结构化输出的完整体系，从背景意义到五大核心实现方法">
+<meta property="og:locale">
+<meta property="article:published_time" content="2026-02-12T06:35:00.000Z">
+<meta property="article:modified_time" content="2026-02-12T06:35:17.005Z">
+<meta property="article:author" content="Bingo Cai">
+<meta property="article:tag" content="AI工程化">
+<meta property="article:tag" content="JSON输出">
+<meta property="article:tag" content="LLM">
+<meta property="article:tag" content="提示词工程">
+<meta property="article:tag" content="结构化输出">
+<meta name="twitter:card" content="summary">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://bingowith.tech/2026/llm-structured-output-guide/"/>
+
+
+
+
+
+  <title>🎯 大语言模型结构化输出：从需求背景到全场景实现方法 | 蔡大锅's Blog</title>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?fa8b25a8de50c7a3401d49765b5192cd";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+<meta name="generator" content="Hexo 8.0.0"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">蔡大锅's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">不背锅日志</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://bingowith.tech/2026/llm-structured-output-guide/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="蔡大锅's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">🎯 大语言模型结构化输出：从需求背景到全场景实现方法</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2026-02-12T14:35:00+08:00">
+                2026-02-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/AI%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index">
+                    <span itemprop="name">AI技术</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2026/llm-structured-output-guide/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="/2026/llm-structured-output-guide/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  23 mins.
+                </span>
+              
+            </div>
+          
+
+          
+              <div class="post-description">
+                  全面解析大语言模型结构化输出的完整体系，从背景意义到五大核心实现方法
+              </div>
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>在大语言模型从通用对话走向产业落地的过程中，结构化输出已成为连接自然语言与工程应用的核心桥梁。不同于日常聊天中自由、松散的文本生成，结构化输出要求模型严格按照指定格式、结构、字段生成内容，例如JSON、XML、Markdown表格、固定键值对、代码片段等。本文将从背景意义、核心价值、实现方法、落地实践四个维度，全面解析大语言模型结构化输出的完整体系。</p>
+<h2 id="📖-一、背景：为什么大模型需要结构化输出？"><a href="#📖-一、背景：为什么大模型需要结构化输出？" class="headerlink" title="📖 一、背景：为什么大模型需要结构化输出？"></a>📖 一、背景：为什么大模型需要结构化输出？</h2><p>大语言模型的原生能力是理解与生成自然语言，但其底层逻辑是基于概率的文本续写，输出具有随机性、非标准化、不可解析三大天然缺陷。而在真实的工业场景、工具调用、数据处理、系统对接中，纯自然语言无法被程序识别、解析、存储和复用，这就催生了对结构化输出的刚性需求。</p>
+<p>从应用场景来看，结构化输出的需求源于三大核心痛点：</p>
+<ol>
+<li>✅ <strong>程序无法读取自然语言：</strong> 后端系统、数据库、API接口只能识别JSON、数组、键值对等结构化数据，无法直接解析”我觉得这个产品的优点是耐用、价格低”这类模糊文本；</li>
+<li>⚠️ <strong>输出不可控导致业务故障：</strong> 模型随机添加解释性文字、格式错乱、字段缺失，会直接导致数据解析失败、流程中断；</li>
+<li>🔗 <strong>多场景协同需要统一标准：</strong> 在RAG检索增强、智能体（Agent）工具调用、表单自动填充、数据抽取等场景中，必须依赖固定格式实现模型与系统、模型与模型之间的交互。</li>
+</ol>
+<p>简单来说，结构化输出是让大模型从”聊天机器人”变成”生产工具”的必经之路，是自然语言能力与工程化落地的核心适配环节。</p>
+<h2 id="🎯-二、价值：结构化输出带来的核心好处"><a href="#🎯-二、价值：结构化输出带来的核心好处" class="headerlink" title="🎯 二、价值：结构化输出带来的核心好处"></a>🎯 二、价值：结构化输出带来的核心好处</h2><p>实现大模型的结构化输出，并非简单的”格式约束”，而是从可用性、稳定性、效率、成本四个层面，全面提升大模型的落地价值：</p>
+<ol>
+<li>🔌 <strong>提升系统兼容性：</strong> 标准化输出可直接对接数据库、API、前端页面、自动化脚本，无需人工二次处理，实现模型与业务系统的无缝集成；</li>
+<li>💰 <strong>降低解析成本：</strong> 无需开发复杂的文本正则匹配、语义提取逻辑，通过简单的结构化解析即可提取有效数据，大幅减少开发工作量；</li>
+<li>🛡️ <strong>保证输出稳定性：</strong> 杜绝模型乱加备注、字段缺失、格式错乱等问题，让输出结果可预测、可复现，满足工业级场景的可靠性要求；</li>
+<li>⚡ <strong>提升处理效率：</strong> 结构化数据可被程序快速读取、存储、计算，相比人工整理自然语言，效率提升数十倍，尤其适用于大批量数据处理；</li>
+<li>🚀 <strong>拓展模型能力边界：</strong> 支撑Agent工具调用、多模型协作、自动化工作流等高阶应用，让大模型从文本生成升级为智能执行单元。</li>
+</ol>
+<h2 id="⚡-三、实现：大模型结构化输出的五大核心方法"><a href="#⚡-三、实现：大模型结构化输出的五大核心方法" class="headerlink" title="⚡ 三、实现：大模型结构化输出的五大核心方法"></a>⚡ 三、实现：大模型结构化输出的五大核心方法</h2><p>目前行业内实现结构化输出的方法，按照成本从低到高、效果从弱到强，可分为提示词工程、后处理解析、约束采样、微调训练、专用结构化模型五大类，不同方法适用于不同场景，可单独使用也可组合落地。</p>
+<h3 id="3-1-提示词工程：零成本、快速落地的基础方法"><a href="#3-1-提示词工程：零成本、快速落地的基础方法" class="headerlink" title="3.1 提示词工程：零成本、快速落地的基础方法"></a>3.1 提示词工程：零成本、快速落地的基础方法</h3><p>提示词工程是最简单、无成本、入门级的结构化输出方案，核心是通过精准的指令，让模型主动遵守格式要求，无需修改模型参数或开发额外代码。</p>
+<p><strong>核心逻辑：</strong> 利用大模型的指令遵循能力，在提示词中明确输出格式、字段、示例、禁止项，引导模型生成标准化内容。</p>
+<p><strong>操作要点：</strong></p>
+<ul>
+<li>明确格式类型（如JSON）</li>
+<li>列出必填字段</li>
+<li>给出完整示例</li>
+<li>禁止添加无关文字</li>
+<li>强调格式严格性</li>
+</ul>
+<p><strong>适用场景：</strong> 简单场景、低复杂度需求、快速原型验证，对格式严谨性要求不极致的场景。</p>
+<p><strong>局限性：</strong> 复杂场景下模型仍会出现格式错误，无法100%保证合规，依赖模型本身的指令遵循能力。</p>
+<h3 id="3-2-后处理：兜底保障，修正格式错误"><a href="#3-2-后处理：兜底保障，修正格式错误" class="headerlink" title="3.2 后处理：兜底保障，修正格式错误"></a>3.2 后处理：兜底保障，修正格式错误</h3><p>后处理是在模型生成文本后，通过代码对输出进行清洗、修正、格式化的方法，常与提示词工程搭配使用，作为格式合规的兜底方案。</p>
+<p><strong>核心逻辑：</strong> 不管模型生成的文本是否规范，通过正则表达式、JSON解析库、格式校验工具，对输出进行截取、修复、补全、过滤。</p>
+<p><strong>操作方法：</strong></p>
+<ul>
+<li>截取有效格式片段（如提取{}内的JSON内容）</li>
+<li>修复语法错误（如补全引号、逗号）</li>
+<li>过滤无关文字</li>
+<li>校验字段完整性</li>
+</ul>
+<p><strong>适用场景：</strong> 对格式有一定要求、模型偶尔出错的场景，作为提示词工程的补充。</p>
+<p><strong>优势：</strong> 不依赖模型能力，可人工干预修正，成本较低；缺点是无法从源头杜绝格式错误。</p>
+<h3 id="3-3-约束采样（Constrained-Sampling）：从源头强制格式合规"><a href="#3-3-约束采样（Constrained-Sampling）：从源头强制格式合规" class="headerlink" title="3.3 约束采样（Constrained Sampling）：从源头强制格式合规"></a>3.3 约束采样（Constrained Sampling）：从源头强制格式合规</h3><p>约束采样是在模型生成token的过程中，通过算法强制限制输出的字符、结构、语法，从生成源头杜绝格式错误，是目前中高阶场景的主流方案。</p>
+<p><strong>核心逻辑：</strong> 修改模型的解码过程，限定模型只能生成符合语法规则的token（如JSON的括号、引号、键名），彻底禁止无关文字和格式错乱。</p>
+<p><strong>主流工具：</strong> Guidance、LM Format Enforcer、Outlines、Jsonformer等开源库，无需训练模型，直接对接主流大模型。</p>
+<p><strong>操作方法：</strong> 定义格式schema（如JSON结构），将约束规则注入模型采样过程，生成即合规。</p>
+<p><strong>优势：</strong> 格式合规率接近100%，无需微调，效果远优于提示词和后处理。</p>
+<p><strong>适用场景：</strong> 对格式严谨性要求极高的工业场景、Agent工具调用、数据批量抽取。</p>
+<h3 id="3-4-微调训练：定制化提升格式遵循能力"><a href="#3-4-微调训练：定制化提升格式遵循能力" class="headerlink" title="3.4 微调训练：定制化提升格式遵循能力"></a>3.4 微调训练：定制化提升格式遵循能力</h3><p>微调是通过标注好的结构化数据对模型进行训练，让模型天生具备生成指定格式的能力，属于定制化深度优化方案。</p>
+<p><strong>核心逻辑：</strong> 基于自有业务的格式需求，构建高质量的结构化输出数据集，对基座模型进行有监督微调（SFT），强化模型的格式生成习惯。</p>
+<p><strong>操作方法：</strong></p>
+<ul>
+<li>数据标注（输入+标准结构化输出）</li>
+<li>模型微调</li>
+<li>效果验证迭代</li>
+</ul>
+<p><strong>优势：</strong> 模型格式遵循能力稳定，复杂场景下表现优异，可适配专属业务格式。</p>
+<p><strong>局限性：</strong> 成本高、周期长、需要算力和数据，适合长期固定的业务场景。</p>
+<p><strong>适用场景：</strong> 企业级专属应用、固定格式的大批量数据处理、私有部署场景。</p>
+<h3 id="3-5-专用结构化模型：开箱即用的标准化方案"><a href="#3-5-专用结构化模型：开箱即用的标准化方案" class="headerlink" title="3.5 专用结构化模型：开箱即用的标准化方案"></a>3.5 专用结构化模型：开箱即用的标准化方案</h3><p>除了通用大模型，目前行业内推出了专为结构化输出优化的专用模型，这类模型在训练时就强化了格式生成能力，开箱即用，无需复杂配置。</p>
+<p><strong>核心特点：</strong> 原生支持JSON、XML、表格等格式，格式合规率高，响应速度快。</p>
+<p><strong>代表模型：</strong> 部分闭源模型（如GPT-4 Turbo的JSON模式、文心一言结构化输出接口）、开源结构化专用模型。</p>
+<p><strong>操作方法：</strong> 直接调用模型的结构化输出接口，传入格式要求即可。</p>
+<p><strong>优势：</strong> 零开发成本、效果稳定、适合快速落地。</p>
+<p><strong>适用场景：</strong> 云端API调用、中小场景快速落地、无研发能力的团队。</p>
+<h2 id="📊-四、组合实践：不同场景的最优方案搭配"><a href="#📊-四、组合实践：不同场景的最优方案搭配" class="headerlink" title="📊 四、组合实践：不同场景的最优方案搭配"></a>📊 四、组合实践：不同场景的最优方案搭配</h2><p>在实际落地中，单一方法往往无法兼顾成本与效果，组合使用是行业通用的最佳实践：</p>
+<table>
+<thead>
+<tr>
+<th>场景类型</th>
+<th>推荐方案</th>
+<th>特点</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>🟢 简单轻量场景</td>
+<td>提示词工程 + 基础后处理</td>
+<td>零成本快速实现</td>
+</tr>
+<tr>
+<td>🟡 中阶严谨场景</td>
+<td>提示词工程 + 约束采样</td>
+<td>100%保证格式合规，无训练成本</td>
+</tr>
+<tr>
+<td>🔴 高阶私有场景</td>
+<td>基座模型微调 + 约束采样 + 后处理</td>
+<td>定制化、高稳定、私有化部署</td>
+</tr>
+<tr>
+<td>🔵 云端快速场景</td>
+<td>直接调用专用结构化模型API</td>
+<td>开箱即用</td>
+</tr>
+</tbody></table>
+<h2 id="💡-五、总结"><a href="#💡-五、总结" class="headerlink" title="💡 五、总结"></a>💡 五、总结</h2><p>大语言模型的结构化输出，是自然语言生成走向产业实用化的核心基础。其本质是解决模型输出随机性与业务系统标准化之间的矛盾，通过格式约束让大模型的能力真正落地到生产环节。</p>
+<p>从实现路径来看：</p>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>成本</th>
+<th>效果</th>
+<th>适用阶段</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>提示词工程</td>
+<td>🟢 低</td>
+<td>🟡 中</td>
+<td>入门基础</td>
+</tr>
+<tr>
+<td>后处理</td>
+<td>🟡 中</td>
+<td>🟡 中</td>
+<td>兜底保障</td>
+</tr>
+<tr>
+<td>约束采样</td>
+<td>🟡 中</td>
+<td>🟢 高</td>
+<td>中阶最优解</td>
+</tr>
+<tr>
+<td>微调训练</td>
+<td>🔴 高</td>
+<td>🟢 高</td>
+<td>高阶定制方案</td>
+</tr>
+<tr>
+<td>专用模型</td>
+<td>🟢 低</td>
+<td>🟢 高</td>
+<td>轻量化选择</td>
+</tr>
+</tbody></table>
+<p>不同团队可根据自身的研发能力、业务需求、成本预算，选择合适的方法或组合方案，让大模型从”会说话”升级为”能用、好用、稳定用”的核心生产力工具。</p>
+<p>未来，随着大模型技术的迭代，结构化输出将变得更简单、更智能，格式约束与自然语言理解的融合也会更加紧密，成为大模型产业落地的标配能力。</p>
+<hr>
+<p><strong>标签：</strong> <code>#LLM</code> <code>#结构化输出</code> <code>#提示词工程</code> <code>#AI工程化</code> <code>#JSON输出</code></p>
+<hr>
+<blockquote>
+<p>本文全面解析了大语言模型结构化输出的完整体系，帮助你从零开始掌握这一核心工程化能力。</p>
+</blockquote>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    Bingo Cai
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://bingowith.tech/2026/llm-structured-output-guide/" title="🎯 大语言模型结构化输出：从需求背景到全场景实现方法">http://bingowith.tech/2026/llm-structured-output-guide/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/LLM/" rel="tag"># LLM</a>
+          
+            <a href="/tags/%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%B7%A5%E7%A8%8B/" rel="tag"># 提示词工程</a>
+          
+            <a href="/tags/%E7%BB%93%E6%9E%84%E5%8C%96%E8%BE%93%E5%87%BA/" rel="tag"># 结构化输出</a>
+          
+            <a href="/tags/AI%E5%B7%A5%E7%A8%8B%E5%8C%96/" rel="tag"># AI工程化</a>
+          
+            <a href="/tags/JSON%E8%BE%93%E5%87%BA/" rel="tag"># JSON输出</a>
+          
+        </div>
+      
+
+      
+      
+        <div class="post-widgets">
+        
+
+        
+
+        
+          
+          <div id="needsharebutton-postbottom">
+            <span class="btn">
+              <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </span>
+          </div>
+        
+        </div>
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2026/llm-sampling-sop/" rel="next" title="大模型采样策略完整SOP教程：从需求场景到参数调优">
+                <i class="fa fa-chevron-left"></i> 大模型采样策略完整SOP教程：从需求场景到参数调优
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2026/ai-trends-2026/" rel="prev" title="2026年AI趋势与职业选择：从模型爆发到个人破局的全景指南">
+                2026年AI趋势与职业选择：从模型爆发到个人破局的全景指南 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a target="_blank" rel="noopener" href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/uploads/avatar.png"
+                alt="" />
+            
+              <p class="site-author-name" itemprop="name"></p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">62</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">25</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">113</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/Everfighting" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-fa-brands fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.douban.com/people/binbeing" target="_blank" title="豆瓣">
+                      
+                        <i class="fa fa-fw fa-fa-solid fa-book"></i>豆瓣</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="http://www.zhihu.com/people/your-user-name" target="_blank" title="知乎">
+                      
+                        <i class="fa fa-fw fa-fa-solid fa-thumbs-up"></i>知乎</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:binbeing@126.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-fa-solid fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://x.com/bingo41589512" target="_blank" title="Twitter">
+                      
+                        <i class="fa fa-fw fa-twitter"></i>Twitter</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%93%96-%E4%B8%80%E3%80%81%E8%83%8C%E6%99%AF%EF%BC%9A%E4%B8%BA%E4%BB%80%E4%B9%88%E5%A4%A7%E6%A8%A1%E5%9E%8B%E9%9C%80%E8%A6%81%E7%BB%93%E6%9E%84%E5%8C%96%E8%BE%93%E5%87%BA%EF%BC%9F"><span class="nav-number">1.</span> <span class="nav-text">📖 一、背景：为什么大模型需要结构化输出？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%8E%AF-%E4%BA%8C%E3%80%81%E4%BB%B7%E5%80%BC%EF%BC%9A%E7%BB%93%E6%9E%84%E5%8C%96%E8%BE%93%E5%87%BA%E5%B8%A6%E6%9D%A5%E7%9A%84%E6%A0%B8%E5%BF%83%E5%A5%BD%E5%A4%84"><span class="nav-number">2.</span> <span class="nav-text">🎯 二、价值：结构化输出带来的核心好处</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E2%9A%A1-%E4%B8%89%E3%80%81%E5%AE%9E%E7%8E%B0%EF%BC%9A%E5%A4%A7%E6%A8%A1%E5%9E%8B%E7%BB%93%E6%9E%84%E5%8C%96%E8%BE%93%E5%87%BA%E7%9A%84%E4%BA%94%E5%A4%A7%E6%A0%B8%E5%BF%83%E6%96%B9%E6%B3%95"><span class="nav-number">3.</span> <span class="nav-text">⚡ 三、实现：大模型结构化输出的五大核心方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%B7%A5%E7%A8%8B%EF%BC%9A%E9%9B%B6%E6%88%90%E6%9C%AC%E3%80%81%E5%BF%AB%E9%80%9F%E8%90%BD%E5%9C%B0%E7%9A%84%E5%9F%BA%E7%A1%80%E6%96%B9%E6%B3%95"><span class="nav-number">3.1.</span> <span class="nav-text">3.1 提示词工程：零成本、快速落地的基础方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-%E5%90%8E%E5%A4%84%E7%90%86%EF%BC%9A%E5%85%9C%E5%BA%95%E4%BF%9D%E9%9A%9C%EF%BC%8C%E4%BF%AE%E6%AD%A3%E6%A0%BC%E5%BC%8F%E9%94%99%E8%AF%AF"><span class="nav-number">3.2.</span> <span class="nav-text">3.2 后处理：兜底保障，修正格式错误</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-%E7%BA%A6%E6%9D%9F%E9%87%87%E6%A0%B7%EF%BC%88Constrained-Sampling%EF%BC%89%EF%BC%9A%E4%BB%8E%E6%BA%90%E5%A4%B4%E5%BC%BA%E5%88%B6%E6%A0%BC%E5%BC%8F%E5%90%88%E8%A7%84"><span class="nav-number">3.3.</span> <span class="nav-text">3.3 约束采样（Constrained Sampling）：从源头强制格式合规</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-4-%E5%BE%AE%E8%B0%83%E8%AE%AD%E7%BB%83%EF%BC%9A%E5%AE%9A%E5%88%B6%E5%8C%96%E6%8F%90%E5%8D%87%E6%A0%BC%E5%BC%8F%E9%81%B5%E5%BE%AA%E8%83%BD%E5%8A%9B"><span class="nav-number">3.4.</span> <span class="nav-text">3.4 微调训练：定制化提升格式遵循能力</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-5-%E4%B8%93%E7%94%A8%E7%BB%93%E6%9E%84%E5%8C%96%E6%A8%A1%E5%9E%8B%EF%BC%9A%E5%BC%80%E7%AE%B1%E5%8D%B3%E7%94%A8%E7%9A%84%E6%A0%87%E5%87%86%E5%8C%96%E6%96%B9%E6%A1%88"><span class="nav-number">3.5.</span> <span class="nav-text">3.5 专用结构化模型：开箱即用的标准化方案</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%93%8A-%E5%9B%9B%E3%80%81%E7%BB%84%E5%90%88%E5%AE%9E%E8%B7%B5%EF%BC%9A%E4%B8%8D%E5%90%8C%E5%9C%BA%E6%99%AF%E7%9A%84%E6%9C%80%E4%BC%98%E6%96%B9%E6%A1%88%E6%90%AD%E9%85%8D"><span class="nav-number">4.</span> <span class="nav-text">📊 四、组合实践：不同场景的最优方案搭配</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%92%A1-%E4%BA%94%E3%80%81%E6%80%BB%E7%BB%93"><span class="nav-number">5.</span> <span class="nav-text">💡 五、总结</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2025 &mdash; <span itemprop="copyrightYear">2026</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Bingo Cai</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+
+
+
+
+  <div class="footer-custom"><a href="https://beian.miit.gov.cn/" target="_blank">沪ICP备2025139614号</a></div>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script id="ribbon" type="text/javascript" size="300" alpha="0.6"  zIndex="-1" src="/lib/canvas-ribbon/canvas-ribbon.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+    
+      <script id="dsq-count-scr" src="https://everfight.disqus.com/count.js" async></script>
+    
+
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'http://bingowith.tech/2026/llm-structured-output-guide/';
+          this.page.identifier = '/2026/llm-structured-output-guide/';
+          this.page.title = '🎯 大语言模型结构化输出：从需求背景到全场景实现方法';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://everfight.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
+    
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+  
+  <link rel="stylesheet" href="/lib/needsharebutton/needsharebutton.css">
+
+  
+  
+  <script src="/lib/needsharebutton/needsharebutton.js"></script>
+
+  <script>
+    
+      pbOptions = {};
+      
+          pbOptions.iconStyle = "box";
+      
+          pbOptions.boxForm = "horizontal";
+      
+          pbOptions.position = "bottomCenter";
+      
+          pbOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
+      
+      new needShareButton('#needsharebutton-postbottom', pbOptions);
+    
+    
+  </script>
+
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+  <script type="text/javascript" src="/js/src/js.cookie.js?v=5.1.4"></script>
+  <script type="text/javascript" src="/js/src/scroll-cookie.js?v=5.1.4"></script>
+
+
+  
+
+</body>
+</html>
