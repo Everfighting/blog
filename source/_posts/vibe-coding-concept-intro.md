@@ -8,7 +8,7 @@ tags:
   - Vibe Coding
 
 categories: 技术趋势
-description: "Vibe Coding"是软件开发中一个新且定义较为宽泛的术语，指借助AI工具生成代码而非手动编写，标志着软件工程从严格手动编码向灵活AI驱动转变。
+description: 'Vibe Coding"是软件开发中一个新且定义较为宽泛的术语，指借助AI工具生成代码而非手动编写，标志着软件工程从严格手动编码向灵活AI驱动转变。'
 abbrlink: vibe-coding-concept-intro
 toc: true
 ---
