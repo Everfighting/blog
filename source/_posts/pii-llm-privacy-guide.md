@@ -41,7 +41,7 @@ toc: true
 - **输出幻觉**：模型可能 "编造" 看似真实的个人信息，引发合规问题
 
 ```mermaid
-flowchart LR
+graph LR
     A[用户输入] --> B[Prompt泄露风险]
     A --> C[训练数据]
     C --> D[模型记忆风险]
@@ -91,7 +91,7 @@ flowchart LR
 你可以根据实际需求选择合适的脱敏方法，参考以下选择流程：
 
 ```mermaid
-flowchart LR
+graph LR
     A[需要保留数据格式？] -->|是| B[掩码Masking]
     A -->|否| C[需要还原原始数据？]
     C -->|是| D[替换/令牌化Tokenization]
@@ -141,7 +141,7 @@ flowchart LR
 企业可以参考以下流程构建完整的 PII 保护体系：
 
 ```mermaid
-flowchart LR
+graph LR
     A[数据收集] --> B[数据最小化过滤]
     B --> C[PII检测]
     C --> D[脱敏处理]
