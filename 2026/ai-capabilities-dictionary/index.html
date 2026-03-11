@@ -1,0 +1,1724 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+  <meta name="google-site-verification" content="j9K0QHVhy5Is2MyrlHKAdrH9TTZmmQ8bQD16-miJTT0" />
+
+
+
+  <meta name="msvalidate.01" content="FC067E398F86AC9B4BF0C75855D30357" />
+
+
+
+
+
+
+  <meta name="baidu-site-verification" content="codeva-IdaHYFTDQL" />
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="https://fonts.lug.ustc.edu.cn/css?family=Noto Serif SC:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="AI工具,AI能力,技术选型," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="蔡大锅's Blog" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="系统梳理主流AI能力版图，涵盖11大核心模块，聚焦&quot;能力-模型-场景&quot;的落地映射">
+<meta property="og:type" content="article">
+<meta property="og:title" content="📘 AI能力词典 - 11大核心模块全景解析">
+<meta property="og:url" content="http://bingowith.tech/2026/ai-capabilities-dictionary/index.html">
+<meta property="og:site_name" content="蔡大锅&#39;s Blog">
+<meta property="og:description" content="系统梳理主流AI能力版图，涵盖11大核心模块，聚焦&quot;能力-模型-场景&quot;的落地映射">
+<meta property="og:locale">
+<meta property="article:published_time" content="2026-03-04T04:13:00.000Z">
+<meta property="article:modified_time" content="2026-03-04T03:33:06.274Z">
+<meta property="article:author" content="Bingo Cai">
+<meta property="article:tag" content="AI工具">
+<meta property="article:tag" content="AI能力">
+<meta property="article:tag" content="技术选型">
+<meta name="twitter:card" content="summary">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://bingowith.tech/2026/ai-capabilities-dictionary/"/>
+
+
+
+
+
+  <title>📘 AI能力词典 - 11大核心模块全景解析 | 蔡大锅's Blog</title>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?fa8b25a8de50c7a3401d49765b5192cd";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+<meta name="generator" content="Hexo 8.0.0"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">蔡大锅's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">不背锅日志</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://bingowith.tech/2026/ai-capabilities-dictionary/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="蔡大锅's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">📘 AI能力词典 - 11大核心模块全景解析</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2026-03-04T12:13:00+08:00">
+                2026-03-04
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/AI%E7%9F%A5%E8%AF%86/" itemprop="url" rel="index">
+                    <span itemprop="name">AI知识</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2026/ai-capabilities-dictionary/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="/2026/ai-capabilities-dictionary/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  35 mins.
+                </span>
+              
+            </div>
+          
+
+          
+              <div class="post-description">
+                  系统梳理主流AI能力版图，涵盖11大核心模块，聚焦"能力-模型-场景"的落地映射
+              </div>
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="📘-AI能力词典-11大核心模块全景解析"><a href="#📘-AI能力词典-11大核心模块全景解析" class="headerlink" title="📘 AI能力词典 - 11大核心模块全景解析"></a>📘 AI能力词典 - 11大核心模块全景解析</h1><h2 id="📖-引言"><a href="#📖-引言" class="headerlink" title="📖 引言"></a>📖 引言</h2><p>该AI能力词典系统梳理了主流AI能力版图，涵盖11大核心模块，聚焦”能力-模型-场景”的落地映射，帮助快速定位需求、选型方案。</p>
+<hr>
+<h2 id="🎯-一、基础模态能力（核心感知与生成）"><a href="#🎯-一、基础模态能力（核心感知与生成）" class="headerlink" title="🎯 一、基础模态能力（核心感知与生成）"></a>🎯 一、基础模态能力（核心感知与生成）</h2><h3 id="1-文本任务（NLP-LLM）"><a href="#1-文本任务（NLP-LLM）" class="headerlink" title="1. 文本任务（NLP&#x2F;LLM）"></a>1. 文本任务（NLP&#x2F;LLM）</h3><p><strong>核心能力：</strong></p>
+<ul>
+<li>基础语言建模（词&#x2F;句&#x2F;文档向量表示）</li>
+<li>文本分类与匹配</li>
+<li>信息抽取</li>
+<li>文本生成与编辑</li>
+</ul>
+<p><strong>代表模型：</strong></p>
+<ul>
+<li>GPT系列（GPT-3.5, GPT-4）</li>
+<li>BERT</li>
+<li>Qwen（通义千问）</li>
+<li>Claude</li>
+<li>LLaMA</li>
+</ul>
+<p><strong>应用场景：</strong></p>
+<ul>
+<li>✍️ 内容写作与创作</li>
+<li>🤖 智能客服与对话系统</li>
+<li>📊 舆情分析与情感分析</li>
+<li>📝 文档摘要与翻译</li>
+</ul>
+<hr>
+<h3 id="2-图像模态"><a href="#2-图像模态" class="headerlink" title="2. 图像模态"></a>2. 图像模态</h3><p><strong>核心能力：</strong></p>
+<ul>
+<li>底层视觉（去噪、增强）</li>
+<li>图像分类&#x2F;识别</li>
+<li>目标检测</li>
+<li>图像分割</li>
+<li>关键点检测</li>
+<li>OCR（光学字符识别）</li>
+<li>图像生成与编辑</li>
+</ul>
+<p><strong>代表模型：</strong></p>
+<ul>
+<li>DALL·E（图像生成）</li>
+<li>YOLO系列（目标检测）</li>
+<li>SAM（Segment Anything Model，图像分割）</li>
+<li>CLIP（图文匹配）</li>
+<li>Midjourney, Stable Diffusion</li>
+</ul>
+<p><strong>应用场景：</strong></p>
+<ul>
+<li>🎨 图像创作与编辑</li>
+<li>🔍 安防监控与人脸识别</li>
+<li>📄 文档数字化与OCR</li>
+<li>🏥 医疗影像分析</li>
+<li>🚗 自动驾驶视觉感知</li>
+</ul>
+<hr>
+<h3 id="3-3D-空间模态"><a href="#3-3D-空间模态" class="headerlink" title="3. 3D&#x2F;空间模态"></a>3. 3D&#x2F;空间模态</h3><p><strong>核心能力：</strong></p>
+<ul>
+<li>3D感知与重建</li>
+<li>场景理解与定位</li>
+<li>3D生成与编辑</li>
+</ul>
+<p><strong>代表模型：</strong></p>
+<ul>
+<li>NeRF（神经辐射场）</li>
+<li>PointNet</li>
+<li>3D Gaussian Splatting</li>
+</ul>
+<p><strong>应用场景：</strong></p>
+<ul>
+<li>🥽 AR&#x2F;VR（增强现实&#x2F;虚拟现实）</li>
+<li>🏙️ 数字孪生与城市建模</li>
+<li>🖨️ 3D打印与逆向工程</li>
+<li>🎮 游戏场景生成</li>
+<li>🤖 机器人导航</li>
+</ul>
+<hr>
+<h3 id="4-音频模态"><a href="#4-音频模态" class="headerlink" title="4. 音频模态"></a>4. 音频模态</h3><p><strong>核心能力：</strong></p>
+<ul>
+<li>波形处理（降噪、分离）</li>
+<li>语音识别（ASR）</li>
+<li>说话人技术（识别、分离）</li>
+<li>音频理解</li>
+<li>语音&#x2F;音乐生成</li>
+</ul>
+<p><strong>代表模型：</strong></p>
+<ul>
+<li>Whisper（OpenAI的ASR模型）</li>
+<li>Tacotron（语音合成）</li>
+<li>VALL-E（语音克隆）</li>
+<li>AudioLM（音频生成）</li>
+</ul>
+<p><strong>应用场景：</strong></p>
+<ul>
+<li>🎤 会议转写与录音转文字</li>
+<li>🔊 智能音箱与语音助手</li>
+<li>🎵 音乐创作与音频编辑</li>
+<li>📞 电话客服质检</li>
+<li>🎬 视频配音与字幕生成</li>
+</ul>
+<hr>
+<h3 id="5-视频模态"><a href="#5-视频模态" class="headerlink" title="5. 视频模态"></a>5. 视频模态</h3><p><strong>核心能力：</strong></p>
+<ul>
+<li>传统视频处理（增强、超分）</li>
+<li>视频理解（动作识别、目标追踪）</li>
+<li>视频+语言多模态任务</li>
+<li>视频生成与编辑</li>
+<li>数字人&#x2F;虚拟人</li>
+</ul>
+<p><strong>代表产品：</strong></p>
+<ul>
+<li>Sora（OpenAI视频生成）</li>
+<li>Runway Gen-2</li>
+<li>Pika Labs</li>
+<li>HeyGen（数字人视频）</li>
+</ul>
+<p><strong>应用场景：</strong></p>
+<ul>
+<li>📱 短视频创作与编辑</li>
+<li>🎭 虚拟直播与数字人</li>
+<li>🚨 安防监控与异常检测</li>
+<li>📺 视频内容理解与检索</li>
+<li>🎬 影视特效制作</li>
+</ul>
+<hr>
+<h2 id="⏱️-二、时序与决策能力"><a href="#⏱️-二、时序与决策能力" class="headerlink" title="⏱️ 二、时序与决策能力"></a>⏱️ 二、时序与决策能力</h2><h3 id="6-时间序列与时序决策"><a href="#6-时间序列与时序决策" class="headerlink" title="6. 时间序列与时序决策"></a>6. 时间序列与时序决策</h3><p><strong>核心能力：</strong></p>
+<ul>
+<li>经典统计建模（ARIMA、VAR）</li>
+<li>深度学习时序建模（LSTM、时序Transformer）</li>
+<li>异常与变点检测</li>
+<li>时空序列建模</li>
+</ul>
+<p><strong>代表模型：</strong></p>
+<ul>
+<li>LSTM&#x2F;GRU</li>
+<li>Temporal Fusion Transformer</li>
+<li>Informer</li>
+<li>TimesNet</li>
+</ul>
+<p><strong>应用场景：</strong></p>
+<ul>
+<li>📈 销量预测与需求预测</li>
+<li>⚙️ 设备监控与预测性维护</li>
+<li>🚗 交通调度与流量预测</li>
+<li>💹 金融时间序列预测</li>
+<li>🌦️ 气象预测</li>
+</ul>
+<hr>
+<h2 id="🤖-三、智能执行与知识增强"><a href="#🤖-三、智能执行与知识增强" class="headerlink" title="🤖 三、智能执行与知识增强"></a>🤖 三、智能执行与知识增强</h2><h3 id="7-Agent与工具调用"><a href="#7-Agent与工具调用" class="headerlink" title="7. Agent与工具调用"></a>7. Agent与工具调用</h3><p><strong>核心能力：</strong></p>
+<ul>
+<li>工具调用（检索、代码执行、媒体生成）</li>
+<li>工作流编排</li>
+<li>多Agent协作</li>
+</ul>
+<p><strong>代表产品：</strong></p>
+<ul>
+<li>AutoGPT</li>
+<li>LangChain</li>
+<li>ChatGPT Plugins</li>
+<li>Claude Artifacts</li>
+<li>Copilot</li>
+</ul>
+<p><strong>应用场景：</strong></p>
+<ul>
+<li>🤖 自动化运营与任务规划</li>
+<li>🔄 复杂业务流程机器人</li>
+<li>💻 代码生成与开发辅助</li>
+<li>🔍 多源数据整合与分析</li>
+</ul>
+<hr>
+<h3 id="8-检索增强与知识层"><a href="#8-检索增强与知识层" class="headerlink" title="8. 检索增强与知识层"></a>8. 检索增强与知识层</h3><p><strong>核心能力：</strong></p>
+<ul>
+<li>RAG（检索增强生成）</li>
+<li>结构化数据与知识图谱问答</li>
+</ul>
+<p><strong>代表框架：</strong></p>
+<ul>
+<li>LangChain</li>
+<li>LlamaIndex</li>
+<li>Pinecone</li>
+<li>Milvus</li>
+<li>Neo4j（知识图谱）</li>
+</ul>
+<p><strong>应用场景：</strong></p>
+<ul>
+<li>📚 企业知识库问答</li>
+<li>📊 BI分析与数据洞察</li>
+<li>🏥 医疗诊断辅助</li>
+<li>⚖️ 法律文档检索与分析</li>
+<li>💼 客户支持与售后服务</li>
+</ul>
+<hr>
+<h2 id="🔒-四、安全与评估体系"><a href="#🔒-四、安全与评估体系" class="headerlink" title="🔒 四、安全与评估体系"></a>🔒 四、安全与评估体系</h2><h3 id="9-安全、对齐与评估"><a href="#9-安全、对齐与评估" class="headerlink" title="9. 安全、对齐与评估"></a>9. 安全、对齐与评估</h3><p><strong>核心能力：</strong></p>
+<ul>
+<li>能力评估（通用&#x2F;专业基准测试）</li>
+<li>价值对齐（SFT、RLHF）</li>
+<li>内容安全与合规</li>
+</ul>
+<p><strong>评估标准：</strong></p>
+<ul>
+<li>GLUE&#x2F;SuperGLUE（语言理解）</li>
+<li>MMLU（多任务语言理解）</li>
+<li>HumanEval（代码生成）</li>
+<li>Safety Benchmarks（安全评估）</li>
+</ul>
+<p><strong>应用场景：</strong></p>
+<ul>
+<li>🏥 高风险行业（医疗、金融）</li>
+<li>🔒 内容审核与安全合规</li>
+<li>📊 模型性能评估与监控</li>
+<li>🎯 模型训练与优化</li>
+</ul>
+<hr>
+<h2 id="🔬-五、前沿与工程支撑"><a href="#🔬-五、前沿与工程支撑" class="headerlink" title="🔬 五、前沿与工程支撑"></a>🔬 五、前沿与工程支撑</h2><h3 id="10-AI-for-Science（AI4Science）"><a href="#10-AI-for-Science（AI4Science）" class="headerlink" title="10. AI for Science（AI4Science）"></a>10. AI for Science（AI4Science）</h3><p><strong>核心能力：</strong></p>
+<ul>
+<li>分子与药物设计</li>
+<li>蛋白质结构建模</li>
+<li>物理仿真加速</li>
+<li>材料发现</li>
+<li>数学推理</li>
+<li>科学工作流自动化</li>
+</ul>
+<p><strong>代表模型：</strong></p>
+<ul>
+<li>AlphaFold（蛋白质结构预测）</li>
+<li>PINN（物理信息神经网络）</li>
+<li>DiffDock（分子对接）</li>
+<li>GNoME（材料发现）</li>
+</ul>
+<p><strong>应用场景：</strong></p>
+<ul>
+<li>💊 药物研发与发现</li>
+<li>🔬 科学研究与实验设计</li>
+<li>🏭 高端制造与材料科学</li>
+<li>🌤️ 气候建模与天气预测</li>
+<li>🧮 数学定理证明</li>
+</ul>
+<hr>
+<h3 id="11-平台与工程能力"><a href="#11-平台与工程能力" class="headerlink" title="11. 平台与工程能力"></a>11. 平台与工程能力</h3><p><strong>核心能力：</strong></p>
+<ul>
+<li>模型训练与微调（预训练、PEFT）</li>
+<li>部署与推理优化</li>
+<li>MLOps运维</li>
+<li>监控与成本管理</li>
+</ul>
+<p><strong>代表平台：</strong></p>
+<ul>
+<li>Hugging Face</li>
+<li>MLflow</li>
+<li>Weights &amp; Biases</li>
+<li>SageMaker（AWS）</li>
+<li>Vertex AI（Google Cloud）</li>
+</ul>
+<p><strong>应用场景：</strong></p>
+<ul>
+<li>🚀 模型研发与迭代</li>
+<li>📦 生产环境部署</li>
+<li>📊 模型监控与日志分析</li>
+<li>💰 成本优化与资源管理</li>
+<li>🔄 持续集成与部署（CI&#x2F;CD）</li>
+</ul>
+<hr>
+<h2 id="📊-六、能力-模型-场景映射速查表"><a href="#📊-六、能力-模型-场景映射速查表" class="headerlink" title="📊 六、能力-模型-场景映射速查表"></a>📊 六、能力-模型-场景映射速查表</h2><table>
+<thead>
+<tr>
+<th>能力模块</th>
+<th>核心能力</th>
+<th>代表模型&#x2F;工具</th>
+<th>典型场景</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>文本任务</strong></td>
+<td>语言建模、分类、生成、抽取</td>
+<td>GPT, BERT, Qwen</td>
+<td>写作、客服、舆情分析</td>
+</tr>
+<tr>
+<td><strong>图像模态</strong></td>
+<td>分类、检测、分割、生成、OCR</td>
+<td>DALL·E, YOLO, SAM</td>
+<td>安防、修图、文档数字化</td>
+</tr>
+<tr>
+<td><strong>3D&#x2F;空间</strong></td>
+<td>感知、重建、生成</td>
+<td>NeRF, PointNet</td>
+<td>AR&#x2F;VR、数字孪生、3D打印</td>
+</tr>
+<tr>
+<td><strong>音频模态</strong></td>
+<td>识别、合成、理解</td>
+<td>Whisper, Tacotron</td>
+<td>会议转写、智能音箱、音乐创作</td>
+</tr>
+<tr>
+<td><strong>视频模态</strong></td>
+<td>理解、生成、数字人</td>
+<td>Sora, Runway</td>
+<td>短视频创作、虚拟直播、监控</td>
+</tr>
+<tr>
+<td><strong>时序决策</strong></td>
+<td>预测、异常检测</td>
+<td>LSTM, Transformer</td>
+<td>销量预测、设备监控、交通调度</td>
+</tr>
+<tr>
+<td><strong>Agent工具</strong></td>
+<td>工具调用、工作流编排</td>
+<td>LangChain, AutoGPT</td>
+<td>自动化运营、业务流程机器人</td>
+</tr>
+<tr>
+<td><strong>检索增强</strong></td>
+<td>RAG、知识图谱问答</td>
+<td>LlamaIndex, Pinecone</td>
+<td>企业知识库、BI分析</td>
+</tr>
+<tr>
+<td><strong>安全评估</strong></td>
+<td>能力评估、价值对齐</td>
+<td>GLUE, MMLU, RLHF</td>
+<td>医疗、金融、内容审核</td>
+</tr>
+<tr>
+<td><strong>AI4Science</strong></td>
+<td>药物设计、物理仿真</td>
+<td>AlphaFold, PINN</td>
+<td>药物研发、科学研究、材料科学</td>
+</tr>
+<tr>
+<td><strong>平台工程</strong></td>
+<td>训练、部署、运维</td>
+<td>Hugging Face, MLflow</td>
+<td>模型研发、生产部署、成本管理</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="🎯-七、选型建议"><a href="#🎯-七、选型建议" class="headerlink" title="🎯 七、选型建议"></a>🎯 七、选型建议</h2><h3 id="根据需求选择能力模块"><a href="#根据需求选择能力模块" class="headerlink" title="根据需求选择能力模块"></a>根据需求选择能力模块</h3><p><strong>如果需要文本处理：</strong></p>
+<ul>
+<li>📝 内容生成 → LLM（GPT-4, Claude）</li>
+<li>🔍 信息检索 → RAG系统</li>
+<li>📊 分类分析 → BERT系列</li>
+</ul>
+<p><strong>如果需要视觉处理：</strong></p>
+<ul>
+<li>🖼️ 图像生成 → DALL·E, Midjourney</li>
+<li>🔍 目标检测 → YOLO系列</li>
+<li>✂️ 图像分割 → SAM</li>
+</ul>
+<p><strong>如果需要智能决策：</strong></p>
+<ul>
+<li>🤖 任务自动化 → Agent + 工具调用</li>
+<li>📈 数据预测 → 时序模型</li>
+<li>🧠 知识问答 → RAG + 知识图谱</li>
+</ul>
+<p><strong>如果需要前沿应用：</strong></p>
+<ul>
+<li>💊 药物研发 → AI4Science工具</li>
+<li>🏬 数字孪生 → 3D重建模型</li>
+<li>🎭 虚拟数字人 → 视频+语音多模态</li>
+</ul>
+<hr>
+<h2 id="💡-八、总结"><a href="#💡-八、总结" class="headerlink" title="💡 八、总结"></a>💡 八、总结</h2><p><strong>AI能力词典的三大核心价值：</strong></p>
+<ol>
+<li><strong>📚 系统化梳理：</strong> 11大模块覆盖主流AI能力，建立完整知识体系</li>
+<li><strong>🎯 场景化映射：</strong> “能力-模型-场景”三维视角，快速定位需求</li>
+<li><strong>🚀 落地化指导：</strong> 每个能力模块提供代表模型和应用场景，指导技术选型</li>
+</ol>
+<p><strong>核心思路：</strong></p>
+<ul>
+<li>从基础模态到高级决策</li>
+<li>从感知生成到智能执行</li>
+<li>从算法模型到工程平台</li>
+</ul>
+<p><strong>使用建议：</strong></p>
+<ul>
+<li>👉 根据业务需求定位能力模块</li>
+<li>👉 选择合适的模型和工具</li>
+<li>👉 评估技术可行性和成本</li>
+<li>👉 制定落地实施路线图</li>
+</ul>
+<hr>
+<p><strong>标签：</strong> <code>#AI能力</code> <code>#AI工具</code> <code>#技术选型</code> <code>#AI知识</code></p>
+<hr>
+<blockquote>
+<p>AI能力不是孤立存在的，而是相互关联、相互增强的。在实际应用中，往往需要多个能力模块协同工作，才能解决复杂的业务问题。理解AI能力版图，是进行技术选型和方案设计的第一步。</p>
+</blockquote>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    Bingo Cai
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://bingowith.tech/2026/ai-capabilities-dictionary/" title="📘 AI能力词典 - 11大核心模块全景解析">http://bingowith.tech/2026/ai-capabilities-dictionary/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/AI%E5%B7%A5%E5%85%B7/" rel="tag"># AI工具</a>
+          
+            <a href="/tags/AI%E8%83%BD%E5%8A%9B/" rel="tag"># AI能力</a>
+          
+            <a href="/tags/%E6%8A%80%E6%9C%AF%E9%80%89%E5%9E%8B/" rel="tag"># 技术选型</a>
+          
+        </div>
+      
+
+      
+      
+        <div class="post-widgets">
+        
+
+        
+
+        
+          
+          <div id="needsharebutton-postbottom">
+            <span class="btn">
+              <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </span>
+          </div>
+        
+        </div>
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2026/ai-daily-20260303/" rel="next" title="AI日报 2026-03-03">
+                <i class="fa fa-chevron-left"></i> AI日报 2026-03-03
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2026/figma-claude-code-mcp-web-guide/" rel="prev" title="Figma+Claude Code MCP 实现Web UI开发完整实操流程">
+                Figma+Claude Code MCP 实现Web UI开发完整实操流程 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a target="_blank" rel="noopener" href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/uploads/avatar.png"
+                alt="" />
+            
+              <p class="site-author-name" itemprop="name"></p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">62</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">25</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">113</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/Everfighting" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-fa-brands fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.douban.com/people/binbeing" target="_blank" title="豆瓣">
+                      
+                        <i class="fa fa-fw fa-fa-solid fa-book"></i>豆瓣</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="http://www.zhihu.com/people/your-user-name" target="_blank" title="知乎">
+                      
+                        <i class="fa fa-fw fa-fa-solid fa-thumbs-up"></i>知乎</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:binbeing@126.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-fa-solid fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://x.com/bingo41589512" target="_blank" title="Twitter">
+                      
+                        <i class="fa fa-fw fa-twitter"></i>Twitter</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%F0%9F%93%98-AI%E8%83%BD%E5%8A%9B%E8%AF%8D%E5%85%B8-11%E5%A4%A7%E6%A0%B8%E5%BF%83%E6%A8%A1%E5%9D%97%E5%85%A8%E6%99%AF%E8%A7%A3%E6%9E%90"><span class="nav-number">1.</span> <span class="nav-text">📘 AI能力词典 - 11大核心模块全景解析</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%93%96-%E5%BC%95%E8%A8%80"><span class="nav-number">1.1.</span> <span class="nav-text">📖 引言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%8E%AF-%E4%B8%80%E3%80%81%E5%9F%BA%E7%A1%80%E6%A8%A1%E6%80%81%E8%83%BD%E5%8A%9B%EF%BC%88%E6%A0%B8%E5%BF%83%E6%84%9F%E7%9F%A5%E4%B8%8E%E7%94%9F%E6%88%90%EF%BC%89"><span class="nav-number">1.2.</span> <span class="nav-text">🎯 一、基础模态能力（核心感知与生成）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E6%96%87%E6%9C%AC%E4%BB%BB%E5%8A%A1%EF%BC%88NLP-LLM%EF%BC%89"><span class="nav-number">1.2.1.</span> <span class="nav-text">1. 文本任务（NLP&#x2F;LLM）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E5%9B%BE%E5%83%8F%E6%A8%A1%E6%80%81"><span class="nav-number">1.2.2.</span> <span class="nav-text">2. 图像模态</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3D-%E7%A9%BA%E9%97%B4%E6%A8%A1%E6%80%81"><span class="nav-number">1.2.3.</span> <span class="nav-text">3. 3D&#x2F;空间模态</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-%E9%9F%B3%E9%A2%91%E6%A8%A1%E6%80%81"><span class="nav-number">1.2.4.</span> <span class="nav-text">4. 音频模态</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-%E8%A7%86%E9%A2%91%E6%A8%A1%E6%80%81"><span class="nav-number">1.2.5.</span> <span class="nav-text">5. 视频模态</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E2%8F%B1%EF%B8%8F-%E4%BA%8C%E3%80%81%E6%97%B6%E5%BA%8F%E4%B8%8E%E5%86%B3%E7%AD%96%E8%83%BD%E5%8A%9B"><span class="nav-number">1.3.</span> <span class="nav-text">⏱️ 二、时序与决策能力</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#6-%E6%97%B6%E9%97%B4%E5%BA%8F%E5%88%97%E4%B8%8E%E6%97%B6%E5%BA%8F%E5%86%B3%E7%AD%96"><span class="nav-number">1.3.1.</span> <span class="nav-text">6. 时间序列与时序决策</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%A4%96-%E4%B8%89%E3%80%81%E6%99%BA%E8%83%BD%E6%89%A7%E8%A1%8C%E4%B8%8E%E7%9F%A5%E8%AF%86%E5%A2%9E%E5%BC%BA"><span class="nav-number">1.4.</span> <span class="nav-text">🤖 三、智能执行与知识增强</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#7-Agent%E4%B8%8E%E5%B7%A5%E5%85%B7%E8%B0%83%E7%94%A8"><span class="nav-number">1.4.1.</span> <span class="nav-text">7. Agent与工具调用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-%E6%A3%80%E7%B4%A2%E5%A2%9E%E5%BC%BA%E4%B8%8E%E7%9F%A5%E8%AF%86%E5%B1%82"><span class="nav-number">1.4.2.</span> <span class="nav-text">8. 检索增强与知识层</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%94%92-%E5%9B%9B%E3%80%81%E5%AE%89%E5%85%A8%E4%B8%8E%E8%AF%84%E4%BC%B0%E4%BD%93%E7%B3%BB"><span class="nav-number">1.5.</span> <span class="nav-text">🔒 四、安全与评估体系</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#9-%E5%AE%89%E5%85%A8%E3%80%81%E5%AF%B9%E9%BD%90%E4%B8%8E%E8%AF%84%E4%BC%B0"><span class="nav-number">1.5.1.</span> <span class="nav-text">9. 安全、对齐与评估</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%94%AC-%E4%BA%94%E3%80%81%E5%89%8D%E6%B2%BF%E4%B8%8E%E5%B7%A5%E7%A8%8B%E6%94%AF%E6%92%91"><span class="nav-number">1.6.</span> <span class="nav-text">🔬 五、前沿与工程支撑</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#10-AI-for-Science%EF%BC%88AI4Science%EF%BC%89"><span class="nav-number">1.6.1.</span> <span class="nav-text">10. AI for Science（AI4Science）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11-%E5%B9%B3%E5%8F%B0%E4%B8%8E%E5%B7%A5%E7%A8%8B%E8%83%BD%E5%8A%9B"><span class="nav-number">1.6.2.</span> <span class="nav-text">11. 平台与工程能力</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%93%8A-%E5%85%AD%E3%80%81%E8%83%BD%E5%8A%9B-%E6%A8%A1%E5%9E%8B-%E5%9C%BA%E6%99%AF%E6%98%A0%E5%B0%84%E9%80%9F%E6%9F%A5%E8%A1%A8"><span class="nav-number">1.7.</span> <span class="nav-text">📊 六、能力-模型-场景映射速查表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%8E%AF-%E4%B8%83%E3%80%81%E9%80%89%E5%9E%8B%E5%BB%BA%E8%AE%AE"><span class="nav-number">1.8.</span> <span class="nav-text">🎯 七、选型建议</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%B9%E6%8D%AE%E9%9C%80%E6%B1%82%E9%80%89%E6%8B%A9%E8%83%BD%E5%8A%9B%E6%A8%A1%E5%9D%97"><span class="nav-number">1.8.1.</span> <span class="nav-text">根据需求选择能力模块</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%92%A1-%E5%85%AB%E3%80%81%E6%80%BB%E7%BB%93"><span class="nav-number">1.9.</span> <span class="nav-text">💡 八、总结</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2025 &mdash; <span itemprop="copyrightYear">2026</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Bingo Cai</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+
+
+
+
+  <div class="footer-custom"><a href="https://beian.miit.gov.cn/" target="_blank">沪ICP备2025139614号</a></div>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script id="ribbon" type="text/javascript" size="300" alpha="0.6"  zIndex="-1" src="/lib/canvas-ribbon/canvas-ribbon.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+    
+      <script id="dsq-count-scr" src="https://everfight.disqus.com/count.js" async></script>
+    
+
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'http://bingowith.tech/2026/ai-capabilities-dictionary/';
+          this.page.identifier = '/2026/ai-capabilities-dictionary/';
+          this.page.title = '📘 AI能力词典 - 11大核心模块全景解析';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://everfight.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
+    
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+  
+  <link rel="stylesheet" href="/lib/needsharebutton/needsharebutton.css">
+
+  
+  
+  <script src="/lib/needsharebutton/needsharebutton.js"></script>
+
+  <script>
+    
+      pbOptions = {};
+      
+          pbOptions.iconStyle = "box";
+      
+          pbOptions.boxForm = "horizontal";
+      
+          pbOptions.position = "bottomCenter";
+      
+          pbOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
+      
+      new needShareButton('#needsharebutton-postbottom', pbOptions);
+    
+    
+  </script>
+
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+  <script type="text/javascript" src="/js/src/js.cookie.js?v=5.1.4"></script>
+  <script type="text/javascript" src="/js/src/scroll-cookie.js?v=5.1.4"></script>
+
+
+  
+
+</body>
+</html>

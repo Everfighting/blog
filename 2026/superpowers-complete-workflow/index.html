@@ -1,0 +1,1511 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+  <meta name="google-site-verification" content="j9K0QHVhy5Is2MyrlHKAdrH9TTZmmQ8bQD16-miJTT0" />
+
+
+
+  <meta name="msvalidate.01" content="FC067E398F86AC9B4BF0C75855D30357" />
+
+
+
+
+
+
+  <meta name="baidu-site-verification" content="codeva-IdaHYFTDQL" />
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="https://fonts.lug.ustc.edu.cn/css?family=Noto Serif SC:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Superpowers,AI编程,开发流程,Claude,工程化实践," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="蔡大锅's Blog" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="深入解析 Superpowers 的完整工作流程，从头脑风暴到代码审查，展示如何通过 AI 技能组合构建高效、安全的开发链路。以用户认证系统为例，一步步演示实战应用。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Superpowers 完整工作流程：从需求到开发">
+<meta property="og:url" content="http://bingowith.tech/2026/superpowers-complete-workflow/index.html">
+<meta property="og:site_name" content="蔡大锅&#39;s Blog">
+<meta property="og:description" content="深入解析 Superpowers 的完整工作流程，从头脑风暴到代码审查，展示如何通过 AI 技能组合构建高效、安全的开发链路。以用户认证系统为例，一步步演示实战应用。">
+<meta property="og:locale">
+<meta property="article:published_time" content="2026-03-06T07:45:00.000Z">
+<meta property="article:modified_time" content="2026-03-06T07:56:41.663Z">
+<meta property="article:author" content="Bingo Cai">
+<meta property="article:tag" content="AI编程">
+<meta property="article:tag" content="Claude">
+<meta property="article:tag" content="Superpowers">
+<meta property="article:tag" content="工程化实践">
+<meta property="article:tag" content="开发流程">
+<meta name="twitter:card" content="summary">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://bingowith.tech/2026/superpowers-complete-workflow/"/>
+
+
+
+
+
+  <title>Superpowers 完整工作流程：从需求到开发 | 蔡大锅's Blog</title>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?fa8b25a8de50c7a3401d49765b5192cd";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+<meta name="generator" content="Hexo 8.0.0"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">蔡大锅's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">不背锅日志</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://bingowith.tech/2026/superpowers-complete-workflow/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="蔡大锅's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">Superpowers 完整工作流程：从需求到开发</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2026-03-06T15:45:00+08:00">
+                2026-03-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%8A%80%E6%9C%AF%E6%95%99%E7%A8%8B/" itemprop="url" rel="index">
+                    <span itemprop="name">技术教程</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2026/superpowers-complete-workflow/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="/2026/superpowers-complete-workflow/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  1:19
+                </span>
+              
+            </div>
+          
+
+          
+              <div class="post-description">
+                  深入解析 Superpowers 的完整工作流程，从头脑风暴到代码审查，展示如何通过 AI 技能组合构建高效、安全的开发链路。以用户认证系统为例，一步步演示实战应用。
+              </div>
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="Superpowers-完整工作流程：从需求到开发"><a href="#Superpowers-完整工作流程：从需求到开发" class="headerlink" title="Superpowers 完整工作流程：从需求到开发"></a>Superpowers 完整工作流程：从需求到开发</h1><p>Superpowers 的真正威力在于将多个技能组合成完整的开发流程。</p>
+<h2 id="标准开发流程"><a href="#标准开发流程" class="headerlink" title="标准开发流程"></a>标准开发流程</h2><ol>
+<li>需求澄清（Brainstorming） - 理解业务需求</li>
+<li>设计文档生成 - 架构设计与技术选型</li>
+<li>实现计划编写 - 任务拆解与优先级排序</li>
+<li>开发执行 - TDD 循环开发</li>
+<li>代码审查 - 质量、安全、测试全覆盖</li>
+</ol>
+<hr>
+<h2 id="实战案例：用-Superpowers-构建用户认证系统"><a href="#实战案例：用-Superpowers-构建用户认证系统" class="headerlink" title="实战案例：用 Superpowers 构建用户认证系统"></a>实战案例：用 Superpowers 构建用户认证系统</h2><h3 id="第一步：Brainstorming-澄清需求"><a href="#第一步：Brainstorming-澄清需求" class="headerlink" title="第一步：Brainstorming - 澄清需求"></a>第一步：Brainstorming - 澄清需求</h3><p>启动 Superpowers 后，Claude 会先进入头脑风暴模式，帮助你澄清需求。对于用户认证系统，Claude 会问你：</p>
+<ul>
+<li><strong>应用类型</strong>：Web 应用还是移动应用？</li>
+<li><strong>登录方式</strong>：需要支持哪些登录方式？（邮箱密码、第三方登录、手机号验证码等）</li>
+<li><strong>密码管理</strong>：需要密码重置功能吗？</li>
+<li><strong>会话管理</strong>：需要”记住我”功能吗？</li>
+<li><strong>安全要求</strong>：是否需要双因素认证（2FA）？密码强度要求？</li>
+</ul>
+<hr>
+<h3 id="第二步：生成设计文档"><a href="#第二步：生成设计文档" class="headerlink" title="第二步：生成设计文档"></a>第二步：生成设计文档</h3><p>确认需求后，Claude 会自动生成设计文档，包括：</p>
+<h4 id="技术选型"><a href="#技术选型" class="headerlink" title="技术选型"></a>技术选型</h4><table>
+<thead>
+<tr>
+<th>组件</th>
+<th>技术方案</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>后端框架</td>
+<td>Express.js (Node.js)</td>
+</tr>
+<tr>
+<td>数据库</td>
+<td>PostgreSQL</td>
+</tr>
+<tr>
+<td>ORM</td>
+<td>Prisma</td>
+</tr>
+<tr>
+<td>认证方案</td>
+<td>JWT + Refresh Token</td>
+</tr>
+<tr>
+<td>密码加密</td>
+<td>bcrypt</td>
+</tr>
+</tbody></table>
+<h4 id="API-设计示例"><a href="#API-设计示例" class="headerlink" title="API 设计示例"></a>API 设计示例</h4><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 用户注册</span></span><br><span class="line"><span class="string">POST</span> <span class="string">/api/auth/register</span></span><br><span class="line"><span class="attr">Request:</span></span><br><span class="line">  <span class="attr">email:</span> <span class="string">string</span></span><br><span class="line">  <span class="attr">password:</span> <span class="string">string</span></span><br><span class="line">  <span class="attr">confirmPassword:</span> <span class="string">string</span></span><br><span class="line"><span class="attr">Response:</span></span><br><span class="line">  <span class="attr">success:</span> <span class="string">boolean</span></span><br><span class="line">  <span class="attr">data:</span> &#123; <span class="string">userId</span>, <span class="string">email</span> &#125;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 用户登录</span></span><br><span class="line"><span class="string">POST</span> <span class="string">/api/auth/login</span></span><br><span class="line"><span class="attr">Request:</span></span><br><span class="line">  <span class="attr">email:</span> <span class="string">string</span></span><br><span class="line">  <span class="attr">password:</span> <span class="string">string</span></span><br><span class="line">  <span class="string">rememberMe?:</span> <span class="string">boolean</span></span><br><span class="line"><span class="attr">Response:</span></span><br><span class="line">  <span class="attr">success:</span> <span class="string">boolean</span></span><br><span class="line">  <span class="attr">data:</span> &#123; <span class="string">accessToken</span>, <span class="string">refreshToken</span>, <span class="string">user</span> &#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="第三步：编写实现计划"><a href="#第三步：编写实现计划" class="headerlink" title="第三步：编写实现计划"></a>第三步：编写实现计划</h3><p>Claude 会生成详细的任务列表，每个任务 2-5 分钟可完成：</p>
+<p><strong>阶段 1：基础设施搭建</strong></p>
+<ul>
+<li><input disabled="" type="checkbox"> 初始化项目结构</li>
+<li><input disabled="" type="checkbox"> 配置数据库连接</li>
+<li><input disabled="" type="checkbox"> 设置环境变量管理</li>
+</ul>
+<p><strong>阶段 2：数据库设计与迁移</strong></p>
+<ul>
+<li><input disabled="" type="checkbox"> 设计用户表 Schema</li>
+<li><input disabled="" type="checkbox"> 设计会话表 Schema</li>
+<li><input disabled="" type="checkbox"> 编写数据库迁移脚本</li>
+</ul>
+<p><strong>阶段 3：核心认证逻辑</strong></p>
+<ul>
+<li><input disabled="" type="checkbox"> 实现密码加密工具函数</li>
+<li><input disabled="" type="checkbox"> 实现 JWT 生成与验证</li>
+<li><input disabled="" type="checkbox"> 实现用户注册接口</li>
+<li><input disabled="" type="checkbox"> 实现用户登录接口</li>
+<li><input disabled="" type="checkbox"> 实现登录状态中间件</li>
+</ul>
+<p><strong>阶段 4：会话管理</strong></p>
+<ul>
+<li><input disabled="" type="checkbox"> 实现 Refresh Token 机制</li>
+<li><input disabled="" type="checkbox"> 实现退出登录接口</li>
+<li><input disabled="" type="checkbox"> 实现”记住我”功能</li>
+</ul>
+<p><strong>阶段 5：测试与文档</strong></p>
+<ul>
+<li><input disabled="" type="checkbox"> 编写单元测试</li>
+<li><input disabled="" type="checkbox"> 编写集成测试</li>
+<li><input disabled="" type="checkbox"> 生成 API 文档</li>
+</ul>
+<hr>
+<h3 id="第四步：执行开发"><a href="#第四步：执行开发" class="headerlink" title="第四步：执行开发"></a>第四步：执行开发</h3><p>Claude 会严格按照 TDD（测试驱动开发）原则执行每个任务：</p>
+<h4 id="TDD-循环流程"><a href="#TDD-循环流程" class="headerlink" title="TDD 循环流程"></a>TDD 循环流程</h4><p>对于”实现用户注册接口”这个任务，Claude 会：</p>
+<p><strong>1. 先写测试（RED 阶段）</strong></p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">describe</span>(<span class="string">&#x27;POST /api/auth/register&#x27;</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="title function_">it</span>(<span class="string">&#x27;should register a new user successfully&#x27;</span>, <span class="title function_">async</span> () =&gt; &#123;</span><br><span class="line">    <span class="keyword">const</span> response = <span class="keyword">await</span> <span class="title function_">request</span>(app)</span><br><span class="line">      .<span class="title function_">post</span>(<span class="string">&#x27;/api/auth/register&#x27;</span>)</span><br><span class="line">      .<span class="title function_">send</span>(&#123;</span><br><span class="line">        <span class="attr">email</span>: <span class="string">&#x27;test@example.com&#x27;</span>,</span><br><span class="line">        <span class="attr">password</span>: <span class="string">&#x27;SecurePass123!&#x27;</span>,</span><br><span class="line">        <span class="attr">confirmPassword</span>: <span class="string">&#x27;SecurePass123!&#x27;</span></span><br><span class="line">      &#125;);</span><br><span class="line"></span><br><span class="line">    <span class="title function_">expect</span>(response.<span class="property">status</span>).<span class="title function_">toBe</span>(<span class="number">201</span>);</span><br><span class="line">    <span class="title function_">expect</span>(response.<span class="property">body</span>.<span class="property">success</span>).<span class="title function_">toBe</span>(<span class="literal">true</span>);</span><br><span class="line">    <span class="title function_">expect</span>(response.<span class="property">body</span>.<span class="property">data</span>.<span class="property">userId</span>).<span class="title function_">toBeDefined</span>();</span><br><span class="line">  &#125;);</span><br><span class="line"></span><br><span class="line">  <span class="title function_">it</span>(<span class="string">&#x27;should fail if passwords do not match&#x27;</span>, <span class="title function_">async</span> () =&gt; &#123;</span><br><span class="line">    <span class="keyword">const</span> response = <span class="keyword">await</span> <span class="title function_">request</span>(app)</span><br><span class="line">      .<span class="title function_">post</span>(<span class="string">&#x27;/api/auth/register&#x27;</span>)</span><br><span class="line">      .<span class="title function_">send</span>(&#123;</span><br><span class="line">        <span class="attr">email</span>: <span class="string">&#x27;test@example.com&#x27;</span>,</span><br><span class="line">        <span class="attr">password</span>: <span class="string">&#x27;SecurePass123!&#x27;</span>,</span><br><span class="line">        <span class="attr">confirmPassword</span>: <span class="string">&#x27;DifferentPass123!&#x27;</span></span><br><span class="line">      &#125;);</span><br><span class="line"></span><br><span class="line">    <span class="title function_">expect</span>(response.<span class="property">status</span>).<span class="title function_">toBe</span>(<span class="number">400</span>);</span><br><span class="line">    <span class="title function_">expect</span>(response.<span class="property">body</span>.<span class="property">success</span>).<span class="title function_">toBe</span>(<span class="literal">false</span>);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p><strong>2. 确认测试失败</strong></p>
+<p>运行测试，确认所有测试用例都失败（预期行为）。</p>
+<p><strong>3. 写实现代码（GREEN 阶段）</strong></p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">async</span> <span class="keyword">function</span> <span class="title function_">register</span>(<span class="params"><span class="attr">req</span>: <span class="title class_">Request</span>, <span class="attr">res</span>: <span class="title class_">Response</span></span>) &#123;</span><br><span class="line">  <span class="keyword">try</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> &#123; email, password, confirmPassword &#125; = req.<span class="property">body</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 验证密码匹配</span></span><br><span class="line">    <span class="keyword">if</span> (password !== confirmPassword) &#123;</span><br><span class="line">      <span class="keyword">return</span> res.<span class="title function_">status</span>(<span class="number">400</span>).<span class="title function_">json</span>(&#123;</span><br><span class="line">        <span class="attr">success</span>: <span class="literal">false</span>,</span><br><span class="line">        <span class="attr">message</span>: <span class="string">&#x27;密码不匹配&#x27;</span></span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 检查邮箱是否已存在</span></span><br><span class="line">    <span class="keyword">const</span> existingUser = <span class="keyword">await</span> prisma.<span class="property">user</span>.<span class="title function_">findUnique</span>(&#123;</span><br><span class="line">      <span class="attr">where</span>: &#123; email &#125;</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (existingUser) &#123;</span><br><span class="line">      <span class="keyword">return</span> res.<span class="title function_">status</span>(<span class="number">409</span>).<span class="title function_">json</span>(&#123;</span><br><span class="line">        <span class="attr">success</span>: <span class="literal">false</span>,</span><br><span class="line">        <span class="attr">message</span>: <span class="string">&#x27;该邮箱已被注册&#x27;</span></span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 加密密码</span></span><br><span class="line">    <span class="keyword">const</span> hashedPassword = <span class="keyword">await</span> bcrypt.<span class="title function_">hash</span>(password, <span class="number">10</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 创建用户</span></span><br><span class="line">    <span class="keyword">const</span> user = <span class="keyword">await</span> prisma.<span class="property">user</span>.<span class="title function_">create</span>(&#123;</span><br><span class="line">      <span class="attr">data</span>: &#123;</span><br><span class="line">        email,</span><br><span class="line">        <span class="attr">password</span>: hashedPassword</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 生成 Token</span></span><br><span class="line">    <span class="keyword">const</span> accessToken = <span class="title function_">generateAccessToken</span>(user.<span class="property">id</span>);</span><br><span class="line">    <span class="keyword">const</span> refreshToken = <span class="title function_">generateRefreshToken</span>(user.<span class="property">id</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> res.<span class="title function_">status</span>(<span class="number">201</span>).<span class="title function_">json</span>(&#123;</span><br><span class="line">      <span class="attr">success</span>: <span class="literal">true</span>,</span><br><span class="line">      <span class="attr">message</span>: <span class="string">&#x27;注册成功&#x27;</span>,</span><br><span class="line">      <span class="attr">data</span>: &#123;</span><br><span class="line">        <span class="attr">userId</span>: user.<span class="property">id</span>,</span><br><span class="line">        <span class="attr">email</span>: user.<span class="property">email</span>,</span><br><span class="line">        accessToken,</span><br><span class="line">        refreshToken</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line">  &#125; <span class="keyword">catch</span> (error) &#123;</span><br><span class="line">    <span class="keyword">return</span> res.<span class="title function_">status</span>(<span class="number">500</span>).<span class="title function_">json</span>(&#123;</span><br><span class="line">      <span class="attr">success</span>: <span class="literal">false</span>,</span><br><span class="line">      <span class="attr">message</span>: <span class="string">&#x27;服务器内部错误&#x27;</span></span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>4. 确认测试通过（GREEN 阶段）</strong></p>
+<p>运行测试，确保所有测试用例都通过。</p>
+<p><strong>5. 重构代码（REFACTOR 阶段）</strong></p>
+<p>Claude 会检查代码质量，进行必要的重构，提取公共逻辑到工具函数。</p>
+<hr>
+<h3 id="第五步：代码审查"><a href="#第五步：代码审查" class="headerlink" title="第五步：代码审查"></a>第五步：代码审查</h3><p>完成后，Claude 会自动触发全面的代码审查，检查多个维度：</p>
+<h4 id="5-1-代码质量检查"><a href="#5-1-代码质量检查" class="headerlink" title="5.1 代码质量检查"></a>5.1 代码质量检查</h4><ul>
+<li>命名规范：使用语义化的变量和函数名</li>
+<li>代码复杂度：函数长度控制在合理范围内</li>
+<li>注释：关键逻辑有清晰注释</li>
+<li>类型安全：TypeScript 严格模式</li>
+<li>错误处理：所有异步操作都有 try-catch</li>
+</ul>
+<h4 id="5-2-安全性检查"><a href="#5-2-安全性检查" class="headerlink" title="5.2 安全性检查"></a>5.2 安全性检查</h4><p><strong>SQL 注入防护</strong></p>
+<ul>
+<li>使用 Prisma ORM，参数化查询</li>
+</ul>
+<p><strong>XSS 防护</strong></p>
+<ul>
+<li>用户输入在返回前经过转义处理</li>
+<li>使用 Helmet 中间件设置安全 HTTP 头</li>
+</ul>
+<p><strong>密码安全</strong></p>
+<ul>
+<li>使用 bcrypt 加密</li>
+<li>不存储明文密码</li>
+<li>不在日志中输出密码信息</li>
+</ul>
+<p><strong>Token 安全</strong></p>
+<ul>
+<li>Access Token 过期时间 15 分钟</li>
+<li>Refresh Token 过期时间 7 天</li>
+<li>使用强随机密钥</li>
+</ul>
+<p><strong>速率限制</strong></p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> loginLimiter = <span class="title function_">rateLimit</span>(&#123;</span><br><span class="line">  <span class="attr">windowMs</span>: <span class="number">15</span> * <span class="number">60</span> * <span class="number">1000</span>, <span class="comment">// 15 分钟</span></span><br><span class="line">  <span class="attr">max</span>: <span class="number">5</span>, <span class="comment">// 最多 5 次尝试</span></span><br><span class="line">  <span class="attr">message</span>: <span class="string">&#x27;登录尝试次数过多，请 15 分钟后再试&#x27;</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h4 id="5-3-测试覆盖率检查"><a href="#5-3-测试覆盖率检查" class="headerlink" title="5.3 测试覆盖率检查"></a>5.3 测试覆盖率检查</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Coverage Summary</span><br><span class="line">================</span><br><span class="line">Statements   : 95.42% ( 342/358 )</span><br><span class="line">Branches     : 90.18% ( 98/109 )</span><br><span class="line">Functions    : 96.15% ( 75/78 )</span><br><span class="line">Lines        : 95.35% ( 338/354 )</span><br></pre></td></tr></table></figure>
+
+<h4 id="5-4-文档完整性检查"><a href="#5-4-文档完整性检查" class="headerlink" title="5.4 文档完整性检查"></a>5.4 文档完整性检查</h4><ul>
+<li>API 文档（Swagger&#x2F;OpenAPI）</li>
+<li>部署文档</li>
+<li>配置说明（.env.example）</li>
+<li>README 包含快速开始指南</li>
+</ul>
+<hr>
+<h2 id="工作流程的优势"><a href="#工作流程的优势" class="headerlink" title="工作流程的优势"></a>工作流程的优势</h2><h3 id="1-效率提升"><a href="#1-效率提升" class="headerlink" title="1. 效率提升"></a>1. 效率提升</h3><ul>
+<li>自动化任务拆解</li>
+<li>自动生成测试</li>
+<li>智能代码审查</li>
+</ul>
+<h3 id="2-质量保证"><a href="#2-质量保证" class="headerlink" title="2. 质量保证"></a>2. 质量保证</h3><ul>
+<li>测试驱动：每个功能都有测试覆盖</li>
+<li>安全审计：自动检查常见安全漏洞</li>
+<li>代码规范：统一风格，易于维护</li>
+</ul>
+<h3 id="3-知识沉淀"><a href="#3-知识沉淀" class="headerlink" title="3. 知识沉淀"></a>3. 知识沉淀</h3><ul>
+<li>设计文档：架构决策有记录</li>
+<li>API 文档：自动生成，保持同步</li>
+<li>最佳实践：AI 将经验编码到流程中</li>
+</ul>
+<hr>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>Superpowers 重新定义了 AI 辅助开发的范式。它不是简单地生成代码片段，而是将 AI 的能力嵌入到完整的软件工程流程中。</p>
+<p>通过五个关键步骤——Brainstorming、设计文档生成、实现计划编写、开发执行和代码审查，Superpowers 让 AI 成为你的智能工程伙伴。</p>
+<p><strong>关键要点：</strong></p>
+<ul>
+<li>✅ 需求澄清避免后期返工</li>
+<li>✅ 设计文档提供全局视角</li>
+<li>✅ 任务拆分降低认知负担</li>
+<li>✅ TDD 保证代码质量</li>
+<li>✅ 自动审查多维度保障安全</li>
+</ul>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    Bingo Cai
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://bingowith.tech/2026/superpowers-complete-workflow/" title="Superpowers 完整工作流程：从需求到开发">http://bingowith.tech/2026/superpowers-complete-workflow/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Superpowers/" rel="tag"># Superpowers</a>
+          
+            <a href="/tags/AI%E7%BC%96%E7%A8%8B/" rel="tag"># AI编程</a>
+          
+            <a href="/tags/%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B/" rel="tag"># 开发流程</a>
+          
+            <a href="/tags/Claude/" rel="tag"># Claude</a>
+          
+            <a href="/tags/%E5%B7%A5%E7%A8%8B%E5%8C%96%E5%AE%9E%E8%B7%B5/" rel="tag"># 工程化实践</a>
+          
+        </div>
+      
+
+      
+      
+        <div class="post-widgets">
+        
+
+        
+
+        
+          
+          <div id="needsharebutton-postbottom">
+            <span class="btn">
+              <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </span>
+          </div>
+        
+        </div>
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2026/ai-native-team-employee/" rel="next" title="李博杰--构建 AI 原生团队，使能 AI 员工">
+                <i class="fa fa-chevron-left"></i> 李博杰--构建 AI 原生团队，使能 AI 员工
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2026/bloom-filter-space-for-time/" rel="prev" title="布隆过滤器：空间换时间的艺术">
+                布隆过滤器：空间换时间的艺术 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a target="_blank" rel="noopener" href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/uploads/avatar.png"
+                alt="" />
+            
+              <p class="site-author-name" itemprop="name"></p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">62</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">25</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">113</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/Everfighting" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-fa-brands fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.douban.com/people/binbeing" target="_blank" title="豆瓣">
+                      
+                        <i class="fa fa-fw fa-fa-solid fa-book"></i>豆瓣</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="http://www.zhihu.com/people/your-user-name" target="_blank" title="知乎">
+                      
+                        <i class="fa fa-fw fa-fa-solid fa-thumbs-up"></i>知乎</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:binbeing@126.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-fa-solid fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://x.com/bingo41589512" target="_blank" title="Twitter">
+                      
+                        <i class="fa fa-fw fa-twitter"></i>Twitter</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Superpowers-%E5%AE%8C%E6%95%B4%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B%EF%BC%9A%E4%BB%8E%E9%9C%80%E6%B1%82%E5%88%B0%E5%BC%80%E5%8F%91"><span class="nav-number">1.</span> <span class="nav-text">Superpowers 完整工作流程：从需求到开发</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A0%87%E5%87%86%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B"><span class="nav-number">1.1.</span> <span class="nav-text">标准开发流程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9E%E6%88%98%E6%A1%88%E4%BE%8B%EF%BC%9A%E7%94%A8-Superpowers-%E6%9E%84%E5%BB%BA%E7%94%A8%E6%88%B7%E8%AE%A4%E8%AF%81%E7%B3%BB%E7%BB%9F"><span class="nav-number">1.2.</span> <span class="nav-text">实战案例：用 Superpowers 构建用户认证系统</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E6%AD%A5%EF%BC%9ABrainstorming-%E6%BE%84%E6%B8%85%E9%9C%80%E6%B1%82"><span class="nav-number">1.2.1.</span> <span class="nav-text">第一步：Brainstorming - 澄清需求</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E6%AD%A5%EF%BC%9A%E7%94%9F%E6%88%90%E8%AE%BE%E8%AE%A1%E6%96%87%E6%A1%A3"><span class="nav-number">1.2.2.</span> <span class="nav-text">第二步：生成设计文档</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%8A%80%E6%9C%AF%E9%80%89%E5%9E%8B"><span class="nav-number">1.2.2.1.</span> <span class="nav-text">技术选型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#API-%E8%AE%BE%E8%AE%A1%E7%A4%BA%E4%BE%8B"><span class="nav-number">1.2.2.2.</span> <span class="nav-text">API 设计示例</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%B8%89%E6%AD%A5%EF%BC%9A%E7%BC%96%E5%86%99%E5%AE%9E%E7%8E%B0%E8%AE%A1%E5%88%92"><span class="nav-number">1.2.3.</span> <span class="nav-text">第三步：编写实现计划</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E5%9B%9B%E6%AD%A5%EF%BC%9A%E6%89%A7%E8%A1%8C%E5%BC%80%E5%8F%91"><span class="nav-number">1.2.4.</span> <span class="nav-text">第四步：执行开发</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#TDD-%E5%BE%AA%E7%8E%AF%E6%B5%81%E7%A8%8B"><span class="nav-number">1.2.4.1.</span> <span class="nav-text">TDD 循环流程</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%BA%94%E6%AD%A5%EF%BC%9A%E4%BB%A3%E7%A0%81%E5%AE%A1%E6%9F%A5"><span class="nav-number">1.2.5.</span> <span class="nav-text">第五步：代码审查</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#5-1-%E4%BB%A3%E7%A0%81%E8%B4%A8%E9%87%8F%E6%A3%80%E6%9F%A5"><span class="nav-number">1.2.5.1.</span> <span class="nav-text">5.1 代码质量检查</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-2-%E5%AE%89%E5%85%A8%E6%80%A7%E6%A3%80%E6%9F%A5"><span class="nav-number">1.2.5.2.</span> <span class="nav-text">5.2 安全性检查</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-3-%E6%B5%8B%E8%AF%95%E8%A6%86%E7%9B%96%E7%8E%87%E6%A3%80%E6%9F%A5"><span class="nav-number">1.2.5.3.</span> <span class="nav-text">5.3 测试覆盖率检查</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-4-%E6%96%87%E6%A1%A3%E5%AE%8C%E6%95%B4%E6%80%A7%E6%A3%80%E6%9F%A5"><span class="nav-number">1.2.5.4.</span> <span class="nav-text">5.4 文档完整性检查</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B%E7%9A%84%E4%BC%98%E5%8A%BF"><span class="nav-number">1.3.</span> <span class="nav-text">工作流程的优势</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E6%95%88%E7%8E%87%E6%8F%90%E5%8D%87"><span class="nav-number">1.3.1.</span> <span class="nav-text">1. 效率提升</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E8%B4%A8%E9%87%8F%E4%BF%9D%E8%AF%81"><span class="nav-number">1.3.2.</span> <span class="nav-text">2. 质量保证</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E7%9F%A5%E8%AF%86%E6%B2%89%E6%B7%80"><span class="nav-number">1.3.3.</span> <span class="nav-text">3. 知识沉淀</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-number">1.4.</span> <span class="nav-text">总结</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2025 &mdash; <span itemprop="copyrightYear">2026</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Bingo Cai</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+
+
+
+
+  <div class="footer-custom"><a href="https://beian.miit.gov.cn/" target="_blank">沪ICP备2025139614号</a></div>
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script id="ribbon" type="text/javascript" size="300" alpha="0.6"  zIndex="-1" src="/lib/canvas-ribbon/canvas-ribbon.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+    
+      <script id="dsq-count-scr" src="https://everfight.disqus.com/count.js" async></script>
+    
+
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'http://bingowith.tech/2026/superpowers-complete-workflow/';
+          this.page.identifier = '/2026/superpowers-complete-workflow/';
+          this.page.title = 'Superpowers 完整工作流程：从需求到开发';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://everfight.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
+    
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+  
+  <link rel="stylesheet" href="/lib/needsharebutton/needsharebutton.css">
+
+  
+  
+  <script src="/lib/needsharebutton/needsharebutton.js"></script>
+
+  <script>
+    
+      pbOptions = {};
+      
+          pbOptions.iconStyle = "box";
+      
+          pbOptions.boxForm = "horizontal";
+      
+          pbOptions.position = "bottomCenter";
+      
+          pbOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
+      
+      new needShareButton('#needsharebutton-postbottom', pbOptions);
+    
+    
+  </script>
+
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+  <script type="text/javascript" src="/js/src/js.cookie.js?v=5.1.4"></script>
+  <script type="text/javascript" src="/js/src/scroll-cookie.js?v=5.1.4"></script>
+
+
+  
+
+</body>
+</html>
