@@ -822,3 +822,8 @@ images: images
 # Theme version
 version: 5.1.4
 
+# mermaid chart
+mermaid:
+  enable: true
+  version: "7.1.2" # 可根据需要修改版本
+  options:  # 更多配置可参考Mermaid官方文档
