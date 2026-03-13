@@ -10,6 +10,7 @@ categories: 科技评论
 description: 拆解对中国AI的四大认知误区，客观分析中国AI的真实实力与长期潜力
 abbrlink: china-ai-confidence
 toc: true
+cover: /images/china-ai-confidence-cover.jpg
 ---
 
 # 中国 AI，不必妄自菲薄
